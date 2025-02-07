@@ -72,7 +72,7 @@ function App() {
             <div className="flex items-center justify-between mb-4">
               <div className="flex items-center space-x-2">
                 <GalleryHorizontal className="h-6 w-6 text-primary" />
-                <h1 className="text-2xl font-bold text-primary">Template Gallery</h1>
+                <h1 className="text-2xl font-bold text-primary">Wreative Showcase</h1>
               </div>
             </div>
             
