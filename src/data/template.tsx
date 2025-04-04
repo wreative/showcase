@@ -9,44 +9,44 @@ export interface TemplateData {
 export const templates: TemplateData[] = [
     {
         id: 1,
-        title: "Modern Dashboard",
-        category: "Admin",
+        title: "Kontraktor Surabaya",
+        category: "Services",
         image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2000&auto=format&fit=crop",
-        url: "https://example.com/templates/modern-dashboard"
+        url: "http://konstraktorsurabaya.com/"
     },
     {
         id: 2,
-        title: "E-commerce Store",
-        category: "E-commerce",
+        title: "Wase Bumi Indonesia",
+        category: "Business",
         image: "https://images.unsplash.com/photo-1472851294608-062f824d29cc?q=80&w=2000&auto=format&fit=crop",
-        url: "https://example.com/templates/ecommerce-store"
+        url: "https://wasebumiindonesia.com/"
     },
     {
         id: 3,
-        title: "Portfolio Site",
-        category: "Portfolio",
+        title: "Cubicle Toilet",
+        category: "Services",
         image: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=2000&auto=format&fit=crop",
-        url: "https://example.com/templates/portfolio-site"
+        url: "https://cubicletoiletid.com/"
     },
     {
         id: 4,
-        title: "Blog Platform",
-        category: "Blog",
+        title: "PT. Adikarya Pesona",
+        category: "Education",
         image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=2000&auto=format&fit=crop",
-        url: "https://example.com/templates/blog-platform"
+        url: "https://adikaryapesona.wreative.com/"
     },
     {
         id: 5,
-        title: "Landing Page",
-        category: "Marketing",
+        title: "Wreative Store",
+        category: "E-Commerce",
         image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2000&auto=format&fit=crop",
-        url: "https://example.com/templates/landing-page"
+        url: "https://store.wreative.com"
     },
     {
         id: 6,
-        title: "Admin Panel",
-        category: "Admin",
+        title: "Home Baraka",
+        category: "Services",
         image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2000&auto=format&fit=crop",
-        url: "https://example.com/templates/admin-panel"
+        url: "https://homebaraka.wreative.com/"
     },
 ];
