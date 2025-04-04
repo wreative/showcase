@@ -1,6 +1,11 @@
 import {Zap} from 'lucide-react';
+import React from "react";
 
-const Footer = ({brandName = "Your Brand"}) => {
+interface FooterProps {
+    brandName: string;
+}
+
+const Footer: React.FC<FooterProps> = ({brandName}) => {
     return (
         <footer
             className="mt-auto border-t border-gray-200 dark:border-gray-800 bg-white/50 dark:bg-gray-900/50 backdrop-blur-sm">
