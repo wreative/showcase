@@ -49,4 +49,25 @@ export const templates: TemplateData[] = [
         image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2000&auto=format&fit=crop",
         url: "https://homebaraka.wreative.com/"
     },
+    {
+        id: 7,
+        title: "Wreative",
+        category: "Business",
+        image: "https://images.unsplash.com/photo-1472851294608-062f824d29cc?q=80&w=2000&auto=format&fit=crop",
+        url: "https://wreative.com/"
+    },
+    {
+        id: 8,
+        title: "Fajar Florist",
+        category: "Florist & Gardening",
+        image: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=2000&auto=format&fit=crop",
+        url: "https://fajarflorist.wreative.com/"
+    },
+    {
+        id: 9,
+        title: "DPU Bina Marga Kabupaten Musi",
+        category: "Government",
+        image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=2000&auto=format&fit=crop",
+        url: "https://pamusiwaras.wreative.com/"
+    },
 ];
