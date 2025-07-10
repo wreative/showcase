@@ -1,7 +1,7 @@
-import {GalleryHorizontal} from 'lucide-react';
 import SearchBar from './SearchBar';
 import CategoryFilter from './CategoryFilter';
 import React from "react";
+import Logo from "../../assets/wreative.png";
 
 interface HeaderProps {
     searchQuery: string;
@@ -25,7 +25,7 @@ const Header: React.FC<HeaderProps> = ({
                     {/* Logo and Title */}
                     <div className="flex items-center justify-between mb-4 px-2">
                         <div className="flex items-center space-x-2">
-                            <GalleryHorizontal className="h-6 w-6 text-primary"/>
+                            <img src={Logo} alt="Logo" className="h-6 w-9"/>
                             <h1 className="text-2xl font-bold text-primary">Wreative Showcase</h1>
                         </div>
                     </div>

@@ -22,7 +22,7 @@ const TemplateGrid: React.FC<TemplateGridProps> = ({ templates, loading }) => {
             {templates.length === 0 && (
                 <div className="text-center py-12">
                     <p className="text-lg text-gray-600 dark:text-gray-400">
-                        No templates found matching your criteria.
+                        Not found matching your criteria.
                     </p>
                 </div>
             )}

@@ -1,5 +1,5 @@
-import {Zap} from 'lucide-react';
 import React from "react";
+import Logo from "../../assets/wreative.png";
 
 interface FooterProps {
     brandName: string;
@@ -12,7 +12,8 @@ const Footer: React.FC<FooterProps> = ({brandName}) => {
             <div className="w-full mx-auto px-4 py-6">
                 <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
                     <div className="flex items-center space-x-2">
-                        <Zap className="h-6 w-6 text-primary"/>
+                        {/* Logo */}
+                        <img src={Logo} alt="Logo" className="h-6 w-9"/>
                         <span className="text-lg font-semibold text-primary">{brandName}</span>
                     </div>
                     <div className="text-sm text-gray-500 dark:text-gray-400">
