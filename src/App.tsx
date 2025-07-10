@@ -1,9 +1,10 @@
-import React, {useState, useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import './App.css';
-import {templates, TemplateData} from "@/data/template.tsx";
+import {TemplateData, templates} from "@/data/template.tsx";
 import Header from './components/Header';
 import TemplateGrid from './components/TemplateGrid';
 import Footer from './components/Footer';
+import {Alert, AlertDescription, AlertTitle} from './components/ui/alert';
 
 // Constants
 const ITEMS_PER_PAGE = 4;
@@ -64,6 +65,14 @@ const App: React.FC = () => {
             />
 
             <main className="flex-1 w-full mx-auto px-2 py-4">
+                <Alert className="mb-4">
+                    <div>
+                        <AlertTitle className="text-base font-semibold">Announcement</AlertTitle>
+                        <AlertDescription className="text-sm text-muted-foreground">
+                            All websites below are the result of <b>mirroring</b>. Some functions may not work properly.
+                        </AlertDescription>
+                    </div>
+                </Alert>
                 <TemplateGrid
                     templates={visibleTemplates}
                     loading={loading}
