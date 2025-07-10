@@ -26,7 +26,9 @@ const Header: React.FC<HeaderProps> = ({
                     <div className="flex items-center justify-between mb-4 px-2">
                         <div className="flex items-center space-x-2">
                             <img src={Logo} alt="Logo" className="h-6 w-9"/>
-                            <h1 className="text-2xl font-bold text-primary">Wreative Showcase</h1>
+                            <a href="https://wreative.com" title="Wreative" target="_blank">
+                                <h1 className="text-2xl font-bold text-primary">Wreative Showcase</h1>
+                            </a>
                         </div>
                     </div>
 
