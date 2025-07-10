@@ -127,4 +127,46 @@ export const templates: TemplateData[] = [
         image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=2000&auto=format&fit=crop",
         url: "https://wreative.com"
     },
+    {
+        id: 17,
+        title: "Pernikahan Ini",
+        category: "Services",
+        image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=2000&auto=format&fit=crop",
+        url: "https://wreative.com"
+    },
+    {
+        id: 18,
+        title: "Chicken Explorer",
+        category: "Business",
+        image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=2000&auto=format&fit=crop",
+        url: "https://wreative.com"
+    },
+    {
+        id: 19,
+        title: "Kurir Pulsa",
+        category: "Services",
+        image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=2000&auto=format&fit=crop",
+        url: "https://wreative.com"
+    },
+    {
+        id: 20,
+        title: "LPK Furinkazan",
+        category: "Education",
+        image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=2000&auto=format&fit=crop",
+        url: "https://wreative.com"
+    },
+    {
+        id: 21,
+        title: "PT Panji Semesta",
+        category: "Business",
+        image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=2000&auto=format&fit=crop",
+        url: "https://wreative.com"
+    },
+    {
+        id: 22,
+        title: "Aviso",
+        category: "Services",
+        image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=2000&auto=format&fit=crop",
+        url: "https://wreative.com"
+    },
 ];
