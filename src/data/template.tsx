@@ -8,6 +8,7 @@ import cubicleToiletCover from '../../assets/cover/cubicle-toilet.webp';
 import DPUBinaMargaMusiCover from '../../assets/cover/dpu-bina-marga-musi.webp';
 import adiKaryaPesonaCover from '../../assets/cover/adikarya-pesona.webp';
 import homeBarakaCover from '../../assets/cover/home-baraka.webp';
+import chickenExplorerCover from '../../assets/cover/chicken-explorer.webp';
 
 export interface TemplateData {
     id: number;
@@ -141,8 +142,8 @@ export const templates: TemplateData[] = [
         id: 18,
         title: "Chicken Explorer",
         category: "Business",
-        image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=2000&auto=format&fit=crop",
-        url: "https://wreative.com"
+        image: chickenExplorerCover,
+        url: "https://chickenexplorer.com"
     },
     {
         id: 19,
