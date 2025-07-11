@@ -158,7 +158,7 @@ export const templates: TemplateData[] = [
     },
     {
         id: 21,
-        title: "PT Panji Semesta",
+        title: "PT. Panji Semesta",
         category: "Business",
         image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=2000&auto=format&fit=crop",
         url: "https://wreative.com"
