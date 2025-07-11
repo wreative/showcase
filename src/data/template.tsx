@@ -6,7 +6,8 @@ import wreativeCover from '../../assets/cover/wreative.webp';
 import wreativeStoreCover from '../../assets/cover/wreative-store.webp';
 import cubicleToiletCover from '../../assets/cover/cubicle-toilet.webp';
 import DPUBinaMargaMusiCover from '../../assets/cover/dpu-bina-marga-musi.webp';
-import AdiKaryaPesonaCover from '../../assets/cover/adikarya-pesona.webp';
+import adiKaryaPesonaCover from '../../assets/cover/adikarya-pesona.webp';
+import homeBarakaCover from '../../assets/cover/home-baraka.webp';
 
 export interface TemplateData {
     id: number;
@@ -42,7 +43,7 @@ export const templates: TemplateData[] = [
         id: 4,
         title: "PT. Adikarya Pesona Intinusa",
         category: "Education",
-        image: AdiKaryaPesonaCover,
+        image: adiKaryaPesonaCover,
         url: "https://adikaryapesona.wreative.com/"
     },
     {
@@ -56,7 +57,7 @@ export const templates: TemplateData[] = [
         id: 6,
         title: "Home Baraka",
         category: "Services",
-        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2000&auto=format&fit=crop",
+        image: homeBarakaCover,
         url: "https://homebaraka.wreative.com/"
     },
     {
