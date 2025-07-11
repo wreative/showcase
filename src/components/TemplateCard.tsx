@@ -5,10 +5,20 @@ interface TemplateCardProps {
     template: TemplateData;
 }
 
+const getTrackedUrl = (url: string) => {
+    try {
+        const u = new URL(url);
+        u.searchParams.set('utm_source', 'showcase');
+        return u.toString();
+    } catch {
+        return url;
+    }
+};
+
 const TemplateCard: React.FC<TemplateCardProps> = ({template}) => {
     return (
         <a
-            href={template.url}
+            href={getTrackedUrl(template.url)}
             target="_blank"
             rel="noopener noreferrer"
             className="group relative overflow-hidden rounded-xl shadow-lg transition-all duration-300 hover:shadow-xl bg-white dark:bg-gray-800 cursor-pointer"
