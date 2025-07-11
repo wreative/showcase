@@ -5,6 +5,7 @@ import kontraktorSurabayaCover from '../../assets/cover/kontraktor-surabaya.webp
 import wreativeCover from '../../assets/cover/wreative.webp';
 import wreativeStoreCover from '../../assets/cover/wreative-store.webp';
 import cubicleToiletCover from '../../assets/cover/cubicle-toilet.webp';
+import DPUBinaMargaMusiCover from '../../assets/cover/dpu-bina-marga-musi.webp';
 
 export interface TemplateData {
     id: number;
@@ -75,7 +76,7 @@ export const templates: TemplateData[] = [
         id: 9,
         title: "DPU Bina Marga Kabupaten Musi",
         category: "Government",
-        image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=2000&auto=format&fit=crop",
+        image: DPUBinaMargaMusiCover,
         url: "https://pamusiwaras.wreative.com/"
     },
     {
