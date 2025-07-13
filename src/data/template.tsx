@@ -10,6 +10,7 @@ import adiKaryaPesonaCover from '../../assets/cover/adikarya-pesona.webp';
 import homeBarakaCover from '../../assets/cover/home-baraka.webp';
 import chickenExplorerCover from '../../assets/cover/chicken-explorer.webp';
 import kurirPulsaCover from '../../assets/cover/kurir-pulsa.webp';
+import panjiSemestaCover from '../../assets/cover/panji-semesta.webp';
 
 export interface TemplateData {
     id: number;
@@ -162,9 +163,9 @@ export const templates: TemplateData[] = [
     },
     {
         id: 21,
-        title: "PT. Panji Semesta",
+        title: "CV. Panji Semesta",
         category: "Business",
-        image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=2000&auto=format&fit=crop",
+        image: panjiSemestaCover,
         url: "https://wreative.com"
     },
     {
