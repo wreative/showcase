@@ -166,7 +166,7 @@ export const templates: TemplateData[] = [
         title: "CV. Panji Semesta",
         category: "Business",
         image: panjiSemestaCover,
-        url: "https://wreative.com"
+        url: "https://panji-semesta.wreative.com"
     },
     {
         id: 22,
