@@ -139,7 +139,7 @@ export const templates: TemplateData[] = [
         title: "Pernikahan Ini",
         category: "Services",
         image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=2000&auto=format&fit=crop",
-        url: "https://wreative.com"
+        url: "https://pernikahanini.com"
     },
     {
         id: 18,
@@ -182,5 +182,12 @@ export const templates: TemplateData[] = [
         category: "Services",
         image: dzataLombokTransportCover,
         url: "https://dzatalomboktransport.com/"
+    },
+    {
+        id: 24,
+        title: "Spesialis Karangan Bunga Indonesia",
+        category: "Florist & Gardening",
+        image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=2000&auto=format&fit=crop",
+        url: "https://spesialiskaranganbungaindonesia.com/"
     },
 ];

@@ -69,7 +69,9 @@ const App: React.FC = () => {
                     <div>
                         <AlertTitle className="text-base font-semibold">Announcement</AlertTitle>
                         <AlertDescription className="text-sm text-muted-foreground">
-                            All websites below are the result of <b>mirroring</b>. Some functions may not work properly.
+                            Not all websites are mirrored, and the <b>mirroring</b> is done to maintain the original
+                            theme we've created, in case there are any changes from the client's side. Some functions
+                            may not work properly.
                         </AlertDescription>
                     </div>
                 </Alert>
