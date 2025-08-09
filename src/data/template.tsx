@@ -12,6 +12,7 @@ import chickenExplorerCover from '../../assets/cover/chicken-explorer.webp';
 import kurirPulsaCover from '../../assets/cover/kurir-pulsa.webp';
 import panjiSemestaCover from '../../assets/cover/panji-semesta.webp';
 import dzataLombokTransportCover from '../../assets/cover/dzata-lombok-transport.webp';
+import pernikahanIni from '../../assets/cover/pernikahan-ini.webp';
 
 export interface TemplateData {
     id: number;
@@ -138,7 +139,7 @@ export const templates: TemplateData[] = [
         id: 17,
         title: "Pernikahan Ini",
         category: "Services",
-        image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=2000&auto=format&fit=crop",
+        image: pernikahanIni,
         url: "https://pernikahanini.com"
     },
     {
