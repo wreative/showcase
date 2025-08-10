@@ -14,6 +14,7 @@ import panjiSemestaCover from '../../assets/cover/panji-semesta.webp';
 import dzataLombokTransportCover from '../../assets/cover/dzata-lombok-transport.webp';
 import pernikahanIni from '../../assets/cover/pernikahan-ini.webp';
 import posSatpam from '../../assets/cover/pos-satpam.webp';
+import toiletPortabel from '../../assets/cover/toilet-portabel.webp';
 
 export interface TemplateData {
     id: number;
@@ -105,8 +106,8 @@ export const templates: TemplateData[] = [
         id: 12,
         title: "Toilet Portable",
         category: "Services",
-        image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=2000&auto=format&fit=crop",
-        url: "https://wreative.com"
+        image: toiletPortabel,
+        url: "https://toilet-portabel.wreative.com"
     },
     {
         id: 13,
