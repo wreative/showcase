@@ -15,6 +15,7 @@ import dzataLombokTransportCover from '../../assets/cover/dzata-lombok-transport
 import pernikahanIni from '../../assets/cover/pernikahan-ini.webp';
 import posSatpam from '../../assets/cover/pos-satpam.webp';
 import toiletPortabel from '../../assets/cover/toilet-portabel.webp';
+import ptModernCocoInternational from '../../assets/cover/pt-modern-coco-international.webp';
 
 export interface TemplateData {
     id: number;
@@ -125,17 +126,17 @@ export const templates: TemplateData[] = [
     },
     {
         id: 15,
-        title: "Modern Coco International",
+        title: "PT. Modern Coco International",
         category: "Business",
-        image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=2000&auto=format&fit=crop",
-        url: "https://wreative.com"
+        image: ptModernCocoInternational,
+        url: "https://pt-modern-coco-international.wreative.com/"
     },
     {
         id: 16,
         title: "CV Putra Kubota",
         category: "Business",
         image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=2000&auto=format&fit=crop",
-        url: "https://wreative.com"
+        url: "https://cv-putra-kubota.wreative.com"
     },
     {
         id: 17,
