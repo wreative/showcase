@@ -26,7 +26,17 @@ export interface TemplateData {
     url: string;
 }
 
-export const templates: TemplateData[] = [
+const sortTemplates = (templates: TemplateData[]): TemplateData[] => {
+    return templates.sort((a, b) => {
+        const firstItemURL = a.url.includes('wreative.com');
+        const secondItemURL = b.url.includes('wreative.com');
+        if (firstItemURL && !secondItemURL) return 1;
+        if (!firstItemURL && secondItemURL) return -1;
+        return 0;
+    });
+};
+
+export const templates: TemplateData[] = sortTemplates([
     {
         id: 1,
         title: "Kontraktor Surabaya",
@@ -195,4 +205,4 @@ export const templates: TemplateData[] = [
         image: spesialisKaranganBungaIndonesia,
         url: "https://spesialiskaranganbungaindonesia.com/"
     },
-];
+]);
