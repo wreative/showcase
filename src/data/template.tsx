@@ -16,6 +16,7 @@ import pernikahanIni from '../../assets/cover/pernikahan-ini.webp';
 import posSatpam from '../../assets/cover/pos-satpam.webp';
 import toiletPortabel from '../../assets/cover/toilet-portabel.webp';
 import ptModernCocoInternational from '../../assets/cover/pt-modern-coco-international.webp';
+import spesialisKaranganBungaIndonesia from '../../assets/cover/spesialis-karangan-bunga.webp';
 
 export interface TemplateData {
     id: number;
@@ -191,7 +192,7 @@ export const templates: TemplateData[] = [
         id: 24,
         title: "Spesialis Karangan Bunga Indonesia",
         category: "Florist & Gardening",
-        image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=2000&auto=format&fit=crop",
+        image: spesialisKaranganBungaIndonesia,
         url: "https://spesialiskaranganbungaindonesia.com/"
     },
 ];
