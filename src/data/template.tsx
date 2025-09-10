@@ -16,7 +16,8 @@ import pernikahanIni from '../../assets/cover/pernikahan-ini.webp';
 import posSatpam from '../../assets/cover/pos-satpam.webp';
 import toiletPortabel from '../../assets/cover/toilet-portabel.webp';
 import ptModernCocoInternational from '../../assets/cover/pt-modern-coco-international.webp';
-import spesialisKaranganBungaIndonesia from '../../assets/cover/spesialis-karangan-bunga.webp';
+import spesialisKaranganBungaIndonesiaCover from '../../assets/cover/spesialis-karangan-bunga.webp';
+import bemodeCover from '../../assets/cover/bemode.webp';
 
 export interface TemplateData {
     id: number;
@@ -202,7 +203,14 @@ export const templates: TemplateData[] = sortTemplates([
         id: 24,
         title: "Spesialis Karangan Bunga Indonesia",
         category: "Florist & Gardening",
-        image: spesialisKaranganBungaIndonesia,
+        image: spesialisKaranganBungaIndonesiaCover,
         url: "https://spesialiskaranganbungaindonesia.com/"
+    },
+    {
+        id: 25,
+        title: "BE MODE Indonesia",
+        category: "E-Commerce",
+        image: bemodeCover,
+        url: "https://bemodeofficial.com/"
     },
 ]);
