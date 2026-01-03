@@ -57,7 +57,7 @@ export const templates: TemplateData[] = sortTemplates([
         title: "Cubicle Toilet",
         category: "Services",
         image: cubicleToiletCover,
-        url: "https://cubicletoiletid.com/"
+        url: "https://cubicletoilet.wreative.com/"
     },
     {
         id: 4,
