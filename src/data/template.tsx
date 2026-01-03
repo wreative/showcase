@@ -162,7 +162,7 @@ export const templates: TemplateData[] = sortTemplates([
         title: "Chicken Explorer",
         category: "Business",
         image: chickenExplorerCover,
-        url: "https://chickenexplorer.com"
+        url: "https://chicken-explorer.wreative.com/"
     },
     {
         id: 19,
