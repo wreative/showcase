@@ -169,7 +169,7 @@ export const templates: TemplateData[] = sortTemplates([
         title: "Kurir Pulsa",
         category: "Services",
         image: kurirPulsaCover,
-        url: "https://kurirpulsa.wreative.com"
+        url: "https://kurir-pulsa.wreative.com"
     },
     {
         id: 20,
