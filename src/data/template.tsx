@@ -19,6 +19,7 @@ import ptModernCocoInternational from '../../assets/cover/pt-modern-coco-interna
 import spesialisKaranganBungaIndonesiaCover from '../../assets/cover/spesialis-karangan-bunga.webp';
 import bemodeCover from '../../assets/cover/bemode.webp';
 import sakpattanaJawaTimurCover from '../../assets/cover/sakpattana.webp';
+import CVPutraKubotaCover from '../../assets/cover/cv-putra-kubota.webp';
 
 export interface TemplateData {
     id: number;
@@ -148,7 +149,7 @@ export const templates: TemplateData[] = sortTemplates([
         id: 16,
         title: "CV Putra Kubota",
         category: "Business",
-        image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=2000&auto=format&fit=crop",
+        image: CVPutraKubotaCover,
         url: "https://cv-putra-kubota.wreative.com"
     },
     {
