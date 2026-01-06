@@ -18,6 +18,7 @@ import toiletPortabel from '../../assets/cover/toilet-portabel.webp';
 import ptModernCocoInternational from '../../assets/cover/pt-modern-coco-international.webp';
 import spesialisKaranganBungaIndonesiaCover from '../../assets/cover/spesialis-karangan-bunga.webp';
 import bemodeCover from '../../assets/cover/bemode.webp';
+import sakpattanaJawaTimurCover from '../../assets/cover/sakpattana.webp';
 
 export interface TemplateData {
     id: number;
@@ -126,8 +127,8 @@ export const templates: TemplateData[] = sortTemplates([
         id: 13,
         title: "Sakpattana Jawa Timur",
         category: "Business",
-        image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=2000&auto=format&fit=crop",
-        url: "https://wreative.com"
+        image: sakpattanaJawaTimurCover,
+        url: "https://sakpattana.wreative.com"
     },
     {
         id: 14,
