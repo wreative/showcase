@@ -21,6 +21,7 @@ import bemodeCover from '../../assets/cover/bemode.webp';
 import sakpattanaJawaTimurCover from '../../assets/cover/sakpattana.webp';
 import CVPutraKubotaCover from '../../assets/cover/cv-putra-kubota.webp';
 import wahyuDewanagariCover from '../../assets/cover/wahyu-dewanagari.webp';
+import avisoCover from '../../assets/cover/aviso.webp';
 
 export interface TemplateData {
     id: number;
@@ -192,8 +193,8 @@ export const templates: TemplateData[] = sortTemplates([
         id: 22,
         title: "Aviso",
         category: "Services",
-        image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=2000&auto=format&fit=crop",
-        url: "https://wreative.com"
+        image: avisoCover,
+        url: "https://aviso.wreative.com"
     },
     {
         id: 23,
