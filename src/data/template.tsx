@@ -192,7 +192,7 @@ export const templates: TemplateData[] = sortTemplates([
     {
         id: 22,
         title: "Aviso",
-        category: "Services",
+        category: "Business",
         image: avisoCover,
         url: "https://aviso.wreative.com"
     },
