@@ -22,6 +22,7 @@ import sakpattanaJawaTimurCover from '../../assets/cover/sakpattana.webp';
 import CVPutraKubotaCover from '../../assets/cover/cv-putra-kubota.webp';
 import wahyuDewanagariCover from '../../assets/cover/wahyu-dewanagari.webp';
 import avisoCover from '../../assets/cover/aviso.webp';
+import lpkFurinkazanCover from '../../assets/cover/lpk-furinkazan.webp';
 
 export interface TemplateData {
     id: number;
@@ -179,8 +180,8 @@ export const templates: TemplateData[] = sortTemplates([
         id: 20,
         title: "LPK Furinkazan",
         category: "Education",
-        image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=2000&auto=format&fit=crop",
-        url: "https://wreative.com"
+        image: lpkFurinkazanCover,
+        url: "https://lpk-furinkazan.wreative.com"
     },
     {
         id: 21,
@@ -201,20 +202,20 @@ export const templates: TemplateData[] = sortTemplates([
         title: "Dzata Lombok Transport",
         category: "Services",
         image: dzataLombokTransportCover,
-        url: "https://dzatalomboktransport.com/"
+        url: "https://dzatalomboktransport.com"
     },
     {
         id: 24,
         title: "Spesialis Karangan Bunga Indonesia",
         category: "Florist & Gardening",
         image: spesialisKaranganBungaIndonesiaCover,
-        url: "https://spesialiskaranganbungaindonesia.com/"
+        url: "https://spesialiskaranganbungaindonesia.com"
     },
     {
         id: 25,
         title: "BE MODE Indonesia",
         category: "E-Commerce",
         image: bemodeCover,
-        url: "https://bemodeofficial.com/"
+        url: "https://bemodeofficial.com"
     },
 ]);
