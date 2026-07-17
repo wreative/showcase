@@ -23,199 +23,213 @@ import CVPutraKubotaCover from "../../assets/cover/cv-putra-kubota.webp";
 import wahyuDewanagariCover from "../../assets/cover/wahyu-dewanagari.webp";
 import avisoCover from "../../assets/cover/aviso.webp";
 import lpkFurinkazanCover from "../../assets/cover/lpk-furinkazan.webp";
+import robySaputraGrupCover from "../../assets/cover/roby-saputra-grup.webp";
+import sgAcademyCover from "../../assets/cover/sg-academy.webp";
+
+export enum TemplateCategory {
+  SERVICES = "Services",
+  BUSINESS = "Business",
+  EDUCATION = "Education",
+  ECOMMERCE = "E-Commerce",
+  GOVERNMENT = "Government",
+  FLORIST = "Florist & Gardening",
+}
 
 export interface TemplateData {
   id: number;
   title: string;
-  category: string;
+  category: TemplateCategory;
   image: string;
   url: string;
 }
 
-const sortTemplates = (templates: TemplateData[]): TemplateData[] => {
-  return templates.sort((a, b) => {
-    const firstItemURL = a.url.includes("wreative.com");
-    const secondItemURL = b.url.includes("wreative.com");
-    if (firstItemURL && !secondItemURL) return 1;
-    if (!firstItemURL && secondItemURL) return -1;
-    return 0;
-  });
-};
+// Domain always pushed to the end of the listing.
+const PRIMARY_DOMAIN = "wreative.com";
 
-export const templates: TemplateData[] = sortTemplates([
-  {
-    id: 1,
-    title: "Kontraktor Surabaya",
-    category: "Services",
-    image: kontraktorSurabayaCover,
-    url: "https://kontraktorsurabaya.wreative.com/",
-  },
-  {
-    id: 2,
-    title: "Wase Bumi Indonesia",
-    category: "Business",
-    image: waseBumiIndonesiaCover,
-    url: "https://wasebumiindonesia.wreative.com/",
-  },
-  {
-    id: 3,
-    title: "Cubicle Toilet",
-    category: "Services",
-    image: cubicleToiletCover,
-    url: "https://cubicletoilet.wreative.com/",
-  },
-  {
-    id: 4,
-    title: "PT. Adikarya Pesona Intinusa",
-    category: "Education",
-    image: adiKaryaPesonaCover,
-    url: "https://adikaryapesona.wreative.com/",
-  },
-  {
-    id: 5,
-    title: "Wreative Store",
-    category: "E-Commerce",
-    image: wreativeStoreCover,
-    url: "https://store.wreative.com",
-  },
-  {
-    id: 6,
-    title: "Home Baraka",
-    category: "Services",
-    image: homeBarakaCover,
-    url: "https://homebaraka.wreative.com/",
-  },
-  {
-    id: 7,
-    title: "Wreative",
-    category: "Business",
-    image: wreativeCover,
-    url: "https://wreative.com/",
-  },
-  {
-    id: 8,
-    title: "Fajar Florist",
-    category: "Florist & Gardening",
-    image: fajarFloristCover,
-    url: "https://fajarflorist.wreative.com/",
-  },
-  {
-    id: 9,
-    title: "DPU Bina Marga Kabupaten Musi",
-    category: "Government",
-    image: DPUBinaMargaMusiCover,
-    url: "https://pamusiwaras.wreative.com/",
-  },
-  {
-    id: 10,
-    title: "First Media Surabaya",
-    category: "Business",
-    image: firstMediaSurabayaCover,
-    url: "https://firstmediasurabaya.wreative.com/",
-  },
-  {
-    id: 11,
-    title: "Wahyu Dewanagari",
-    category: "Business",
-    image: wahyuDewanagariCover,
-    url: "https://wahyudewanagari.wreative.com",
-  },
-  {
-    id: 12,
-    title: "Toilet Portable",
-    category: "Services",
-    image: toiletPortabel,
-    url: "https://toilet-portabel.wreative.com",
-  },
-  {
-    id: 13,
-    title: "Sakpattana Jawa Timur",
-    category: "Business",
-    image: sakpattanaJawaTimurCover,
-    url: "https://sakpattana.wreative.com",
-  },
-  {
-    id: 14,
-    title: "Pos Satpam Surabaya",
-    category: "Services",
-    image: posSatpam,
-    url: "https://pos-satpam.wreative.com",
-  },
-  {
-    id: 15,
-    title: "PT. Modern Coco International",
-    category: "Business",
-    image: ptModernCocoInternational,
-    url: "https://pt-modern-coco-international.wreative.com/",
-  },
-  {
-    id: 16,
-    title: "CV Putra Kubota",
-    category: "Business",
-    image: CVPutraKubotaCover,
-    url: "https://cv-putra-kubota.wreative.com",
-  },
-  {
-    id: 17,
-    title: "Pernikahan Ini",
-    category: "Services",
-    image: pernikahanIni,
-    url: "https://pernikahanini.com",
-  },
-  {
-    id: 18,
-    title: "Chicken Explorer",
-    category: "Business",
-    image: chickenExplorerCover,
-    url: "https://chicken-explorer.wreative.com/",
-  },
-  {
-    id: 19,
-    title: "Kurir Pulsa",
-    category: "Services",
-    image: kurirPulsaCover,
-    url: "https://kurir-pulsa.wreative.com",
-  },
-  {
-    id: 20,
-    title: "LPK Furinkazan",
-    category: "Education",
-    image: lpkFurinkazanCover,
-    url: "https://lpk-furinkazan.wreative.com",
-  },
-  {
-    id: 21,
-    title: "CV. Panji Semesta",
-    category: "Business",
-    image: panjiSemestaCover,
-    url: "https://panji-semesta.wreative.com",
-  },
-  {
-    id: 22,
-    title: "Aviso",
-    category: "Business",
-    image: avisoCover,
-    url: "https://aviso.wreative.com",
-  },
-  {
-    id: 23,
-    title: "Dzata Lombok Transport",
-    category: "Services",
-    image: dzataLombokTransportCover,
-    url: "https://dzatalomboktransport.com",
-  },
-  {
-    id: 24,
-    title: "Spesialis Karangan Bunga Indonesia",
-    category: "Florist & Gardening",
-    image: spesialisKaranganBungaIndonesiaCover,
-    url: "https://spesialiskaranganbungaindonesia.com",
-  },
-  {
-    id: 25,
-    title: "BE MODE Indonesia",
-    category: "E-Commerce",
-    image: bemodeCover,
-    url: "https://bemodeofficial.com",
-  },
-]);
+// Named-parameter builder — keeps entries terse (tuple-length short)
+// while still catching argument-order mistakes at compile time,
+// unlike a raw positional tuple array would.
+const portfolio = (
+  title: string,
+  category: TemplateCategory,
+  image: string,
+  url: string,
+): Omit<TemplateData, "id"> => ({ title, category, image, url });
+
+const rawTemplates: Omit<TemplateData, "id">[] = [
+  portfolio(
+    "Kontraktor Surabaya",
+    TemplateCategory.SERVICES,
+    kontraktorSurabayaCover,
+    "https://kontraktorsurabaya.wreative.com/",
+  ),
+  portfolio(
+    "Wase Bumi Indonesia",
+    TemplateCategory.BUSINESS,
+    waseBumiIndonesiaCover,
+    "https://wasebumiindonesia.wreative.com/",
+  ),
+  portfolio(
+    "Cubicle Toilet",
+    TemplateCategory.SERVICES,
+    cubicleToiletCover,
+    "https://cubicletoilet.wreative.com/",
+  ),
+  portfolio(
+    "PT. Adikarya Pesona Intinusa",
+    TemplateCategory.EDUCATION,
+    adiKaryaPesonaCover,
+    "https://adikaryapesona.wreative.com/",
+  ),
+  portfolio(
+    "Wreative Store",
+    TemplateCategory.ECOMMERCE,
+    wreativeStoreCover,
+    "https://store.wreative.com",
+  ),
+  portfolio(
+    "Home Baraka",
+    TemplateCategory.SERVICES,
+    homeBarakaCover,
+    "https://homebaraka.wreative.com/",
+  ),
+  portfolio(
+    "Wreative",
+    TemplateCategory.BUSINESS,
+    wreativeCover,
+    "https://wreative.com/",
+  ),
+  portfolio(
+    "Fajar Florist",
+    TemplateCategory.FLORIST,
+    fajarFloristCover,
+    "https://fajarflorist.wreative.com/",
+  ),
+  portfolio(
+    "DPU Bina Marga Kabupaten Musi",
+    TemplateCategory.GOVERNMENT,
+    DPUBinaMargaMusiCover,
+    "https://pamusiwaras.wreative.com/",
+  ),
+  portfolio(
+    "First Media Surabaya",
+    TemplateCategory.BUSINESS,
+    firstMediaSurabayaCover,
+    "https://firstmediasurabaya.wreative.com/",
+  ),
+  portfolio(
+    "Wahyu Dewanagari",
+    TemplateCategory.BUSINESS,
+    wahyuDewanagariCover,
+    "https://wahyudewanagari.wreative.com",
+  ),
+  portfolio(
+    "Toilet Portable",
+    TemplateCategory.SERVICES,
+    toiletPortabel,
+    "https://toilet-portabel.wreative.com",
+  ),
+  portfolio(
+    "Sakpattana Jawa Timur",
+    TemplateCategory.BUSINESS,
+    sakpattanaJawaTimurCover,
+    "https://sakpattana.wreative.com",
+  ),
+  portfolio(
+    "Pos Satpam Surabaya",
+    TemplateCategory.SERVICES,
+    posSatpam,
+    "https://pos-satpam.wreative.com",
+  ),
+  portfolio(
+    "PT. Modern Coco International",
+    TemplateCategory.BUSINESS,
+    ptModernCocoInternational,
+    "https://pt-modern-coco-international.wreative.com/",
+  ),
+  portfolio(
+    "CV Putra Kubota",
+    TemplateCategory.BUSINESS,
+    CVPutraKubotaCover,
+    "https://cv-putra-kubota.wreative.com",
+  ),
+  portfolio(
+    "Pernikahan Ini",
+    TemplateCategory.SERVICES,
+    pernikahanIni,
+    "https://pernikahanini.com",
+  ),
+  portfolio(
+    "Chicken Explorer",
+    TemplateCategory.BUSINESS,
+    chickenExplorerCover,
+    "https://chicken-explorer.wreative.com/",
+  ),
+  portfolio(
+    "Kurir Pulsa",
+    TemplateCategory.SERVICES,
+    kurirPulsaCover,
+    "https://kurir-pulsa.wreative.com",
+  ),
+  portfolio(
+    "LPK Furinkazan",
+    TemplateCategory.EDUCATION,
+    lpkFurinkazanCover,
+    "https://lpk-furinkazan.wreative.com",
+  ),
+  portfolio(
+    "CV. Panji Semesta",
+    TemplateCategory.BUSINESS,
+    panjiSemestaCover,
+    "https://panji-semesta.wreative.com",
+  ),
+  portfolio(
+    "Aviso",
+    TemplateCategory.BUSINESS,
+    avisoCover,
+    "https://aviso.wreative.com",
+  ),
+  portfolio(
+    "Dzata Lombok Transport",
+    TemplateCategory.SERVICES,
+    dzataLombokTransportCover,
+    "https://dzatalomboktransport.com",
+  ),
+  portfolio(
+    "Spesialis Karangan Bunga Indonesia",
+    TemplateCategory.FLORIST,
+    spesialisKaranganBungaIndonesiaCover,
+    "https://spesialiskaranganbungaindonesia.com",
+  ),
+  portfolio(
+    "BE MODE Indonesia",
+    TemplateCategory.ECOMMERCE,
+    bemodeCover,
+    "https://bemodeofficial.com",
+  ),
+  portfolio(
+    "SG Academy",
+    TemplateCategory.EDUCATION,
+    sgAcademyCover,
+    "https://sgacademy.co.id/",
+  ),
+  portfolio(
+    "Roby Saputra Grup",
+    TemplateCategory.BUSINESS,
+    robySaputraGrupCover,
+    "https://robysaputragrup.com/",
+  ),
+];
+
+// Any wreative.com URL, including subdomains, counts as primary.
+const isPrimaryDomain = (url: string): boolean => url.includes(PRIMARY_DOMAIN);
+
+// Stable sort: primary-domain entries move to the end, others keep their order.
+const sortByPrimaryDomainLast = (entries: TemplateData[]): TemplateData[] =>
+  [...entries].sort(
+    (a, b) => Number(isPrimaryDomain(a.url)) - Number(isPrimaryDomain(b.url)),
+  );
+
+export const templates: TemplateData[] = sortByPrimaryDomainLast(
+  rawTemplates.map((entry, index) => ({ id: index + 1, ...entry })),
+);
