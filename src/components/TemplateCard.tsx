@@ -10,40 +10,44 @@ const TemplateCard: React.FC<TemplateCardProps> = ({ template }) => {
   return (
     <Link
       to={`/project/${template.id}`}
-      className="group relative overflow-hidden rounded-xl shadow-lg transition-all duration-300 hover:shadow-xl bg-card border border-border cursor-pointer block"
+      className="group relative overflow-hidden rounded-xl bg-card border border-border cursor-pointer block
+        hover:border-foreground/20 transition-colors duration-300"
     >
       <div className="aspect-[16/9] overflow-hidden">
         <img
           src={template.image}
           alt={template.title}
-          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+          className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
           loading="lazy"
         />
       </div>
-      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent">
-        <div className="absolute bottom-0 p-6 w-full">
-          <div className="flex items-center justify-between">
-            <h2 className="text-xl font-semibold text-white">
-              {template.title}
-            </h2>
-            <span className="px-3 py-1 text-sm bg-white/20 backdrop-blur-sm rounded-full text-white">
-              {template.category}
-            </span>
-          </div>
+
+      {/* Gradient overlay — subtle, only at bottom */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
+
+      {/* Title + category */}
+      <div className="absolute bottom-0 inset-x-0 p-5">
+        <div className="flex items-end justify-between gap-2">
+          <h2 className="text-lg font-semibold text-white leading-tight">
+            {template.title}
+          </h2>
+          <span className="shrink-0 px-2.5 py-0.5 text-xs font-medium rounded-full bg-white/15 text-white/90">
+            {template.category}
+          </span>
         </div>
       </div>
 
-      {/* Platform badge */}
-      <div className="absolute top-3 left-3 capitalize px-2 py-0.5 text-xs rounded-md font-medium bg-black/40 backdrop-blur-sm text-white/80">
+      {/* Platform badge — top-left */}
+      <span className="absolute top-3 left-3 px-2 py-0.5 text-[11px] font-medium rounded-md bg-black/50 text-white/70 capitalize">
         {template.platform}
-      </div>
+      </span>
 
-      {/* Media badge */}
+      {/* Media count badge — top-right, only when multi-item */}
       {template.gallery.length > 1 && (
-        <div className="absolute top-3 right-3 bg-black/40 backdrop-blur-sm rounded-lg px-2 py-0.5 text-white/70 text-xs">
-          {template.gallery.filter((i) => i.type === "image").length} images
-          {template.gallery.some((i) => i.type === "video") && " + video"}
-        </div>
+        <span className="absolute top-3 right-3 px-2 py-0.5 text-[11px] rounded-md bg-black/50 text-white/70">
+          {template.gallery.filter((i) => i.type === "image").length} img
+          {template.gallery.some((i) => i.type === "video") && " + vid"}
+        </span>
       )}
     </Link>
   );

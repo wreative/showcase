@@ -150,13 +150,13 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ items, onImageClick }) => {
 };
 
 const ZoomHint: React.FC = () => (
-  <div className="absolute top-3 right-3 bg-black/40 backdrop-blur-sm rounded-lg px-2.5 py-1 text-white/70 text-xs pointer-events-none select-none">
+  <div className="absolute top-3 right-3 bg-black/50 rounded-md px-2.5 py-1 text-white/60 text-xs pointer-events-none select-none">
     Click to zoom
   </div>
 );
 
 const VideoBadge: React.FC = () => (
-  <div className="absolute top-3 left-3 bg-black/60 backdrop-blur-sm rounded-lg px-2.5 py-1 text-white/80 text-xs pointer-events-none select-none flex items-center gap-1.5">
+  <div className="absolute top-3 left-3 bg-black/60 rounded-md px-2.5 py-1 text-white/75 text-xs pointer-events-none select-none flex items-center gap-1.5">
     <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
       <path d="M8 5v14l11-7z" />
     </svg>
