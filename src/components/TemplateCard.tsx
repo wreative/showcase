@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { TemplateData } from "../data/template";
+import type { PortfolioItem } from "@/data/portfolio";
 
 interface TemplateCardProps {
-  template: TemplateData;
+  template: PortfolioItem;
 }
 
 const TemplateCard: React.FC<TemplateCardProps> = ({ template }) => {

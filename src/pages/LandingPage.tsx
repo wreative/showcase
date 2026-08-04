@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useCallback } from "react";
-import { templates, type Platform } from "@/data/template";
+import { portfolios, type Platform } from "@/data/portfolio";
 import Header from "@/components/Header";
 import TemplateGrid from "@/components/TemplateGrid";
 import Footer from "@/components/Footer";
@@ -7,9 +7,9 @@ import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 
 const ITEMS_PER_PAGE = 8;
 
-const categories: string[] = [
+const categories = [
   "All",
-  ...new Set(templates.map((t) => t.category)),
+  ...new Set(portfolios.map((t) => t.category)),
 ];
 
 const LandingPage: React.FC = () => {
@@ -19,7 +19,7 @@ const LandingPage: React.FC = () => {
   const [visibleItems, setVisibleItems] = useState(ITEMS_PER_PAGE);
   const [loading, setLoading] = useState(false);
 
-  const filtered = templates.filter((t) => {
+  const filtered = portfolios.filter((t) => {
     const matchesSearch = t.title.toLowerCase().includes(searchQuery.toLowerCase());
     const matchesPlatform = selectedPlatform === "all" || t.platform === selectedPlatform;
     const matchesCategory = selectedCategory === "All" || t.category === selectedCategory;
@@ -77,7 +77,6 @@ const LandingPage: React.FC = () => {
           </AlertDescription>
         </Alert>
 
-        {/* Platform subtitle */}
         {selectedPlatform !== "all" && (
           <p className="text-sm text-muted-foreground mb-4 capitalize">
             Showing {selectedPlatform} projects

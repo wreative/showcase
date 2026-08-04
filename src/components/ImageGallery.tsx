@@ -1,5 +1,5 @@
 import React, { useRef, useState, useCallback, useMemo } from "react";
-import type { GalleryItem } from "@/data/template";
+import type { GalleryItem } from "@/data/portfolio";
 
 interface ImageGalleryProps {
   items: GalleryItem[];
@@ -20,8 +20,6 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ items, onImageClick }) => {
   const didDrag = useRef(false);
 
   const sorted = useMemo(() => sortVideosLast(items), [items]);
-
-  // Count image-type items
   const imageCount = useMemo(
     () => sorted.filter((i) => i.type === "image").length,
     [sorted],
@@ -29,7 +27,6 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ items, onImageClick }) => {
 
   const isMulti = sorted.length > 1;
 
-  // -- Drag handlers --
   const handleMouseDown = (e: React.MouseEvent) => {
     if (!isMulti || !scrollRef.current) return;
     setIsDragging(true);
@@ -57,7 +54,7 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ items, onImageClick }) => {
 
   if (sorted.length === 0) return null;
 
-  // -- Single item: static display --
+  // Single item — static display
   if (!isMulti) {
     const item = sorted[0];
     return (
@@ -90,7 +87,7 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ items, onImageClick }) => {
     );
   }
 
-  // -- Multi-item: scrollable gallery --
+  // Multi-item — scrollable gallery
   return (
     <div className="relative">
       <div
@@ -126,14 +123,11 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ items, onImageClick }) => {
                 />
               )}
             </div>
-            {item.type === "video" && (
-              <VideoBadge />
-            )}
+            {item.type === "video" && <VideoBadge />}
           </div>
         ))}
       </div>
 
-      {/* Dots */}
       <div className="flex justify-center gap-1.5 mt-3">
         {sorted.map((_, i) => (
           <button
@@ -154,7 +148,6 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ items, onImageClick }) => {
         ))}
       </div>
 
-      {/* Zoom hint — only if there are images */}
       {imageCount > 0 && (
         <div className="absolute top-3 right-3 bg-black/40 backdrop-blur-sm rounded-lg px-2.5 py-1 text-white/70 text-xs pointer-events-none">
           Click image to zoom

@@ -4,7 +4,7 @@ import ThemeToggle from "./ThemeToggle";
 import BrandLogo from "./BrandLogo";
 import React from "react";
 import { Link } from "react-router-dom";
-import type { Platform } from "@/data/template";
+import type { Platform } from "@/data/portfolio";
 
 interface HeaderProps {
   searchQuery: string;
@@ -44,7 +44,6 @@ const Header: React.FC<HeaderProps> = ({
           <ThemeToggle />
         </div>
 
-        {/* Platform tabs */}
         <div className="flex gap-1 mb-3">
           {tabs.map((tab) => (
             <button
@@ -62,10 +61,7 @@ const Header: React.FC<HeaderProps> = ({
         </div>
 
         <div className="flex gap-2">
-          <SearchBar
-            searchQuery={searchQuery}
-            setSearchQuery={setSearchQuery}
-          />
+          <SearchBar searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
           <CategoryFilter
             selectedCategory={selectedCategory}
             setSelectedCategory={setSelectedCategory}

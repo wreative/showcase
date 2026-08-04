@@ -1,10 +1,10 @@
 import React from "react";
 import TemplateCard from "./TemplateCard";
 import LoadingIndicator from "./LoadingIndicator";
-import { TemplateData } from "@/data/template";
+import type { PortfolioItem } from "@/data/portfolio";
 
 interface TemplateGridProps {
-  templates: TemplateData[];
+  templates: PortfolioItem[];
   loading: boolean;
 }
 
