@@ -33,6 +33,11 @@ const TemplateCard: React.FC<TemplateCardProps> = ({ template }) => {
         </div>
       </div>
 
+      {/* Platform badge */}
+      <div className="absolute top-3 left-3 capitalize px-2 py-0.5 text-xs rounded-md font-medium bg-black/40 backdrop-blur-sm text-white/80">
+        {template.platform}
+      </div>
+
       {/* Media badge */}
       {template.gallery.length > 1 && (
         <div className="absolute top-3 right-3 bg-black/40 backdrop-blur-sm rounded-lg px-2 py-0.5 text-white/70 text-xs">
