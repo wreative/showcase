@@ -1,7 +1,7 @@
 import React from "react";
 import TemplateCard from "./TemplateCard";
 import LoadingIndicator from "./LoadingIndicator";
-import { TemplateData } from "@/data/template.tsx";
+import { TemplateData } from "@/data/template";
 
 interface TemplateGridProps {
   templates: TemplateData[];
@@ -21,8 +21,8 @@ const TemplateGrid: React.FC<TemplateGridProps> = ({ templates, loading }) => {
 
       {templates.length === 0 && (
         <div className="text-center py-12">
-          <p className="text-lg text-gray-600 dark:text-gray-400">
-            Not found matching your criteria.
+          <p className="text-lg text-muted-foreground">
+            Nothing found matching your criteria.
           </p>
         </div>
       )}

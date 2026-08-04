@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from "../../assets/wreative.png";
+import BrandLogo from "./BrandLogo";
 
 interface FooterProps {
   brandName: string;
@@ -7,18 +7,17 @@ interface FooterProps {
 
 const Footer: React.FC<FooterProps> = ({ brandName }) => {
   return (
-    <footer className="mt-auto border-t border-gray-200 dark:border-gray-800 bg-white/50 dark:bg-gray-900/50 backdrop-blur-sm">
-      <div className="w-full mx-auto px-4 py-6">
+    <footer className="mt-auto border-t border-border bg-muted/50">
+      <div className="max-w-7xl mx-auto px-4 py-6">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-          <div className="flex items-center space-x-2">
-            {/* Logo */}
-            <img src={Logo} alt="Logo" className="h-6 w-9" />
-            <span className="text-lg font-semibold text-primary">
+          <div className="flex items-center gap-2">
+            <BrandLogo className="h-5 w-7" />
+            <span className="text-sm font-medium text-foreground/70">
               {brandName}
             </span>
           </div>
-          <div className="text-sm text-gray-500 dark:text-gray-400">
-            © {new Date().getFullYear()} {brandName}. All rights reserved.
+          <div className="text-sm text-muted-foreground">
+            &copy; {new Date().getFullYear()} {brandName}. All rights reserved.
           </div>
         </div>
       </div>

@@ -20,7 +20,7 @@ const CategoryFilter: React.FC<CategoryFilterProps> = ({
 }) => {
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger className="flex items-center gap-1 px-4 py-2 rounded-lg bg-primary text-primary-foreground hover:bg-primary/90">
+      <DropdownMenuTrigger className="flex items-center gap-1 px-4 py-2 rounded-lg bg-primary text-primary-foreground hover:opacity-90 transition-colors text-sm">
         {selectedCategory}
         <ChevronDown className="h-4 w-4" />
       </DropdownMenuTrigger>
@@ -29,7 +29,11 @@ const CategoryFilter: React.FC<CategoryFilterProps> = ({
           <DropdownMenuItem
             key={category}
             onClick={() => setSelectedCategory(category)}
-            className={selectedCategory === category ? "bg-secondary" : ""}
+            className={
+              selectedCategory === category
+                ? "bg-accent text-accent-foreground"
+                : ""
+            }
           >
             {category}
           </DropdownMenuItem>

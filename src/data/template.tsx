@@ -26,6 +26,8 @@ import lpkFurinkazanCover from "../../assets/cover/lpk-furinkazan.webp";
 import robySaputraGrupCover from "../../assets/cover/roby-saputra-grup.webp";
 import sgAcademyCover from "../../assets/cover/sg-academy.webp";
 
+export type Platform = "website" | "mobile";
+
 export enum TemplateCategory {
   SERVICES = "Services",
   BUSINESS = "Business",
@@ -35,196 +37,281 @@ export enum TemplateCategory {
   FLORIST = "Florist & Gardening",
 }
 
+export interface GalleryImage {
+  type: "image";
+  src: string;
+}
+
+export interface GalleryVideo {
+  type: "video";
+  src: string;
+  poster?: string;
+}
+
+export type GalleryItem = GalleryImage | GalleryVideo;
+
 export interface TemplateData {
   id: number;
   title: string;
+  platform: Platform;
   category: TemplateCategory;
   image: string;
   url: string;
+  description: string;
+  tags: string[];
+  gallery: GalleryItem[];
 }
 
-// Domain always pushed to the end of the listing.
 const PRIMARY_DOMAIN = "wreative.com";
 
-// Named-parameter builder — keeps entries terse (tuple-length short)
-// while still catching argument-order mistakes at compile time,
-// unlike a raw positional tuple array would.
+const img = (src: string): GalleryImage => ({ type: "image", src });
+const vid = (src: string, poster?: string): GalleryVideo => ({
+  type: "video",
+  src,
+  poster,
+});
+
 const portfolio = (
   title: string,
+  platform: Platform,
   category: TemplateCategory,
   image: string,
   url: string,
-): Omit<TemplateData, "id"> => ({ title, category, image, url });
+  description: string,
+  tags: string[],
+  gallery: GalleryItem[] = [],
+): Omit<TemplateData, "id"> => ({
+  title,
+  platform,
+  category,
+  image,
+  url,
+  description,
+  tags,
+  gallery: gallery.length > 0 ? gallery : [img(image)],
+});
+
+const demoVideo = "https://www.w3schools.com/html/mov_bbb.mp4";
+
+// --- Example multi-image galleries ---
+const wreativeGallery: GalleryItem[] = [
+  img(wreativeCover),
+  img(wreativeStoreCover),
+  img(homeBarakaCover),
+  img(avisoCover),
+  vid(demoVideo, wreativeCover),
+];
+
+const fajarFloristGallery: GalleryItem[] = [
+  img(fajarFloristCover),
+  img(spesialisKaranganBungaIndonesiaCover),
+  img(bemodeCover),
+];
+
+const wreativeStoreGallery: GalleryItem[] = [
+  img(wreativeStoreCover),
+  img(chickenExplorerCover),
+  img(kurirPulsaCover),
+  vid(demoVideo, wreativeStoreCover),
+];
 
 const rawTemplates: Omit<TemplateData, "id">[] = [
   portfolio(
-    "Kontraktor Surabaya",
-    TemplateCategory.SERVICES,
-    kontraktorSurabayaCover,
+    "Kontraktor Surabaya", "website",
+    TemplateCategory.SERVICES, kontraktorSurabayaCover,
     "https://kontraktorsurabaya.wreative.com/",
+    "Professional contracting services website for Surabaya region. Clean layout showcasing construction services, project portfolio, and client testimonials with easy contact integration.",
+    ["WordPress", "Elementor", "SEO"],
   ),
   portfolio(
-    "Wase Bumi Indonesia",
-    TemplateCategory.BUSINESS,
-    waseBumiIndonesiaCover,
+    "Wase Bumi Indonesia", "website",
+    TemplateCategory.BUSINESS, waseBumiIndonesiaCover,
     "https://wasebumiindonesia.wreative.com/",
+    "Corporate business website for a natural resource company. Features company profile, service offerings, and a modern design that reflects the brand's commitment to sustainability.",
+    ["WordPress", "Custom Theme", "ACF"],
   ),
   portfolio(
-    "Cubicle Toilet",
-    TemplateCategory.SERVICES,
-    cubicleToiletCover,
+    "Cubicle Toilet", "website",
+    TemplateCategory.SERVICES, cubicleToiletCover,
     "https://cubicletoilet.wreative.com/",
+    "Specialized cubicle and toilet partition services website. Product catalog with detailed specifications, project gallery, and inquiry system for commercial clients.",
+    ["WordPress", "WooCommerce", "Elementor"],
   ),
   portfolio(
-    "PT. Adikarya Pesona Intinusa",
-    TemplateCategory.EDUCATION,
-    adiKaryaPesonaCover,
+    "PT. Adikarya Pesona Intinusa", "website",
+    TemplateCategory.EDUCATION, adiKaryaPesonaCover,
     "https://adikaryapesona.wreative.com/",
+    "Educational institution website with modern design. Includes course listings, faculty profiles, online registration, and student portal integration.",
+    ["WordPress", "LMS Integration", "Custom Theme"],
   ),
   portfolio(
-    "Wreative Store",
-    TemplateCategory.ECOMMERCE,
-    wreativeStoreCover,
+    "Wreative Store", "website",
+    TemplateCategory.ECOMMERCE, wreativeStoreCover,
     "https://store.wreative.com",
+    "E-commerce storefront for digital products and services. Clean product layouts, smooth checkout experience, and integrated payment gateway. Features a product walkthrough video.",
+    ["WordPress", "WooCommerce", "Payment Gateway"],
+    wreativeStoreGallery,
   ),
   portfolio(
-    "Home Baraka",
-    TemplateCategory.SERVICES,
-    homeBarakaCover,
+    "Home Baraka", "website",
+    TemplateCategory.SERVICES, homeBarakaCover,
     "https://homebaraka.wreative.com/",
+    "Property and home services platform. Features property listings, service bookings, and an intuitive search interface for potential buyers and renters.",
+    ["WordPress", "Custom Post Types", "SEO"],
   ),
   portfolio(
-    "Wreative",
-    TemplateCategory.BUSINESS,
-    wreativeCover,
+    "Wreative", "website",
+    TemplateCategory.BUSINESS, wreativeCover,
     "https://wreative.com/",
+    "Main brand website for Wreative — a creative digital agency. Showcases the agency's portfolio, services, and team with a bold, modern design. Includes a brand overview video.",
+    ["WordPress", "Custom Theme", "GSAP"],
+    wreativeGallery,
   ),
   portfolio(
-    "Fajar Florist",
-    TemplateCategory.FLORIST,
-    fajarFloristCover,
+    "Fajar Florist", "website",
+    TemplateCategory.FLORIST, fajarFloristCover,
     "https://fajarflorist.wreative.com/",
+    "Online florist and flower arrangement business. Beautiful product displays, seasonal collections, and easy ordering system for delivery across the city.",
+    ["WordPress", "WooCommerce", "Custom Theme"],
+    fajarFloristGallery,
   ),
   portfolio(
-    "DPU Bina Marga Kabupaten Musi",
-    TemplateCategory.GOVERNMENT,
-    DPUBinaMargaMusiCover,
-    "https://pamusiwaras.wreative.com/",
-  ),
-  portfolio(
-    "First Media Surabaya",
-    TemplateCategory.BUSINESS,
-    firstMediaSurabayaCover,
+    "First Media Surabaya", "website",
+    TemplateCategory.SERVICES, firstMediaSurabayaCover,
     "https://firstmediasurabaya.wreative.com/",
+    "Local internet service provider website for Surabaya. Service plans comparison, coverage area maps, and customer support portal.",
+    ["WordPress", "Custom Forms", "SEO"],
   ),
   portfolio(
-    "Wahyu Dewanagari",
-    TemplateCategory.BUSINESS,
-    wahyuDewanagariCover,
-    "https://wahyudewanagari.wreative.com",
+    "DPU Bina Marga Musi", "website",
+    TemplateCategory.GOVERNMENT, DPUBinaMargaMusiCover,
+    "https://dpubinamargamusi.wreative.com/",
+    "Government public works department website. Features project transparency reports, public service announcements, and infrastructure development updates.",
+    ["WordPress", "Government Theme", "Accessibility"],
   ),
   portfolio(
-    "Toilet Portable",
-    TemplateCategory.SERVICES,
-    toiletPortabel,
-    "https://toilet-portabel.wreative.com",
+    "Chicken Explorer", "website",
+    TemplateCategory.ECOMMERCE, chickenExplorerCover,
+    "https://chickenexplorer.wreative.com/",
+    "Food and culinary brand e-commerce site. Menu showcase, online ordering system, and location finder for multiple restaurant branches.",
+    ["WordPress", "WooCommerce", "Maps Integration"],
   ),
   portfolio(
-    "Sakpattana Jawa Timur",
-    TemplateCategory.BUSINESS,
-    sakpattanaJawaTimurCover,
-    "https://sakpattana.wreative.com",
+    "Kurir Pulsa", "website",
+    TemplateCategory.ECOMMERCE, kurirPulsaCover,
+    "https://kurirpulsa.wreative.com/",
+    "Digital products and top-up service platform. Fast transaction processing, user dashboard, and automated order fulfillment system.",
+    ["WordPress", "API Integration", "WooCommerce"],
   ),
   portfolio(
-    "Pos Satpam Surabaya",
-    TemplateCategory.SERVICES,
-    posSatpam,
-    "https://pos-satpam.wreative.com",
+    "Panji Semesta", "website",
+    TemplateCategory.BUSINESS, panjiSemestaCover,
+    "https://panjisemesta.wreative.com/",
+    "General trading and business company profile. Modern corporate design with service overview, partner network, and business inquiry forms.",
+    ["WordPress", "Corporate Theme", "Contact Forms"],
   ),
   portfolio(
-    "PT. Modern Coco International",
-    TemplateCategory.BUSINESS,
-    ptModernCocoInternational,
-    "https://pt-modern-coco-international.wreative.com/",
+    "Dzata Lombok Transport", "website",
+    TemplateCategory.SERVICES, dzataLombokTransportCover,
+    "https://dzatalomboktransport.wreative.com/",
+    "Transportation and travel services in Lombok. Booking system, fleet showcase, tour packages, and customer review integration.",
+    ["WordPress", "Booking System", "SEO"],
   ),
   portfolio(
-    "CV Putra Kubota",
-    TemplateCategory.BUSINESS,
-    CVPutraKubotaCover,
-    "https://cv-putra-kubota.wreative.com",
+    "Pernikahan Ini", "website",
+    TemplateCategory.SERVICES, pernikahanIni,
+    "https://pernikahanini.wreative.com/",
+    "Wedding services and planning platform. Vendor directories, wedding packages, gallery showcase, and planning tools for couples.",
+    ["WordPress", "Custom Directory", "Forms"],
   ),
   portfolio(
-    "Pernikahan Ini",
-    TemplateCategory.SERVICES,
-    pernikahanIni,
-    "https://pernikahanini.com",
+    "Pos Satpam", "website",
+    TemplateCategory.SERVICES, posSatpam,
+    "https://possatpam.wreative.com/",
+    "Security guard post and equipment supplier. Product catalog with specifications, project references, and quotation request system.",
+    ["WordPress", "WooCommerce", "Catalog Theme"],
   ),
   portfolio(
-    "Chicken Explorer",
-    TemplateCategory.BUSINESS,
-    chickenExplorerCover,
-    "https://chicken-explorer.wreative.com/",
+    "Toilet Portabel", "website",
+    TemplateCategory.SERVICES, toiletPortabel,
+    "https://toiletportabel.wreative.com/",
+    "Portable toilet rental and services. Product listings with pricing, event booking calendar, and service area information.",
+    ["WordPress", "Booking Calendar", "SEO"],
   ),
   portfolio(
-    "Kurir Pulsa",
-    TemplateCategory.SERVICES,
-    kurirPulsaCover,
-    "https://kurir-pulsa.wreative.com",
+    "PT Modern Coco International", "website",
+    TemplateCategory.BUSINESS, ptModernCocoInternational,
+    "https://ptmoderncocointernational.wreative.com/",
+    "International trading company corporate website. Global business profile, product sourcing information, and international partner network.",
+    ["WordPress", "Multilingual", "Corporate Theme"],
   ),
   portfolio(
-    "LPK Furinkazan",
-    TemplateCategory.EDUCATION,
-    lpkFurinkazanCover,
-    "https://lpk-furinkazan.wreative.com",
-  ),
-  portfolio(
-    "CV. Panji Semesta",
-    TemplateCategory.BUSINESS,
-    panjiSemestaCover,
-    "https://panji-semesta.wreative.com",
-  ),
-  portfolio(
-    "Aviso",
-    TemplateCategory.BUSINESS,
-    avisoCover,
-    "https://aviso.wreative.com",
-  ),
-  portfolio(
-    "Dzata Lombok Transport",
-    TemplateCategory.SERVICES,
-    dzataLombokTransportCover,
-    "https://dzatalomboktransport.com",
-  ),
-  portfolio(
-    "Spesialis Karangan Bunga Indonesia",
-    TemplateCategory.FLORIST,
-    spesialisKaranganBungaIndonesiaCover,
+    "Spesialis Karangan Bunga Indonesia", "website",
+    TemplateCategory.FLORIST, spesialisKaranganBungaIndonesiaCover,
     "https://spesialiskaranganbungaindonesia.com",
+    "Specialist flower arrangement and bouquet service. Stunning product galleries, occasion-based collections, and nationwide delivery information.",
+    ["WordPress", "WooCommerce", "Custom Theme"],
   ),
   portfolio(
-    "BE MODE Indonesia",
-    TemplateCategory.ECOMMERCE,
-    bemodeCover,
+    "BE MODE Indonesia", "website",
+    TemplateCategory.ECOMMERCE, bemodeCover,
     "https://bemodeofficial.com",
+    "Fashion and lifestyle e-commerce brand. Trendy product displays, lookbook galleries, size guides, and seamless checkout flow.",
+    ["WordPress", "WooCommerce", "Fashion Theme"],
   ),
   portfolio(
-    "SG Academy",
-    TemplateCategory.EDUCATION,
-    sgAcademyCover,
+    "SG Academy", "website",
+    TemplateCategory.EDUCATION, sgAcademyCover,
     "https://sgacademy.co.id/",
+    "Professional training academy website. Course catalog, instructor profiles, online enrollment, and learning management system integration.",
+    ["WordPress", "LMS", "Registration System"],
   ),
   portfolio(
-    "Roby Saputra Grup",
-    TemplateCategory.BUSINESS,
-    robySaputraGrupCover,
+    "Roby Saputra Grup", "website",
+    TemplateCategory.BUSINESS, robySaputraGrupCover,
     "https://robysaputragrup.com/",
+    "Business group holding company profile. Multi-division overview, leadership team, and corporate achievements showcase.",
+    ["WordPress", "Corporate Theme", "Multi-Site"],
+  ),
+  portfolio(
+    "Sakpattana Jawa Timur", "website",
+    TemplateCategory.BUSINESS, sakpattanaJawaTimurCover,
+    "https://sakpattanajawatimur.wreative.com/",
+    "Regional business branch website for East Java. Local services, regional news, and community engagement features.",
+    ["WordPress", "Regional Theme", "SEO"],
+  ),
+  portfolio(
+    "CV Putra Kubota", "website",
+    TemplateCategory.BUSINESS, CVPutraKubotaCover,
+    "https://cvputrakubota.wreative.com/",
+    "Agricultural equipment and machinery dealer. Product catalog with specs, spare parts ordering, and service center locator.",
+    ["WordPress", "Product Catalog", "Contact Forms"],
+  ),
+  portfolio(
+    "Wahyu Dewanagari", "website",
+    TemplateCategory.BUSINESS, wahyuDewanagariCover,
+    "https://wahyudewanagari.wreative.com/",
+    "Cultural and arts foundation website. Event calendar, gallery of cultural performances, and community program information.",
+    ["WordPress", "Events Calendar", "Gallery"],
+  ),
+  portfolio(
+    "Aviso", "website",
+    TemplateCategory.BUSINESS, avisoCover,
+    "https://aviso.wreative.com/",
+    "Business consulting and advisory services. Service packages, consultant profiles, case studies, and client success stories.",
+    ["WordPress", "Consulting Theme", "Case Studies"],
+  ),
+  portfolio(
+    "LPK Furinkazan", "website",
+    TemplateCategory.EDUCATION, lpkFurinkazanCover,
+    "https://lpkfurinkazan.wreative.com/",
+    "Japanese language and culture training institute. Course levels, instructor credentials, student testimonials, and Japan placement program information.",
+    ["WordPress", "LMS", "Registration Forms"],
   ),
 ];
 
-// Any wreative.com URL, including subdomains, counts as primary.
 const isPrimaryDomain = (url: string): boolean => url.includes(PRIMARY_DOMAIN);
 
-// Stable sort: primary-domain entries move to the end, others keep their order.
 const sortByPrimaryDomainLast = (entries: TemplateData[]): TemplateData[] =>
   [...entries].sort(
     (a, b) => Number(isPrimaryDomain(a.url)) - Number(isPrimaryDomain(b.url)),

@@ -1,33 +1,22 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { TemplateData } from "../data/template";
 
 interface TemplateCardProps {
   template: TemplateData;
 }
 
-const getTrackedUrl = (url: string) => {
-  try {
-    const u = new URL(url);
-    u.searchParams.set("utm_source", "showcase");
-    return u.toString();
-  } catch {
-    return url;
-  }
-};
-
 const TemplateCard: React.FC<TemplateCardProps> = ({ template }) => {
   return (
-    <a
-      href={getTrackedUrl(template.url)}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="group relative overflow-hidden rounded-xl shadow-lg transition-all duration-300 hover:shadow-xl bg-white dark:bg-gray-800 cursor-pointer"
+    <Link
+      to={`/project/${template.id}`}
+      className="group relative overflow-hidden rounded-xl shadow-lg transition-all duration-300 hover:shadow-xl bg-card border border-border cursor-pointer block"
     >
       <div className="aspect-[16/9] overflow-hidden">
         <img
           src={template.image}
           alt={template.title}
-          className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110"
+          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
           loading="lazy"
         />
       </div>
@@ -37,13 +26,21 @@ const TemplateCard: React.FC<TemplateCardProps> = ({ template }) => {
             <h2 className="text-xl font-semibold text-white">
               {template.title}
             </h2>
-            <span className="px-3 py-1 text-sm bg-primary/20 backdrop-blur-sm rounded-full text-white">
+            <span className="px-3 py-1 text-sm bg-white/20 backdrop-blur-sm rounded-full text-white">
               {template.category}
             </span>
           </div>
         </div>
       </div>
-    </a>
+
+      {/* Media badge */}
+      {template.gallery.length > 1 && (
+        <div className="absolute top-3 right-3 bg-black/40 backdrop-blur-sm rounded-lg px-2 py-0.5 text-white/70 text-xs">
+          {template.gallery.filter((i) => i.type === "image").length} images
+          {template.gallery.some((i) => i.type === "video") && " + video"}
+        </div>
+      )}
+    </Link>
   );
 };
 
