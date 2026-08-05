@@ -1,13 +1,13 @@
-import { readFileSync, writeFileSync } from "node:fs";
-import { resolve } from "node:path";
+import { readFileSync, writeFileSync } from 'node:fs';
+import { resolve } from 'node:path';
 
-const BASE_URL = "https://showcase.wreative.com";
+const BASE_URL = 'https://showcase.wreative.com';
 
 const toSlug = (title: string): string =>
   title
     .toLowerCase()
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-+|-+$/g, "");
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
 
 interface ParsedEntry {
   title: string;
@@ -23,7 +23,7 @@ function findEntryBodies(content: string): string[] {
   const bodies: string[] = [];
   let i = 0;
   while (i < content.length) {
-    const start = content.indexOf("entry(", i);
+    const start = content.indexOf('entry(', i);
     if (start === -1) break;
     const startDepth = 0;
     let depth = 0;
@@ -32,12 +32,12 @@ function findEntryBodies(content: string): string[] {
     let j = start + 5;
     for (; j < content.length; j++) {
       const ch = content[j];
-      const prev = j > 0 ? content[j - 1] : "";
-      if (ch === '"' && prev !== "\\") inDq = !inDq;
-      else if (!inDq && ch === "'" && prev !== "\\") inSq = !inSq;
+      const prev = j > 0 ? content[j - 1] : '';
+      if (ch === '"' && prev !== '\\') inDq = !inDq;
+      else if (!inDq && ch === "'" && prev !== '\\') inSq = !inSq;
       else if (!inDq && !inSq) {
-        if (ch === "(") depth++;
-        else if (ch === ")") {
+        if (ch === '(') depth++;
+        else if (ch === ')') {
           depth--;
           if (depth === startDepth) break;
         }
@@ -68,7 +68,7 @@ function parseEntry(body: string): ParsedEntry | null {
   return {
     title: strings[0],
     platform: strings[1],
-    category: "",
+    category: '',
     url: strings[2],
     description: strings[3],
     tags,
@@ -80,18 +80,18 @@ function extractStrings(text: string): string[] {
   const regex = /"((?:[^"\\]|\\.)*)"/g;
   let m: RegExpExecArray | null;
   while ((m = regex.exec(text)) !== null) {
-    strings.push(m[1].replace(/\\"/g, '"').replace(/\\n/g, "\n"));
+    strings.push(m[1].replace(/\\"/g, '"').replace(/\\n/g, '\n'));
   }
   return strings;
 }
 
 // -- Main --
 
-const portfolioDir = resolve(import.meta.dirname, "../src/data/portfolio");
+const portfolioDir = resolve(import.meta.dirname, '../src/data/portfolio');
 const entries: ParsedEntry[] = [];
 
-for (const name of ["websites.ts", "mobiles.ts"]) {
-  const content = readFileSync(resolve(portfolioDir, name), "utf-8");
+for (const name of ['websites.ts', 'mobiles.ts']) {
+  const content = readFileSync(resolve(portfolioDir, name), 'utf-8');
   const bodies = findEntryBodies(content);
   for (const body of bodies) {
     const parsed = parseEntry(body);
@@ -104,14 +104,14 @@ console.log(`Found ${entries.length} portfolio entries`);
 // --- Sitemap ---
 
 const sitemapUrls: { loc: string; changefreq: string; priority: string }[] = [
-  { loc: `${BASE_URL}/`, changefreq: "weekly", priority: "1.0" },
+  { loc: `${BASE_URL}/`, changefreq: 'weekly', priority: '1.0' },
 ];
 
 for (const entry of entries) {
   sitemapUrls.push({
     loc: `${BASE_URL}/project/${toSlug(entry.title)}`,
-    changefreq: "monthly",
-    priority: "0.8",
+    changefreq: 'monthly',
+    priority: '0.8',
   });
 }
 
@@ -123,59 +123,57 @@ ${sitemapUrls
     <loc>${u.loc}</loc>
     <changefreq>${u.changefreq}</changefreq>
     <priority>${u.priority}</priority>
-  </url>`,
+  </url>`
   )
-  .join("\n")}
+  .join('\n')}
 </urlset>
 `;
 
-const sitemapPath = resolve(import.meta.dirname, "../public/sitemap.xml");
+const sitemapPath = resolve(import.meta.dirname, '../public/sitemap.xml');
 writeFileSync(sitemapPath, sitemap);
 console.log(`Generated ${sitemapPath} with ${sitemapUrls.length} URLs`);
 
 // --- llms.txt ---
 
-const websites = entries.filter((e) => e.platform === "website");
-const mobiles = entries.filter((e) => e.platform === "mobile");
+const websites = entries.filter((e) => e.platform === 'website');
+const mobiles = entries.filter((e) => e.platform === 'mobile');
 
 const llmsLines: string[] = [
-  "# Wreative Showcase",
-  "",
-  "> Portfolio of website and mobile application projects by Wreative creative agency.",
-  "> Author: Wreative | Location: Surabaya, Indonesia",
-  "",
+  '# Wreative Showcase',
+  '',
+  '> Portfolio of website and mobile application projects by Wreative creative agency.',
+  '> Author: Wreative | Location: Surabaya, Indonesia',
+  '',
   `Total: ${entries.length} projects (${websites.length} websites, ${mobiles.length} mobile apps)`,
-  "",
-  "## Websites",
-  "",
+  '',
+  '## Websites',
+  '',
 ];
 
 websites.forEach((e, i) => {
   llmsLines.push(`### ${i + 1}. ${e.title}`);
   llmsLines.push(`- **Platform:** Website`);
   llmsLines.push(`- **URL:** [${e.url}](${e.url})`);
-  llmsLines.push(`- **Tech:** ${e.tags.join(", ")}`);
+  llmsLines.push(`- **Tech:** ${e.tags.join(', ')}`);
   llmsLines.push(`- **Description:** ${e.description}`);
-  llmsLines.push("");
+  llmsLines.push('');
 });
 
-llmsLines.push("## Mobile Apps", "");
+llmsLines.push('## Mobile Apps', '');
 
 mobiles.forEach((e, i) => {
   llmsLines.push(`### ${i + 1}. ${e.title}`);
   llmsLines.push(`- **Platform:** Mobile App`);
   llmsLines.push(`- **URL:** [${e.url}](${e.url})`);
-  llmsLines.push(`- **Tech:** ${e.tags.join(", ")}`);
+  llmsLines.push(`- **Tech:** ${e.tags.join(', ')}`);
   llmsLines.push(`- **Description:** ${e.description}`);
-  llmsLines.push("");
+  llmsLines.push('');
 });
 
-llmsLines.push("---");
-llmsLines.push(
-  "This llms.txt follows the [llms.txt specification](https://llmstxt.org/).",
-);
-llmsLines.push("");
+llmsLines.push('---');
+llmsLines.push('This llms.txt follows the [llms.txt specification](https://llmstxt.org/).');
+llmsLines.push('');
 
-const llmsPath = resolve(import.meta.dirname, "../public/llms.txt");
-writeFileSync(llmsPath, llmsLines.join("\n"));
+const llmsPath = resolve(import.meta.dirname, '../public/llms.txt');
+writeFileSync(llmsPath, llmsLines.join('\n'));
 console.log(`Generated ${llmsPath} with ${entries.length} projects`);

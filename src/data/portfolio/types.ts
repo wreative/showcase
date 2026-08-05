@@ -1,21 +1,21 @@
-export type Platform = "website" | "mobile";
+export type Platform = 'website' | 'mobile';
 
 export enum PortfolioCategory {
-  SERVICES = "Services",
-  BUSINESS = "Business",
-  EDUCATION = "Education",
-  ECOMMERCE = "E-Commerce",
-  GOVERNMENT = "Government",
-  FLORIST = "Florist & Gardening",
+  SERVICES = 'Services',
+  BUSINESS = 'Business',
+  EDUCATION = 'Education',
+  ECOMMERCE = 'E-Commerce',
+  GOVERNMENT = 'Government',
+  FLORIST = 'Florist & Gardening',
 }
 
 export interface GalleryImage {
-  type: "image";
+  type: 'image';
   src: string;
 }
 
 export interface GalleryVideo {
-  type: "video";
+  type: 'video';
   src: string;
   poster?: string;
 }
@@ -38,15 +38,15 @@ export interface PortfolioItem {
 export const toSlug = (title: string): string =>
   title
     .toLowerCase()
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-+|-+$/g, "");
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
 
 // -- Helpers --
 
-export const img = (src: string): GalleryImage => ({ type: "image", src });
+export const img = (src: string): GalleryImage => ({ type: 'image', src });
 
 export const vid = (src: string, poster?: string): GalleryVideo => ({
-  type: "video",
+  type: 'video',
   src,
   poster,
 });
@@ -59,8 +59,8 @@ export const entry = (
   url: string,
   description: string,
   tags: string[],
-  gallery: GalleryItem[] = [],
-): Omit<PortfolioItem, "id" | "slug"> => ({
+  gallery: GalleryItem[] = []
+): Omit<PortfolioItem, 'id' | 'slug'> => ({
   title,
   platform,
   category,
@@ -72,14 +72,9 @@ export const entry = (
 });
 
 // Domain always pushed to the end of the listing.
-export const PRIMARY_DOMAIN = "wreative.com";
+export const PRIMARY_DOMAIN = 'wreative.com';
 
-export const isPrimaryDomain = (url: string): boolean =>
-  url.includes(PRIMARY_DOMAIN);
+export const isPrimaryDomain = (url: string): boolean => url.includes(PRIMARY_DOMAIN);
 
-export const sortByPrimaryDomainLast = (
-  entries: PortfolioItem[],
-): PortfolioItem[] =>
-  [...entries].sort(
-    (a, b) => Number(isPrimaryDomain(a.url)) - Number(isPrimaryDomain(b.url)),
-  );
+export const sortByPrimaryDomainLast = (entries: PortfolioItem[]): PortfolioItem[] =>
+  [...entries].sort((a, b) => Number(isPrimaryDomain(a.url)) - Number(isPrimaryDomain(b.url)));

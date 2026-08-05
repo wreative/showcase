@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useRef, useState } from "react";
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 
 interface LightboxProps {
   images: string[];
@@ -8,13 +8,7 @@ interface LightboxProps {
   onNext: () => void;
 }
 
-const Lightbox: React.FC<LightboxProps> = ({
-  images,
-  currentIndex,
-  onClose,
-  onPrev,
-  onNext,
-}) => {
+const Lightbox: React.FC<LightboxProps> = ({ images, currentIndex, onClose, onPrev, onNext }) => {
   const [scale, setScale] = useState(1);
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [isDragging, setIsDragging] = useState(false);
@@ -32,15 +26,15 @@ const Lightbox: React.FC<LightboxProps> = ({
 
   useEffect(() => {
     const handleKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") onClose();
-      if (e.key === "ArrowLeft") onPrev();
-      if (e.key === "ArrowRight") onNext();
+      if (e.key === 'Escape') onClose();
+      if (e.key === 'ArrowLeft') onPrev();
+      if (e.key === 'ArrowRight') onNext();
     };
-    window.addEventListener("keydown", handleKey);
-    document.body.style.overflow = "hidden";
+    window.addEventListener('keydown', handleKey);
+    document.body.style.overflow = 'hidden';
     return () => {
-      window.removeEventListener("keydown", handleKey);
-      document.body.style.overflow = "";
+      window.removeEventListener('keydown', handleKey);
+      document.body.style.overflow = '';
     };
   }, [onClose, onPrev, onNext]);
 
@@ -77,13 +71,13 @@ const Lightbox: React.FC<LightboxProps> = ({
 
   return (
     <div
-      className="fixed inset-0 z-[100] bg-black/95 flex items-center justify-center"
+      className="fixed inset-0 z-[100] flex items-center justify-center bg-black/95"
       onClick={handleBackdropClick}
     >
       {/* Close */}
       <button
         onClick={onClose}
-        className="absolute top-4 right-4 z-10 p-2 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors"
+        className="absolute right-4 top-4 z-10 rounded-full bg-white/10 p-2 text-white transition-colors hover:bg-white/20"
         aria-label="Close lightbox"
       >
         <svg
@@ -99,7 +93,7 @@ const Lightbox: React.FC<LightboxProps> = ({
       </button>
 
       {/* Counter */}
-      <div className="absolute top-4 left-4 z-10 text-white/70 text-sm tabular-nums">
+      <div className="absolute left-4 top-4 z-10 text-sm tabular-nums text-white/70">
         {currentIndex + 1} / {images.length}
       </div>
 
@@ -110,7 +104,7 @@ const Lightbox: React.FC<LightboxProps> = ({
             e.stopPropagation();
             onPrev();
           }}
-          className="absolute left-4 top-1/2 -translate-y-1/2 z-10 p-2 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors"
+          className="absolute left-4 top-1/2 z-10 -translate-y-1/2 rounded-full bg-white/10 p-2 text-white transition-colors hover:bg-white/20"
           aria-label="Previous image"
         >
           <svg
@@ -133,7 +127,7 @@ const Lightbox: React.FC<LightboxProps> = ({
             e.stopPropagation();
             onNext();
           }}
-          className="absolute right-4 top-1/2 -translate-y-1/2 z-10 p-2 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors"
+          className="absolute right-4 top-1/2 z-10 -translate-y-1/2 rounded-full bg-white/10 p-2 text-white transition-colors hover:bg-white/20"
           aria-label="Next image"
         >
           <svg
@@ -151,21 +145,21 @@ const Lightbox: React.FC<LightboxProps> = ({
 
       {/* Image container */}
       <div
-        className="max-w-[90vw] max-h-[90vh] flex items-center justify-center overflow-hidden"
+        className="flex max-h-[90vh] max-w-[90vw] items-center justify-center overflow-hidden"
         onWheel={handleWheel}
         onMouseDown={handleMouseDown}
         onMouseMove={handleMouseMove}
         onMouseUp={handleMouseUp}
         onMouseLeave={handleMouseUp}
         style={{
-          cursor: scale > 1 ? (isDragging ? "grabbing" : "grab") : "default",
+          cursor: scale > 1 ? (isDragging ? 'grabbing' : 'grab') : 'default',
         }}
       >
         <img
           ref={imageRef}
           src={images[currentIndex]}
           alt={`Gallery image ${currentIndex + 1}`}
-          className="max-w-full max-h-[90vh] object-contain select-none transition-transform duration-200"
+          className="max-h-[90vh] max-w-full select-none object-contain transition-transform duration-200"
           draggable={false}
           style={{
             transform: `scale(${scale}) translate(${position.x / scale}px, ${position.y / scale}px)`,
@@ -174,10 +168,10 @@ const Lightbox: React.FC<LightboxProps> = ({
       </div>
 
       {/* Zoom controls */}
-      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-3 py-1.5">
+      <div className="absolute bottom-4 left-1/2 flex -translate-x-1/2 items-center gap-2 rounded-full bg-white/10 px-3 py-1.5 backdrop-blur-sm">
         <button
           onClick={() => setScale((s) => Math.max(0.5, s - 0.25))}
-          className="text-white/70 hover:text-white p-1 transition-colors"
+          className="p-1 text-white/70 transition-colors hover:text-white"
           aria-label="Zoom out"
         >
           <svg
@@ -191,12 +185,12 @@ const Lightbox: React.FC<LightboxProps> = ({
             <path d="M5 12h14" />
           </svg>
         </button>
-        <span className="text-white/70 text-xs tabular-nums min-w-[3ch] text-center">
+        <span className="min-w-[3ch] text-center text-xs tabular-nums text-white/70">
           {Math.round(scale * 100)}%
         </span>
         <button
           onClick={() => setScale((s) => Math.min(5, s + 0.25))}
-          className="text-white/70 hover:text-white p-1 transition-colors"
+          className="p-1 text-white/70 transition-colors hover:text-white"
           aria-label="Zoom in"
         >
           <svg
@@ -210,10 +204,10 @@ const Lightbox: React.FC<LightboxProps> = ({
             <path d="M12 5v14M5 12h14" />
           </svg>
         </button>
-        <div className="w-px h-4 bg-white/20 mx-1" />
+        <div className="mx-1 h-4 w-px bg-white/20" />
         <button
           onClick={resetZoom}
-          className="text-white/70 hover:text-white p-1 transition-colors text-xs"
+          className="p-1 text-xs text-white/70 transition-colors hover:text-white"
           aria-label="Reset zoom"
         >
           Reset
@@ -222,7 +216,7 @@ const Lightbox: React.FC<LightboxProps> = ({
 
       {/* Thumbnails */}
       {images.length > 1 && (
-        <div className="absolute bottom-14 left-1/2 -translate-x-1/2 flex gap-1.5">
+        <div className="absolute bottom-14 left-1/2 flex -translate-x-1/2 gap-1.5">
           {images.map((_, i) => (
             <button
               key={i}
@@ -231,10 +225,8 @@ const Lightbox: React.FC<LightboxProps> = ({
                 if (i < currentIndex) onPrev();
                 else if (i > currentIndex) onNext();
               }}
-              className={`w-1.5 h-1.5 rounded-full transition-all ${
-                i === currentIndex
-                  ? "bg-white w-4"
-                  : "bg-white/40 hover:bg-white/60"
+              className={`h-1.5 w-1.5 rounded-full transition-all ${
+                i === currentIndex ? 'w-4 bg-white' : 'bg-white/40 hover:bg-white/60'
               }`}
               aria-label={`Go to image ${i + 1}`}
             />

@@ -1,8 +1,8 @@
-import React from "react";
-import { Routes, Route } from "react-router-dom";
-import LandingPage from "@/pages/LandingPage";
-import DetailPage from "@/pages/DetailPage";
-import NotFound from "@/pages/NotFound";
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import LandingPage from '@/pages/LandingPage';
+import DetailPage from '@/pages/DetailPage';
+import NotFound from '@/pages/NotFound';
 
 const App: React.FC = () => {
   return (

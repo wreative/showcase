@@ -1,5 +1,5 @@
-import React, { useRef, useState, useCallback, useMemo } from "react";
-import type { GalleryItem } from "@/data/portfolio";
+import React, { useRef, useState, useCallback, useMemo } from 'react';
+import type { GalleryItem } from '@/data/portfolio';
 
 interface ImageGalleryProps {
   items: GalleryItem[];
@@ -7,8 +7,8 @@ interface ImageGalleryProps {
 }
 
 const sortVideosLast = (items: GalleryItem[]): GalleryItem[] => {
-  const images = items.filter((i) => i.type === "image");
-  const videos = items.filter((i) => i.type === "video");
+  const images = items.filter((i) => i.type === 'image');
+  const videos = items.filter((i) => i.type === 'video');
   return [...images, ...videos];
 };
 
@@ -28,12 +28,9 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ items, onImageClick }) => {
     const raw = scrollRef.current.scrollLeft / w;
     setActiveIndex(
       Math.min(
-        Math.max(
-          raw - Math.floor(raw) >= 0.5 ? Math.ceil(raw) : Math.floor(raw),
-          0,
-        ),
-        sorted.length - 1,
-      ),
+        Math.max(raw - Math.floor(raw) >= 0.5 ? Math.ceil(raw) : Math.floor(raw), 0),
+        sorted.length - 1
+      )
     );
   }, [sorted.length]);
 
@@ -54,28 +51,26 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ items, onImageClick }) => {
     moved.current = false;
   };
 
-  const containerClass = isMulti
-    ? "flex overflow-x-auto snap-x snap-mandatory scrollbar-hide"
-    : "";
+  const containerClass = isMulti ? 'flex overflow-x-auto snap-x snap-mandatory scrollbar-hide' : '';
 
   // ---- single item ----
   if (!isMulti) {
     const item = sorted[0];
     return (
       <div>
-        <div className="rounded-xl overflow-hidden bg-muted">
-          {item.type === "image" ? (
+        <div className="overflow-hidden rounded-xl bg-muted">
+          {item.type === 'image' ? (
             <img
               src={item.src}
               alt="Preview"
               draggable={false}
               onClick={() => onImageClick(0)}
-              className="w-full max-h-[70vh] object-contain select-none"
+              className="max-h-[70vh] w-full select-none object-contain"
               style={
                 {
-                  cursor: "zoom-in",
-                  userDrag: "none",
-                  WebkitUserDrag: "none",
+                  cursor: 'zoom-in',
+                  userDrag: 'none',
+                  WebkitUserDrag: 'none',
                 } as React.CSSProperties
               }
             />
@@ -85,11 +80,11 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ items, onImageClick }) => {
               poster={item.poster}
               controls
               preload="metadata"
-              className="w-full max-h-[70vh] object-contain bg-black"
+              className="max-h-[70vh] w-full bg-black object-contain"
             />
           )}
         </div>
-        {item.type === "image" && <ZoomHint />}
+        {item.type === 'image' && <ZoomHint />}
       </div>
     );
   }
@@ -103,26 +98,26 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ items, onImageClick }) => {
         onPointerDown={onPointerDown}
         onPointerMove={onPointerMove}
         onScroll={updateActive}
-        style={{ touchAction: "pan-x" }}
+        style={{ touchAction: 'pan-x' }}
       >
         {sorted.map((item, i) => (
           <div
             key={i}
-            className="min-w-full snap-center flex-shrink-0"
+            className="min-w-full flex-shrink-0 snap-center"
             onClick={() => onSlideClick(i)}
           >
-            <div className="rounded-xl overflow-hidden bg-muted">
-              {item.type === "image" ? (
+            <div className="overflow-hidden rounded-xl bg-muted">
+              {item.type === 'image' ? (
                 <img
                   src={item.src}
                   alt={`Slide ${i + 1}`}
                   draggable={false}
-                  className="w-full max-h-[70vh] object-contain select-none"
+                  className="max-h-[70vh] w-full select-none object-contain"
                   style={
                     {
-                      userDrag: "none",
-                      WebkitUserDrag: "none",
-                      cursor: "zoom-in",
+                      userDrag: 'none',
+                      WebkitUserDrag: 'none',
+                      cursor: 'zoom-in',
                     } as React.CSSProperties
                   }
                 />
@@ -132,30 +127,30 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ items, onImageClick }) => {
                   poster={item.poster}
                   controls
                   preload="metadata"
-                  className="w-full max-h-[70vh] object-contain bg-black"
+                  className="max-h-[70vh] w-full bg-black object-contain"
                 />
               )}
             </div>
-            {item.type === "video" && <VideoBadge />}
+            {item.type === 'video' && <VideoBadge />}
           </div>
         ))}
       </div>
 
       {/* Dots */}
-      <div className="flex justify-center gap-1.5 mt-3">
+      <div className="mt-3 flex justify-center gap-1.5">
         {sorted.map((_, i) => (
           <button
             key={i}
             onClick={() =>
               scrollRef.current?.scrollTo({
                 left: i * scrollRef.current.clientWidth,
-                behavior: "smooth",
+                behavior: 'smooth',
               })
             }
             className={`h-1.5 rounded-full transition-all duration-300 ${
               i === activeIndex
-                ? "w-6 bg-foreground"
-                : "w-1.5 bg-foreground/30 hover:bg-foreground/50"
+                ? 'w-6 bg-foreground'
+                : 'w-1.5 bg-foreground/30 hover:bg-foreground/50'
             }`}
             aria-label={`Go to slide ${i + 1}`}
           />
@@ -168,13 +163,13 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ items, onImageClick }) => {
 };
 
 const ZoomHint: React.FC = () => (
-  <div className="absolute top-3 right-3 bg-black/50 rounded-md px-2.5 py-1 text-white/60 text-xs pointer-events-none select-none">
+  <div className="pointer-events-none absolute right-3 top-3 select-none rounded-md bg-black/50 px-2.5 py-1 text-xs text-white/60">
     Click to zoom
   </div>
 );
 
 const VideoBadge: React.FC = () => (
-  <div className="absolute top-3 left-3 bg-black/60 rounded-md px-2.5 py-1 text-white/75 text-xs pointer-events-none select-none flex items-center gap-1.5">
+  <div className="pointer-events-none absolute left-3 top-3 flex select-none items-center gap-1.5 rounded-md bg-black/60 px-2.5 py-1 text-xs text-white/75">
     <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
       <path d="M8 5v14l11-7z" />
     </svg>

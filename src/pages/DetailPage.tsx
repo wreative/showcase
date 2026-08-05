@@ -1,15 +1,15 @@
-import React, { useMemo, useState, useCallback } from "react";
-import { Helmet } from "react-helmet-async";
-import { useParams, Link } from "react-router-dom";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Keyboard } from "swiper/modules";
-import type { Swiper as SwiperType } from "swiper";
-import { portfolios } from "@/data/portfolio";
-import type { GalleryItem } from "@/data/portfolio";
-import Lightbox from "@/components/Lightbox";
-import ThemeToggle from "@/components/ThemeToggle";
-import BrandLogo from "@/components/BrandLogo";
-import "swiper/css";
+import React, { useMemo, useState, useCallback } from 'react';
+import { Helmet } from 'react-helmet-async';
+import { useParams, Link } from 'react-router-dom';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Keyboard } from 'swiper/modules';
+import type { Swiper as SwiperType } from 'swiper';
+import { portfolios } from '@/data/portfolio';
+import type { GalleryItem } from '@/data/portfolio';
+import Lightbox from '@/components/Lightbox';
+import ThemeToggle from '@/components/ThemeToggle';
+import BrandLogo from '@/components/BrandLogo';
+import 'swiper/css';
 
 // -- Gallery Swiper --
 
@@ -22,7 +22,7 @@ const GallerySwiper: React.FC<{
   const imageIndices = useMemo(() => {
     const map: number[] = [];
     items.forEach((item, i) => {
-      if (item.type === "image") map.push(i);
+      if (item.type === 'image') map.push(i);
     });
     return map;
   }, [items]);
@@ -34,7 +34,7 @@ const GallerySwiper: React.FC<{
 
   return (
     <div>
-      <div className="relative group/swiper">
+      <div className="group/swiper relative">
         <Swiper
           modules={[Keyboard]}
           spaceBetween={12}
@@ -42,17 +42,15 @@ const GallerySwiper: React.FC<{
           keyboard={{ enabled: true }}
           onSwiper={setSwiper}
           onSlideChange={(s) => setActiveIdx(s.activeIndex)}
-          className="rounded-xl overflow-hidden bg-muted/30"
+          className="overflow-hidden rounded-xl bg-muted/30"
         >
           {items.map((item) => (
             <SwiperSlide key={item.src}>
-              {item.type === "image" ? (
+              {item.type === 'image' ? (
                 <button
                   type="button"
                   onClick={() => {
-                    const lightboxIdx = imageIndices.indexOf(
-                      items.indexOf(item),
-                    );
+                    const lightboxIdx = imageIndices.indexOf(items.indexOf(item));
                     if (lightboxIdx >= 0) onImageClick(lightboxIdx);
                   }}
                   className="block w-full cursor-zoom-in focus:outline-none"
@@ -60,7 +58,7 @@ const GallerySwiper: React.FC<{
                   <img
                     src={item.src}
                     alt="Gallery"
-                    className="w-full h-auto max-h-[70vh] object-contain bg-muted/20"
+                    className="h-auto max-h-[70vh] w-full bg-muted/20 object-contain"
                   />
                 </button>
               ) : (
@@ -69,7 +67,7 @@ const GallerySwiper: React.FC<{
                   poster={item.poster}
                   controls
                   preload="metadata"
-                  className="w-full h-auto max-h-[70vh] object-contain bg-muted/20"
+                  className="h-auto max-h-[70vh] w-full bg-muted/20 object-contain"
                 />
               )}
             </SwiperSlide>
@@ -82,7 +80,7 @@ const GallerySwiper: React.FC<{
             <button
               type="button"
               onClick={goPrev}
-              className="absolute left-2 top-1/2 -translate-y-1/2 z-10 w-8 h-8 rounded-full bg-black/30 hover:bg-black/50 text-white flex items-center justify-center opacity-0 group-hover/swiper:opacity-100 transition-opacity"
+              className="absolute left-2 top-1/2 z-10 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full bg-black/30 text-white opacity-0 transition-opacity hover:bg-black/50 group-hover/swiper:opacity-100"
               aria-label="Previous slide"
             >
               <svg
@@ -99,7 +97,7 @@ const GallerySwiper: React.FC<{
             <button
               type="button"
               onClick={goNext}
-              className="absolute right-2 top-1/2 -translate-y-1/2 z-10 w-8 h-8 rounded-full bg-black/30 hover:bg-black/50 text-white flex items-center justify-center opacity-0 group-hover/swiper:opacity-100 transition-opacity"
+              className="absolute right-2 top-1/2 z-10 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full bg-black/30 text-white opacity-0 transition-opacity hover:bg-black/50 group-hover/swiper:opacity-100"
               aria-label="Next slide"
             >
               <svg
@@ -117,14 +115,14 @@ const GallerySwiper: React.FC<{
         )}
 
         {/* Zoom hint */}
-        <div className="absolute top-3 right-3 z-10 bg-black/50 rounded-md px-2.5 py-1 text-white/60 text-xs pointer-events-none select-none">
+        <div className="pointer-events-none absolute right-3 top-3 z-10 select-none rounded-md bg-black/50 px-2.5 py-1 text-xs text-white/60">
           Click image to zoom
         </div>
       </div>
 
       {/* Custom dots — below the asset */}
       {isMulti && (
-        <div className="flex justify-center gap-1.5 mt-3">
+        <div className="mt-3 flex justify-center gap-1.5">
           {items.map((item, i) => (
             <button
               key={item.src}
@@ -132,8 +130,8 @@ const GallerySwiper: React.FC<{
               onClick={() => swiper?.slideTo(i)}
               className={`rounded-full transition-all ${
                 i === activeIdx
-                  ? "w-4 h-1.5 bg-foreground"
-                  : "w-1.5 h-1.5 bg-foreground/20 hover:bg-foreground/40"
+                  ? 'h-1.5 w-4 bg-foreground'
+                  : 'h-1.5 w-1.5 bg-foreground/20 hover:bg-foreground/40'
               }`}
               aria-label={`Go to slide ${i + 1}`}
             />
@@ -153,27 +151,19 @@ const DetailPage: React.FC = () => {
   const template = portfolios.find((t) => t.slug === slug);
 
   const imageSrcs = useMemo(
-    () =>
-      template?.gallery
-        .filter((i) => i.type === "image")
-        .map((i) => i.src as string) ?? [],
-    [template],
+    () => template?.gallery.filter((i) => i.type === 'image').map((i) => i.src as string) ?? [],
+    [template]
   );
 
   if (!template) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-background">
+      <div className="flex min-h-screen items-center justify-center bg-background">
         <Helmet>
           <title>Project Not Found — Wreative Showcase</title>
         </Helmet>
         <div className="text-center">
-          <h1 className="text-2xl font-bold text-foreground mb-4">
-            Project Not Found
-          </h1>
-          <Link
-            to="/"
-            className="text-muted-foreground hover:text-foreground transition-colors"
-          >
+          <h1 className="mb-4 text-2xl font-bold text-foreground">Project Not Found</h1>
+          <Link to="/" className="text-muted-foreground transition-colors hover:text-foreground">
             &larr; Back to Showcase
           </Link>
         </div>
@@ -183,13 +173,13 @@ const DetailPage: React.FC = () => {
 
   const handlePrev = () => {
     setLightboxIndex((prev) =>
-      prev !== null ? (prev === 0 ? imageSrcs.length - 1 : prev - 1) : null,
+      prev !== null ? (prev === 0 ? imageSrcs.length - 1 : prev - 1) : null
     );
   };
 
   const handleNext = () => {
     setLightboxIndex((prev) =>
-      prev !== null ? (prev === imageSrcs.length - 1 ? 0 : prev + 1) : null,
+      prev !== null ? (prev === imageSrcs.length - 1 ? 0 : prev + 1) : null
     );
   };
 
@@ -203,23 +193,23 @@ const DetailPage: React.FC = () => {
         <link rel="canonical" href={projectUrl} />
         <script type="application/ld+json">
           {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "CreativeWork",
+            '@context': 'https://schema.org',
+            '@type': 'CreativeWork',
             name: template.title,
             url: template.url,
             description: template.description,
-            creator: { "@id": "https://showcase.wreative.com/#person" },
-            provider: { "@id": "https://showcase.wreative.com/#org" },
-            keywords: template.tags.join(", "),
+            creator: { '@id': 'https://showcase.wreative.com/#person' },
+            provider: { '@id': 'https://showcase.wreative.com/#org' },
+            keywords: template.tags.join(', '),
             about: template.category,
           })}
         </script>
       </Helmet>
-      <header className="sticky top-0 z-40 bg-background/80 backdrop-blur-md border-b border-border">
-        <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <header className="sticky top-0 z-40 border-b border-border bg-background/80 backdrop-blur-md">
+        <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
           <Link
             to="/"
-            className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors group"
+            className="group flex items-center gap-2 text-muted-foreground transition-colors hover:text-foreground"
           >
             <svg
               width="16"
@@ -228,7 +218,7 @@ const DetailPage: React.FC = () => {
               fill="none"
               stroke="currentColor"
               strokeWidth="2"
-              className="group-hover:-translate-x-0.5 transition-transform"
+              className="transition-transform group-hover:-translate-x-0.5"
             >
               <path d="M19 12H5M12 19l-7-7 7-7" />
             </svg>
@@ -241,9 +231,9 @@ const DetailPage: React.FC = () => {
         </div>
       </header>
 
-      <main className="max-w-6xl mx-auto px-4 py-6">
-        <div className="flex items-center gap-2 mb-4">
-          <span className="px-2 py-0.5 text-xs font-medium rounded bg-muted text-muted-foreground capitalize">
+      <main className="mx-auto max-w-6xl px-4 py-6">
+        <div className="mb-4 flex items-center gap-2">
+          <span className="rounded bg-muted px-2 py-0.5 text-xs font-medium capitalize text-muted-foreground">
             {template.platform}
           </span>
         </div>
@@ -255,20 +245,18 @@ const DetailPage: React.FC = () => {
           />
         </section>
 
-        <section className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          <div className="lg:col-span-2 space-y-6">
+        <section className="grid grid-cols-1 gap-8 lg:grid-cols-3">
+          <div className="space-y-6 lg:col-span-2">
             <div>
-              <div className="flex items-center gap-3 mb-2">
-                <span className="px-2.5 py-0.5 text-xs font-medium rounded-full bg-muted text-muted-foreground">
+              <div className="mb-2 flex items-center gap-3">
+                <span className="rounded-full bg-muted px-2.5 py-0.5 text-xs font-medium text-muted-foreground">
                   {template.category}
                 </span>
               </div>
-              <h1 className="text-3xl sm:text-4xl font-bold tracking-tight">
-                {template.title}
-              </h1>
+              <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">{template.title}</h1>
             </div>
 
-            <p className="text-muted-foreground text-base leading-relaxed">
+            <p className="text-base leading-relaxed text-muted-foreground">
               {template.description}
             </p>
 
@@ -276,7 +264,7 @@ const DetailPage: React.FC = () => {
               {template.tags.map((tag) => (
                 <span
                   key={tag}
-                  className="px-3 py-1 text-xs rounded-md bg-muted text-muted-foreground border border-border"
+                  className="rounded-md border border-border bg-muted px-3 py-1 text-xs text-muted-foreground"
                 >
                   {tag}
                 </span>
@@ -285,16 +273,16 @@ const DetailPage: React.FC = () => {
           </div>
 
           <div className="space-y-4">
-            <div className="rounded-xl bg-card border border-border p-5 space-y-4">
+            <div className="space-y-4 rounded-xl border border-border bg-card p-5">
               <div>
-                <p className="text-xs text-muted-foreground uppercase tracking-wider mb-1">
+                <p className="mb-1 text-xs uppercase tracking-wider text-muted-foreground">
                   Live Website
                 </p>
                 <a
                   href={template.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-5 py-2.5 bg-foreground text-background rounded-lg font-medium text-sm hover:opacity-90 transition-opacity group"
+                  className="group inline-flex items-center gap-2 rounded-lg bg-foreground px-5 py-2.5 text-sm font-medium text-background transition-opacity hover:opacity-90"
                 >
                   Visit Site
                   <svg
@@ -304,33 +292,33 @@ const DetailPage: React.FC = () => {
                     fill="none"
                     stroke="currentColor"
                     strokeWidth="2"
-                    className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"
+                    className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
                   >
                     <path d="M7 17L17 7M7 7h10v10" />
                   </svg>
                 </a>
               </div>
               <div>
-                <p className="text-xs text-muted-foreground uppercase tracking-wider mb-1">
+                <p className="mb-1 text-xs uppercase tracking-wider text-muted-foreground">
                   Platform
                 </p>
                 <p className="text-sm capitalize">{template.platform}</p>
               </div>
               <div>
-                <p className="text-xs text-muted-foreground uppercase tracking-wider mb-1">
+                <p className="mb-1 text-xs uppercase tracking-wider text-muted-foreground">
                   Category
                 </p>
                 <p className="text-sm">{template.category}</p>
               </div>
               <div>
-                <p className="text-xs text-muted-foreground uppercase tracking-wider mb-2">
+                <p className="mb-2 text-xs uppercase tracking-wider text-muted-foreground">
                   Tech Stack
                 </p>
                 <div className="flex flex-wrap gap-1.5">
                   {template.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="px-2 py-0.5 text-xs rounded bg-muted text-muted-foreground"
+                      className="rounded bg-muted px-2 py-0.5 text-xs text-muted-foreground"
                     >
                       {tag}
                     </span>
@@ -339,14 +327,13 @@ const DetailPage: React.FC = () => {
               </div>
               {template.gallery.length > 1 && (
                 <div>
-                  <p className="text-xs text-muted-foreground uppercase tracking-wider mb-1">
+                  <p className="mb-1 text-xs uppercase tracking-wider text-muted-foreground">
                     Media
                   </p>
                   <p className="text-sm">
-                    {template.gallery.filter((i) => i.type === "image").length}{" "}
-                    images
-                    {template.gallery.some((i) => i.type === "video") &&
-                      ` + ${template.gallery.filter((i) => i.type === "video").length} video`}
+                    {template.gallery.filter((i) => i.type === 'image').length} images
+                    {template.gallery.some((i) => i.type === 'video') &&
+                      ` + ${template.gallery.filter((i) => i.type === 'video').length} video`}
                   </p>
                 </div>
               )}

@@ -1,56 +1,45 @@
-import React, { useEffect, useState, useCallback } from "react";
-import { Helmet } from "react-helmet-async";
-import { portfolios, type Platform } from "@/data/portfolio";
-import Header from "@/components/Header";
-import TemplateGrid from "@/components/TemplateGrid";
-import Footer from "@/components/Footer";
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
+import React, { useEffect, useState, useCallback } from 'react';
+import { Helmet } from 'react-helmet-async';
+import { portfolios, type Platform } from '@/data/portfolio';
+import Header from '@/components/Header';
+import TemplateGrid from '@/components/TemplateGrid';
+import Footer from '@/components/Footer';
+import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 
 const ITEMS_PER_PAGE = 8;
 
-const categories = ["All", ...new Set(portfolios.map((t) => t.category))];
+const categories = ['All', ...new Set(portfolios.map((t) => t.category))];
 
 const LandingPage: React.FC = () => {
-  const [searchQuery, setSearchQuery] = useState("");
-  const [selectedPlatform, setSelectedPlatform] = useState<Platform | "all">(
-    "all",
-  );
-  const [selectedCategory, setSelectedCategory] = useState("All");
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedPlatform, setSelectedPlatform] = useState<Platform | 'all'>('all');
+  const [selectedCategory, setSelectedCategory] = useState('All');
   const [visibleItems, setVisibleItems] = useState(ITEMS_PER_PAGE);
   const [loading, setLoading] = useState(false);
 
   const filtered = portfolios.filter((t) => {
-    const matchesSearch = t.title
-      .toLowerCase()
-      .includes(searchQuery.toLowerCase());
-    const matchesPlatform =
-      selectedPlatform === "all" || t.platform === selectedPlatform;
-    const matchesCategory =
-      selectedCategory === "All" || t.category === selectedCategory;
+    const matchesSearch = t.title.toLowerCase().includes(searchQuery.toLowerCase());
+    const matchesPlatform = selectedPlatform === 'all' || t.platform === selectedPlatform;
+    const matchesCategory = selectedCategory === 'All' || t.category === selectedCategory;
     return matchesSearch && matchesPlatform && matchesCategory;
   });
 
   const loadMore = useCallback(() => {
     setLoading(true);
     setTimeout(() => {
-      setVisibleItems((prev) =>
-        Math.min(prev + ITEMS_PER_PAGE, filtered.length),
-      );
+      setVisibleItems((prev) => Math.min(prev + ITEMS_PER_PAGE, filtered.length));
       setLoading(false);
     }, 400);
   }, [filtered.length]);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (
-        window.innerHeight + window.scrollY >=
-        document.documentElement.scrollHeight - 200
-      ) {
+      if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 200) {
         if (!loading && visibleItems < filtered.length) loadMore();
       }
     };
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
   }, [visibleItems, filtered.length, loading, loadMore]);
 
   useEffect(() => {
@@ -60,7 +49,7 @@ const LandingPage: React.FC = () => {
   const visible = filtered.slice(0, visibleItems);
 
   return (
-    <div className="min-h-screen flex flex-col bg-background">
+    <div className="flex min-h-screen flex-col bg-background">
       <Helmet>
         <title>Wreative Showcase — Portfolio Kreatif Indonesia</title>
         <meta
@@ -70,15 +59,15 @@ const LandingPage: React.FC = () => {
         <link rel="canonical" href="https://showcase.wreative.com/" />
         <script type="application/ld+json">
           {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "CollectionPage",
-            name: "Wreative Showcase — Portfolio",
-            url: "https://showcase.wreative.com/",
+            '@context': 'https://schema.org',
+            '@type': 'CollectionPage',
+            name: 'Wreative Showcase — Portfolio',
+            url: 'https://showcase.wreative.com/',
             description:
-              "Portfolio of website and mobile application projects by Wreative creative agency.",
-            provider: { "@id": "https://showcase.wreative.com/#org" },
+              'Portfolio of website and mobile application projects by Wreative creative agency.',
+            provider: { '@id': 'https://showcase.wreative.com/#org' },
             mainEntity: {
-              "@type": "ItemList",
+              '@type': 'ItemList',
               numberOfItems: portfolios.length,
             },
           })}
@@ -94,31 +83,30 @@ const LandingPage: React.FC = () => {
         categories={categories}
       />
 
-      <main className="flex-1 w-full max-w-7xl mx-auto px-4 py-6">
-        <Alert className="mb-6 bg-amber-500/5 border-amber-500/20 text-amber-600 dark:text-amber-200">
+      <main className="mx-auto w-full max-w-7xl flex-1 px-4 py-6">
+        <Alert className="mb-6 border-amber-500/20 bg-amber-500/5 text-amber-600 dark:text-amber-200">
           <AlertTitle className="text-base font-semibold text-amber-700 dark:text-amber-100">
             Announcement
           </AlertTitle>
           <AlertDescription className="text-sm text-amber-600/70 dark:text-amber-200/70">
-            Not all websites are mirrored, and the <b>mirroring</b> is done to
-            maintain the original theme we've created, in case there are any
-            changes from the client's side. Some functions may not work
-            properly.
+            Not all websites are mirrored, and the <b>mirroring</b> is done to maintain the original
+            theme we've created, in case there are any changes from the client's side. Some
+            functions may not work properly.
           </AlertDescription>
         </Alert>
 
-        {selectedPlatform !== "all" && (
-          <p className="text-sm text-muted-foreground mb-4 capitalize">
+        {selectedPlatform !== 'all' && (
+          <p className="mb-4 text-sm capitalize text-muted-foreground">
             Showing {selectedPlatform} projects
-            {selectedCategory !== "All" && ` in ${selectedCategory}`}
+            {selectedCategory !== 'All' && ` in ${selectedCategory}`}
           </p>
         )}
 
         <TemplateGrid templates={visible} loading={loading} />
 
         {filtered.length === 0 && (
-          <div className="text-center py-20">
-            <p className="text-muted-foreground text-lg">
+          <div className="py-20 text-center">
+            <p className="text-lg text-muted-foreground">
               No projects found matching your criteria.
             </p>
           </div>
