@@ -24,6 +24,7 @@ export type GalleryItem = GalleryImage | GalleryVideo;
 
 export interface PortfolioItem {
   id: number;
+  slug: string;
   title: string;
   platform: Platform;
   category: PortfolioCategory;
@@ -33,6 +34,12 @@ export interface PortfolioItem {
   tags: string[];
   gallery: GalleryItem[];
 }
+
+export const toSlug = (title: string): string =>
+  title
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
 
 // -- Helpers --
 
@@ -53,7 +60,7 @@ export const entry = (
   description: string,
   tags: string[],
   gallery: GalleryItem[] = [],
-): Omit<PortfolioItem, "id"> => ({
+): Omit<PortfolioItem, "id" | "slug"> => ({
   title,
   platform,
   category,

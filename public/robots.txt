@@ -1,0 +1,15 @@
+# Wreative Showcase
+# https://showcase.wreative.com/
+
+User-agent: GPTBot
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: *
+Allow: /
+
+Sitemap: https://showcase.wreative.com/sitemap.xml

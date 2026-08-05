@@ -1,0 +1,211 @@
+# Wreative Showcase
+
+> Portfolio of website and mobile application projects by Wreative creative agency.
+> Author: Wreative | Location: Surabaya, Indonesia
+
+Total: 33 projects (27 websites, 6 mobile apps)
+
+## Websites
+
+### 1. Kontraktor Surabaya
+- **Platform:** Website
+- **URL:** [https://kontraktorsurabaya.wreative.com/](https://kontraktorsurabaya.wreative.com/)
+- **Tech:** WordPress, Elementor, SEO
+- **Description:** Professional contracting services website for Surabaya region. Clean layout showcasing construction services, project portfolio, and client testimonials with easy contact integration.
+
+### 2. Wase Bumi Indonesia
+- **Platform:** Website
+- **URL:** [https://wasebumiindonesia.wreative.com/](https://wasebumiindonesia.wreative.com/)
+- **Tech:** WordPress, Custom Theme, ACF
+- **Description:** Corporate business website for a natural resource company. Features company profile, service offerings, and a modern design that reflects the brand's commitment to sustainability.
+
+### 3. Cubicle Toilet
+- **Platform:** Website
+- **URL:** [https://cubicletoilet.wreative.com/](https://cubicletoilet.wreative.com/)
+- **Tech:** WordPress, WooCommerce, Elementor
+- **Description:** Specialized cubicle and toilet partition services website. Product catalog with detailed specifications, project gallery, and inquiry system for commercial clients.
+
+### 4. PT. Adikarya Pesona Intinusa
+- **Platform:** Website
+- **URL:** [https://adikaryapesona.wreative.com/](https://adikaryapesona.wreative.com/)
+- **Tech:** WordPress, LMS Integration, Custom Theme
+- **Description:** Educational institution website with modern design. Includes course listings, faculty profiles, online registration, and student portal integration.
+
+### 5. Wreative Store
+- **Platform:** Website
+- **URL:** [https://store.wreative.com](https://store.wreative.com)
+- **Tech:** WordPress, WooCommerce, Payment Gateway
+- **Description:** E-commerce storefront for digital products and services. Clean product layouts, smooth checkout experience, and integrated payment gateway. Features a product walkthrough video.
+
+### 6. Home Baraka
+- **Platform:** Website
+- **URL:** [https://homebaraka.wreative.com/](https://homebaraka.wreative.com/)
+- **Tech:** WordPress, Custom Post Types, SEO
+- **Description:** Property and home services platform. Features property listings, service bookings, and an intuitive search interface for potential buyers and renters.
+
+### 7. Wreative
+- **Platform:** Website
+- **URL:** [https://wreative.com/](https://wreative.com/)
+- **Tech:** WordPress, Custom Theme, GSAP
+- **Description:** Main brand website for Wreative — a creative digital agency. Showcases the agency's portfolio, services, and team with a bold, modern design. Includes a brand overview video.
+
+### 8. Fajar Florist
+- **Platform:** Website
+- **URL:** [https://fajarflorist.wreative.com/](https://fajarflorist.wreative.com/)
+- **Tech:** WordPress, WooCommerce, Custom Theme
+- **Description:** Online florist and flower arrangement business. Beautiful product displays, seasonal collections, and easy ordering system for delivery across the city.
+
+### 9. First Media Surabaya
+- **Platform:** Website
+- **URL:** [https://firstmediasurabaya.wreative.com/](https://firstmediasurabaya.wreative.com/)
+- **Tech:** WordPress, Custom Forms, SEO
+- **Description:** Local internet service provider website for Surabaya. Service plans comparison, coverage area maps, and customer support portal.
+
+### 10. DPU Bina Marga Musi
+- **Platform:** Website
+- **URL:** [https://dpubinamargamusi.wreative.com/](https://dpubinamargamusi.wreative.com/)
+- **Tech:** WordPress, Government Theme, Accessibility
+- **Description:** Government public works department website. Features project transparency reports, public service announcements, and infrastructure development updates.
+
+### 11. Chicken Explorer
+- **Platform:** Website
+- **URL:** [https://chickenexplorer.wreative.com/](https://chickenexplorer.wreative.com/)
+- **Tech:** WordPress, WooCommerce, Maps Integration
+- **Description:** Food and culinary brand e-commerce site. Menu showcase, online ordering system, and location finder for multiple restaurant branches.
+
+### 12. Kurir Pulsa
+- **Platform:** Website
+- **URL:** [https://kurirpulsa.wreative.com/](https://kurirpulsa.wreative.com/)
+- **Tech:** WordPress, API Integration, WooCommerce
+- **Description:** Digital products and top-up service platform. Fast transaction processing, user dashboard, and automated order fulfillment system.
+
+### 13. Panji Semesta
+- **Platform:** Website
+- **URL:** [https://panjisemesta.wreative.com/](https://panjisemesta.wreative.com/)
+- **Tech:** WordPress, Corporate Theme, Contact Forms
+- **Description:** General trading and business company profile. Modern corporate design with service overview, partner network, and business inquiry forms.
+
+### 14. Dzata Lombok Transport
+- **Platform:** Website
+- **URL:** [https://dzatalomboktransport.wreative.com/](https://dzatalomboktransport.wreative.com/)
+- **Tech:** WordPress, Booking System, SEO
+- **Description:** Transportation and travel services in Lombok. Booking system, fleet showcase, tour packages, and customer review integration.
+
+### 15. Pernikahan Ini
+- **Platform:** Website
+- **URL:** [https://pernikahanini.wreative.com/](https://pernikahanini.wreative.com/)
+- **Tech:** WordPress, Custom Directory, Forms
+- **Description:** Wedding services and planning platform. Vendor directories, wedding packages, gallery showcase, and planning tools for couples.
+
+### 16. Pos Satpam
+- **Platform:** Website
+- **URL:** [https://possatpam.wreative.com/](https://possatpam.wreative.com/)
+- **Tech:** WordPress, WooCommerce, Catalog Theme
+- **Description:** Security guard post and equipment supplier. Product catalog with specifications, project references, and quotation request system.
+
+### 17. Toilet Portabel
+- **Platform:** Website
+- **URL:** [https://toiletportabel.wreative.com/](https://toiletportabel.wreative.com/)
+- **Tech:** WordPress, Booking Calendar, SEO
+- **Description:** Portable toilet rental and services. Product listings with pricing, event booking calendar, and service area information.
+
+### 18. PT Modern Coco International
+- **Platform:** Website
+- **URL:** [https://ptmoderncocointernational.wreative.com/](https://ptmoderncocointernational.wreative.com/)
+- **Tech:** WordPress, Multilingual, Corporate Theme
+- **Description:** International trading company corporate website. Global business profile, product sourcing information, and international partner network.
+
+### 19. Spesialis Karangan Bunga Indonesia
+- **Platform:** Website
+- **URL:** [https://spesialiskaranganbungaindonesia.com](https://spesialiskaranganbungaindonesia.com)
+- **Tech:** WordPress, WooCommerce, Custom Theme
+- **Description:** Specialist flower arrangement and bouquet service. Stunning product galleries, occasion-based collections, and nationwide delivery information.
+
+### 20. BE MODE Indonesia
+- **Platform:** Website
+- **URL:** [https://bemodeofficial.com](https://bemodeofficial.com)
+- **Tech:** WordPress, WooCommerce, Fashion Theme
+- **Description:** Fashion and lifestyle e-commerce brand. Trendy product displays, lookbook galleries, size guides, and seamless checkout flow.
+
+### 21. SG Academy
+- **Platform:** Website
+- **URL:** [https://sgacademy.co.id/](https://sgacademy.co.id/)
+- **Tech:** WordPress, LMS, Registration System
+- **Description:** Professional training academy website. Course catalog, instructor profiles, online enrollment, and learning management system integration.
+
+### 22. Roby Saputra Grup
+- **Platform:** Website
+- **URL:** [https://robysaputragrup.com/](https://robysaputragrup.com/)
+- **Tech:** WordPress, Corporate Theme, Multi-Site
+- **Description:** Business group holding company profile. Multi-division overview, leadership team, and corporate achievements showcase.
+
+### 23. Sakpattana Jawa Timur
+- **Platform:** Website
+- **URL:** [https://sakpattanajawatimur.wreative.com/](https://sakpattanajawatimur.wreative.com/)
+- **Tech:** WordPress, Regional Theme, SEO
+- **Description:** Regional business branch website for East Java. Local services, regional news, and community engagement features.
+
+### 24. CV Putra Kubota
+- **Platform:** Website
+- **URL:** [https://cvputrakubota.wreative.com/](https://cvputrakubota.wreative.com/)
+- **Tech:** WordPress, Product Catalog, Contact Forms
+- **Description:** Agricultural equipment and machinery dealer. Product catalog with specs, spare parts ordering, and service center locator.
+
+### 25. Wahyu Dewanagari
+- **Platform:** Website
+- **URL:** [https://wahyudewanagari.wreative.com/](https://wahyudewanagari.wreative.com/)
+- **Tech:** WordPress, Events Calendar, Gallery
+- **Description:** Cultural and arts foundation website. Event calendar, gallery of cultural performances, and community program information.
+
+### 26. Aviso
+- **Platform:** Website
+- **URL:** [https://aviso.wreative.com/](https://aviso.wreative.com/)
+- **Tech:** WordPress, Consulting Theme, Case Studies
+- **Description:** Business consulting and advisory services. Service packages, consultant profiles, case studies, and client success stories.
+
+### 27. LPK Furinkazan
+- **Platform:** Website
+- **URL:** [https://lpkfurinkazan.wreative.com/](https://lpkfurinkazan.wreative.com/)
+- **Tech:** WordPress, LMS, Registration Forms
+- **Description:** Japanese language and culture training institute. Course levels, instructor credentials, student testimonials, and Japan placement program information.
+
+## Mobile Apps
+
+### 1. Wreative App
+- **Platform:** Mobile App
+- **URL:** [https://wreative.com/](https://wreative.com/)
+- **Tech:** React Native, Expo, Firebase, Push Notifications
+- **Description:** Brand companion app for Wreative creative agency. Clients can browse the portfolio, track project progress in real-time, communicate via in-app chat, and approve deliverables directly from their phone. Push notifications keep everyone aligned on deadlines.
+
+### 2. FoodDash — Food Delivery
+- **Platform:** Mobile App
+- **URL:** [https://chickenexplorer.wreative.com/](https://chickenexplorer.wreative.com/)
+- **Tech:** Flutter, Dart, Firebase, Google Maps API, Midtrans
+- **Description:** Cross-platform food delivery app connecting hungry users with local restaurants. Features real-time order tracking with live GPS, multiple payment gateways (GoPay, OVO, bank transfer), smart recommendation engine, and a loyalty points system.
+
+### 3. WeddingKu — Wedding Planner
+- **Platform:** Mobile App
+- **URL:** [https://pernikahanini.wreative.com/](https://pernikahanini.wreative.com/)
+- **Tech:** React Native, TypeScript, Supabase, Midtrans
+- **Description:** All-in-one wedding planning app for Indonesian couples. Browse vendor catalogs, manage guest lists with RSVP tracking, track budget across categories, timeline countdown, and mood board with Pinterest integration.
+
+### 4. LombokRide — Transport Booking
+- **Platform:** Mobile App
+- **URL:** [https://dzatalomboktransport.wreative.com/](https://dzatalomboktransport.wreative.com/)
+- **Tech:** Flutter, Google Maps SDK, Firebase, Localization
+- **Description:** Transport and tour booking app for Lombok island. Book cars, scooters, and tour packages with instant confirmation. Includes offline-capable maps, driver tracking, and multi-language support (ID/EN/JP).
+
+### 5. SG Academy Mobile
+- **Platform:** Mobile App
+- **URL:** [https://sgacademy.co.id/](https://sgacademy.co.id/)
+- **Tech:** React Native, Zoom SDK, AWS S3, Offline-First
+- **Description:** Mobile learning companion for SG Academy students. Access course materials offline, submit assignments, join live classes via integrated video conferencing, track learning progress with detailed analytics.
+
+### 6. BE MODE — Fashion Shopping
+- **Platform:** Mobile App
+- **URL:** [https://bemodeofficial.com](https://bemodeofficial.com)
+- **Tech:** Flutter, TensorFlow Lite, ARCore, Shopify API
+- **Description:** Fashion e-commerce app with AR try-on for accessories, personalized style recommendations powered by ML, size guide with measurement input, wishlist sync across devices, and one-tap checkout.
+
+---
+This llms.txt follows the [llms.txt specification](https://llmstxt.org/).

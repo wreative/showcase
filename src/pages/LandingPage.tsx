@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useCallback } from "react";
+import { Helmet } from "react-helmet-async";
 import { portfolios, type Platform } from "@/data/portfolio";
 import Header from "@/components/Header";
 import TemplateGrid from "@/components/TemplateGrid";
@@ -7,29 +8,34 @@ import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 
 const ITEMS_PER_PAGE = 8;
 
-const categories = [
-  "All",
-  ...new Set(portfolios.map((t) => t.category)),
-];
+const categories = ["All", ...new Set(portfolios.map((t) => t.category))];
 
 const LandingPage: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState("");
-  const [selectedPlatform, setSelectedPlatform] = useState<Platform | "all">("all");
+  const [selectedPlatform, setSelectedPlatform] = useState<Platform | "all">(
+    "all",
+  );
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [visibleItems, setVisibleItems] = useState(ITEMS_PER_PAGE);
   const [loading, setLoading] = useState(false);
 
   const filtered = portfolios.filter((t) => {
-    const matchesSearch = t.title.toLowerCase().includes(searchQuery.toLowerCase());
-    const matchesPlatform = selectedPlatform === "all" || t.platform === selectedPlatform;
-    const matchesCategory = selectedCategory === "All" || t.category === selectedCategory;
+    const matchesSearch = t.title
+      .toLowerCase()
+      .includes(searchQuery.toLowerCase());
+    const matchesPlatform =
+      selectedPlatform === "all" || t.platform === selectedPlatform;
+    const matchesCategory =
+      selectedCategory === "All" || t.category === selectedCategory;
     return matchesSearch && matchesPlatform && matchesCategory;
   });
 
   const loadMore = useCallback(() => {
     setLoading(true);
     setTimeout(() => {
-      setVisibleItems((prev) => Math.min(prev + ITEMS_PER_PAGE, filtered.length));
+      setVisibleItems((prev) =>
+        Math.min(prev + ITEMS_PER_PAGE, filtered.length),
+      );
       setLoading(false);
     }, 400);
   }, [filtered.length]);
@@ -55,6 +61,29 @@ const LandingPage: React.FC = () => {
 
   return (
     <div className="min-h-screen flex flex-col bg-background">
+      <Helmet>
+        <title>Wreative Showcase — Portfolio Kreatif Indonesia</title>
+        <meta
+          name="description"
+          content="Portfolio showcase by Wreative — creative agency based in Indonesia. Browse 36 website and mobile app projects across business, education, e-commerce, government, and services categories."
+        />
+        <link rel="canonical" href="https://showcase.wreative.com/" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "CollectionPage",
+            name: "Wreative Showcase — Portfolio",
+            url: "https://showcase.wreative.com/",
+            description:
+              "Portfolio of website and mobile application projects by Wreative creative agency.",
+            provider: { "@id": "https://showcase.wreative.com/#org" },
+            mainEntity: {
+              "@type": "ItemList",
+              numberOfItems: portfolios.length,
+            },
+          })}
+        </script>
+      </Helmet>
       <Header
         searchQuery={searchQuery}
         setSearchQuery={setSearchQuery}
@@ -73,7 +102,8 @@ const LandingPage: React.FC = () => {
           <AlertDescription className="text-sm text-amber-600/70 dark:text-amber-200/70">
             Not all websites are mirrored, and the <b>mirroring</b> is done to
             maintain the original theme we've created, in case there are any
-            changes from the client's side. Some functions may not work properly.
+            changes from the client's side. Some functions may not work
+            properly.
           </AlertDescription>
         </Alert>
 

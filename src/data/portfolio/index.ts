@@ -1,13 +1,13 @@
 import { websitePortfolios } from "./websites";
 import { mobilePortfolios } from "./mobiles";
-import { type PortfolioItem, sortByPrimaryDomainLast } from "./types";
+import { type PortfolioItem, sortByPrimaryDomainLast, toSlug } from "./types";
 
 const raw = [...websitePortfolios, ...mobilePortfolios];
 
 export const portfolios: PortfolioItem[] = sortByPrimaryDomainLast(
-  raw.map((entry, index) => ({ id: index + 1, ...entry })),
+  raw.map((entry, index) => ({ id: index + 1, slug: toSlug(entry.title), ...entry })),
 );
 
 // Re-export everything for convenience
 export type { Platform, PortfolioItem, GalleryItem, GalleryImage, GalleryVideo } from "./types";
-export { PortfolioCategory, img, vid, entry, PRIMARY_DOMAIN } from "./types";
+export { PortfolioCategory, img, vid, entry, PRIMARY_DOMAIN, toSlug } from "./types";

@@ -9,7 +9,7 @@ interface TemplateCardProps {
 const TemplateCard: React.FC<TemplateCardProps> = ({ template }) => {
   return (
     <Link
-      to={`/project/${template.id}`}
+      to={`/project/${template.slug}`}
       className="group relative overflow-hidden rounded-xl bg-card border border-border cursor-pointer block
         hover:border-foreground/20 transition-colors duration-300"
     >
