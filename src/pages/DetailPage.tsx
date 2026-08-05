@@ -1,11 +1,150 @@
-import React, { useMemo, useState } from "react";
+import React, { useMemo, useState, useCallback } from "react";
 import { Helmet } from "react-helmet-async";
 import { useParams, Link } from "react-router-dom";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Keyboard } from "swiper/modules";
+import type { Swiper as SwiperType } from "swiper";
 import { portfolios } from "@/data/portfolio";
-import ImageGallery from "@/components/ImageGallery";
+import type { GalleryItem } from "@/data/portfolio";
 import Lightbox from "@/components/Lightbox";
 import ThemeToggle from "@/components/ThemeToggle";
 import BrandLogo from "@/components/BrandLogo";
+import "swiper/css";
+
+// -- Gallery Swiper --
+
+const GallerySwiper: React.FC<{
+  items: GalleryItem[];
+  onImageClick: (index: number) => void;
+}> = ({ items, onImageClick }) => {
+  const [swiper, setSwiper] = useState<SwiperType | null>(null);
+  const [activeIdx, setActiveIdx] = useState(0);
+  const imageIndices = useMemo(() => {
+    const map: number[] = [];
+    items.forEach((item, i) => {
+      if (item.type === "image") map.push(i);
+    });
+    return map;
+  }, [items]);
+
+  const isMulti = items.length > 1;
+
+  const goPrev = useCallback(() => swiper?.slidePrev(), [swiper]);
+  const goNext = useCallback(() => swiper?.slideNext(), [swiper]);
+
+  return (
+    <div>
+      <div className="relative group/swiper">
+        <Swiper
+          modules={[Keyboard]}
+          spaceBetween={12}
+          slidesPerView={1}
+          keyboard={{ enabled: true }}
+          onSwiper={setSwiper}
+          onSlideChange={(s) => setActiveIdx(s.activeIndex)}
+          className="rounded-xl overflow-hidden bg-muted/30"
+        >
+          {items.map((item) => (
+            <SwiperSlide key={item.src}>
+              {item.type === "image" ? (
+                <button
+                  type="button"
+                  onClick={() => {
+                    const lightboxIdx = imageIndices.indexOf(
+                      items.indexOf(item),
+                    );
+                    if (lightboxIdx >= 0) onImageClick(lightboxIdx);
+                  }}
+                  className="block w-full cursor-zoom-in focus:outline-none"
+                >
+                  <img
+                    src={item.src}
+                    alt="Gallery"
+                    className="w-full h-auto max-h-[70vh] object-contain bg-muted/20"
+                  />
+                </button>
+              ) : (
+                <video
+                  src={item.src}
+                  poster={item.poster}
+                  controls
+                  preload="metadata"
+                  className="w-full h-auto max-h-[70vh] object-contain bg-muted/20"
+                />
+              )}
+            </SwiperSlide>
+          ))}
+        </Swiper>
+
+        {/* Custom nav arrows */}
+        {isMulti && (
+          <>
+            <button
+              type="button"
+              onClick={goPrev}
+              className="absolute left-2 top-1/2 -translate-y-1/2 z-10 w-8 h-8 rounded-full bg-black/30 hover:bg-black/50 text-white flex items-center justify-center opacity-0 group-hover/swiper:opacity-100 transition-opacity"
+              aria-label="Previous slide"
+            >
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+              >
+                <path d="M15 18l-6-6 6-6" />
+              </svg>
+            </button>
+            <button
+              type="button"
+              onClick={goNext}
+              className="absolute right-2 top-1/2 -translate-y-1/2 z-10 w-8 h-8 rounded-full bg-black/30 hover:bg-black/50 text-white flex items-center justify-center opacity-0 group-hover/swiper:opacity-100 transition-opacity"
+              aria-label="Next slide"
+            >
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+              >
+                <path d="M9 18l6-6-6-6" />
+              </svg>
+            </button>
+          </>
+        )}
+
+        {/* Zoom hint */}
+        <div className="absolute top-3 right-3 z-10 bg-black/50 rounded-md px-2.5 py-1 text-white/60 text-xs pointer-events-none select-none">
+          Click image to zoom
+        </div>
+      </div>
+
+      {/* Custom dots — below the asset */}
+      {isMulti && (
+        <div className="flex justify-center gap-1.5 mt-3">
+          {items.map((item, i) => (
+            <button
+              key={item.src}
+              type="button"
+              onClick={() => swiper?.slideTo(i)}
+              className={`rounded-full transition-all ${
+                i === activeIdx
+                  ? "w-4 h-1.5 bg-foreground"
+                  : "w-1.5 h-1.5 bg-foreground/20 hover:bg-foreground/40"
+              }`}
+              aria-label={`Go to slide ${i + 1}`}
+            />
+          ))}
+        </div>
+      )}
+    </div>
+  );
+};
+
+// -- Detail Page --
 
 const DetailPage: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -110,7 +249,7 @@ const DetailPage: React.FC = () => {
         </div>
 
         <section className="mb-8">
-          <ImageGallery
+          <GallerySwiper
             items={template.gallery}
             onImageClick={(index) => setLightboxIndex(index)}
           />

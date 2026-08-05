@@ -27,7 +27,13 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ items, onImageClick }) => {
     if (w === 0) return;
     const raw = scrollRef.current.scrollLeft / w;
     setActiveIndex(
-      Math.min(Math.max(raw - Math.floor(raw) >= 0.5 ? Math.ceil(raw) : Math.floor(raw), 0), sorted.length - 1),
+      Math.min(
+        Math.max(
+          raw - Math.floor(raw) >= 0.5 ? Math.ceil(raw) : Math.floor(raw),
+          0,
+        ),
+        sorted.length - 1,
+      ),
     );
   }, [sorted.length]);
 
@@ -65,7 +71,13 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ items, onImageClick }) => {
               draggable={false}
               onClick={() => onImageClick(0)}
               className="w-full max-h-[70vh] object-contain select-none"
-              style={{ cursor: "zoom-in", userDrag: "none", WebkitUserDrag: "none" } as React.CSSProperties}
+              style={
+                {
+                  cursor: "zoom-in",
+                  userDrag: "none",
+                  WebkitUserDrag: "none",
+                } as React.CSSProperties
+              }
             />
           ) : (
             <video
@@ -106,7 +118,13 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ items, onImageClick }) => {
                   alt={`Slide ${i + 1}`}
                   draggable={false}
                   className="w-full max-h-[70vh] object-contain select-none"
-                  style={{ userDrag: "none", WebkitUserDrag: "none", cursor: "zoom-in" } as React.CSSProperties}
+                  style={
+                    {
+                      userDrag: "none",
+                      WebkitUserDrag: "none",
+                      cursor: "zoom-in",
+                    } as React.CSSProperties
+                  }
                 />
               ) : (
                 <video

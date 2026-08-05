@@ -53,7 +53,12 @@ const Lightbox: React.FC<LightboxProps> = ({
   const handleMouseDown = (e: React.MouseEvent) => {
     if (scale > 1) {
       setIsDragging(true);
-      dragStart.current = { x: e.clientX, y: e.clientY, px: position.x, py: position.y };
+      dragStart.current = {
+        x: e.clientX,
+        y: e.clientY,
+        px: position.x,
+        py: position.y,
+      };
     }
   };
 
@@ -81,7 +86,14 @@ const Lightbox: React.FC<LightboxProps> = ({
         className="absolute top-4 right-4 z-10 p-2 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors"
         aria-label="Close lightbox"
       >
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+        >
           <path d="M18 6L6 18M6 6l12 12" />
         </svg>
       </button>
@@ -94,11 +106,21 @@ const Lightbox: React.FC<LightboxProps> = ({
       {/* Prev */}
       {images.length > 1 && (
         <button
-          onClick={(e) => { e.stopPropagation(); onPrev(); }}
+          onClick={(e) => {
+            e.stopPropagation();
+            onPrev();
+          }}
           className="absolute left-4 top-1/2 -translate-y-1/2 z-10 p-2 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors"
           aria-label="Previous image"
         >
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+          >
             <path d="M15 18l-6-6 6-6" />
           </svg>
         </button>
@@ -107,11 +129,21 @@ const Lightbox: React.FC<LightboxProps> = ({
       {/* Next */}
       {images.length > 1 && (
         <button
-          onClick={(e) => { e.stopPropagation(); onNext(); }}
+          onClick={(e) => {
+            e.stopPropagation();
+            onNext();
+          }}
           className="absolute right-4 top-1/2 -translate-y-1/2 z-10 p-2 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors"
           aria-label="Next image"
         >
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+          >
             <path d="M9 18l6-6-6-6" />
           </svg>
         </button>
@@ -125,7 +157,9 @@ const Lightbox: React.FC<LightboxProps> = ({
         onMouseMove={handleMouseMove}
         onMouseUp={handleMouseUp}
         onMouseLeave={handleMouseUp}
-        style={{ cursor: scale > 1 ? (isDragging ? "grabbing" : "grab") : "default" }}
+        style={{
+          cursor: scale > 1 ? (isDragging ? "grabbing" : "grab") : "default",
+        }}
       >
         <img
           ref={imageRef}
@@ -146,7 +180,14 @@ const Lightbox: React.FC<LightboxProps> = ({
           className="text-white/70 hover:text-white p-1 transition-colors"
           aria-label="Zoom out"
         >
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+          >
             <path d="M5 12h14" />
           </svg>
         </button>
@@ -158,7 +199,14 @@ const Lightbox: React.FC<LightboxProps> = ({
           className="text-white/70 hover:text-white p-1 transition-colors"
           aria-label="Zoom in"
         >
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+          >
             <path d="M12 5v14M5 12h14" />
           </svg>
         </button>
@@ -184,7 +232,9 @@ const Lightbox: React.FC<LightboxProps> = ({
                 else if (i > currentIndex) onNext();
               }}
               className={`w-1.5 h-1.5 rounded-full transition-all ${
-                i === currentIndex ? "bg-white w-4" : "bg-white/40 hover:bg-white/60"
+                i === currentIndex
+                  ? "bg-white w-4"
+                  : "bg-white/40 hover:bg-white/60"
               }`}
               aria-label={`Go to image ${i + 1}`}
             />

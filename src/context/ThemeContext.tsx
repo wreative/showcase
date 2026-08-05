@@ -15,7 +15,9 @@ const getStored = (): Theme => {
   try {
     const stored = localStorage.getItem(STORAGE_KEY);
     if (stored === "light" || stored === "dark") return stored;
-  } catch { /* localStorage unavailable */ }
+  } catch {
+    /* localStorage unavailable */
+  }
   return "dark";
 };
 
@@ -30,7 +32,11 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({
 
   useEffect(() => {
     applyTheme(theme);
-    try { localStorage.setItem(STORAGE_KEY, theme); } catch { /* noop */ }
+    try {
+      localStorage.setItem(STORAGE_KEY, theme);
+    } catch {
+      /* noop */
+    }
   }, [theme]);
 
   const toggle = () => setTheme((t) => (t === "dark" ? "light" : "dark"));
