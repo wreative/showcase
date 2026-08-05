@@ -12,6 +12,5 @@ export const portfolios: PortfolioItem[] = sortByPrimaryDomainLast(
   }))
 );
 
-// Re-export everything for convenience
-export type { Platform, PortfolioItem, GalleryItem, GalleryImage, GalleryVideo } from './types';
-export { PortfolioCategory, img, vid, entry, PRIMARY_DOMAIN, toSlug } from './types';
+// Re-export only what's consumed externally
+export type { Platform, PortfolioItem, GalleryItem } from './types';
