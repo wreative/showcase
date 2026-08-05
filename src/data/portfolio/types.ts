@@ -33,6 +33,8 @@ export interface PortfolioItem {
   description: string;
   tags: string[];
   gallery: GalleryItem[];
+  playStoreUrl?: string;
+  appStoreUrl?: string;
 }
 
 export const toSlug = (title: string): string =>
@@ -59,7 +61,9 @@ export const entry = (
   url: string,
   description: string,
   tags: string[],
-  gallery: GalleryItem[] = []
+  gallery: GalleryItem[] = [],
+  playStoreUrl?: string,
+  appStoreUrl?: string
 ): Omit<PortfolioItem, 'id' | 'slug'> => ({
   title,
   platform,
@@ -69,6 +73,8 @@ export const entry = (
   description,
   tags,
   gallery: gallery.length > 0 ? gallery : [img(image)],
+  playStoreUrl,
+  appStoreUrl,
 });
 
 // Domain always pushed to the end of the listing.

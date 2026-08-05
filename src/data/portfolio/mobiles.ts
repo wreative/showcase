@@ -52,7 +52,7 @@ const transportAppGallery = [
 
 // --- Mobile entries ---
 
-export const mobilePortfolios: Omit<PortfolioItem, "id" | "slug">[] = [
+export const mobilePortfolios: Omit<PortfolioItem, 'id' | 'slug'>[] = [
   entry(
     'Wreative App',
     'mobile',

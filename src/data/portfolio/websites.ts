@@ -55,7 +55,7 @@ const wreativeStoreGallery = [
 
 // --- Website entries ---
 
-export const websitePortfolios: Omit<PortfolioItem, "id" | "slug">[] = [
+export const websitePortfolios: Omit<PortfolioItem, 'id' | 'slug'>[] = [
   entry(
     'Kontraktor Surabaya',
     'website',
