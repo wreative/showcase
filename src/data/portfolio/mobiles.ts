@@ -2,52 +2,38 @@ import { type PortfolioItem, PortfolioCategory as C, entry, img, vid } from './t
 
 // Mobile app screenshot placeholders — reuse existing covers with diverse visuals.
 // Replace these with real app screenshots when available.
-import wreativeCover from '../../../assets/cover/wreative.webp';
-import wreativeStoreCover from '../../../assets/cover/wreative-store.webp';
-import bemodeCover from '../../../assets/cover/bemode.webp';
-import chickenExplorerCover from '../../../assets/cover/chicken-explorer.webp';
-import fajarFloristCover from '../../../assets/cover/fajar-florist.webp';
-import kurirPulsaCover from '../../../assets/cover/kurir-pulsa.webp';
-import pernikahanIni from '../../../assets/cover/pernikahan-ini.webp';
-import dzataLombokTransportCover from '../../../assets/cover/dzata-lombok-transport.webp';
-import sgAcademyCover from '../../../assets/cover/sg-academy.webp';
-import posSatpam from '../../../assets/cover/pos-satpam.webp';
-import toiletPortabel from '../../../assets/cover/toilet-portabel.webp';
-
-import DPUBinaMargaMusiCover from '../../../assets/cover/dpu-bina-marga-musi.webp';
-import wahyuDewanagariCover from '../../../assets/cover/wahyu-dewanagari.webp';
 
 const demoVideo = 'https://www.w3schools.com/html/mov_bbb.mp4';
 
 // --- Galleries (all images clearly different) ---
 
 const wreativeAppGallery = [
-  img(wreativeCover), // agency branding
-  img(wreativeStoreCover), // e-commerce layout
-  img(kurirPulsaCover), // dark top-up site
-  img(DPUBinaMargaMusiCover), // government site
-  vid(demoVideo, wreativeCover),
+  img('/assets/cover/wreative.webp'), // agency branding
+  img('/assets/cover/wreative-store.webp'), // e-commerce layout
+  img('/assets/cover/kurir-pulsa.webp'), // dark top-up site
+  img('/assets/cover/dpu-bina-marga-musi.webp'), // government site
+  vid(demoVideo, '/assets/cover/wreative.webp'),
 ];
 
 const foodAppGallery = [
-  img(chickenExplorerCover), // food site
-  img(fajarFloristCover), // florist site
-  img(bemodeCover), // fashion site
-  img(kurirPulsaCover), // dark top-up site
-  vid(demoVideo, chickenExplorerCover),
+  img('/assets/cover/chicken-explorer.webp'), // food site
+  img('/assets/cover/fajar-florist.webp'), // florist site
+  img('/assets/cover/bemode.webp'), // fashion site
+  img('/assets/cover/kurir-pulsa.webp'), // dark top-up site
+  vid(demoVideo, '/assets/cover/chicken-explorer.webp'),
 ];
 
 const weddingAppGallery = [
-  img(pernikahanIni), // wedding site
-  img(fajarFloristCover), // florist site
-  img(posSatpam), // security equipment
-  vid(demoVideo, pernikahanIni),
+  img('/assets/cover/pernikahan-ini.webp'), // wedding site
+  img('/assets/cover/fajar-florist.webp'), // florist site
+  img('/assets/cover/pos-satpam.webp'), // security equipment
+  vid(demoVideo, '/assets/cover/pernikahan-ini.webp'),
 ];
 
 const transportAppGallery = [
-  img(dzataLombokTransportCover), // transport site
-  img(toiletPortabel), // portable toilet rental
-  img(wahyuDewanagariCover), // cultural foundation
+  img('/assets/cover/dzata-lombok-transport.webp'), // transport site
+  img('/assets/cover/toilet-portabel.webp'), // portable toilet rental
+  img('/assets/cover/wahyu-dewanagari.webp'), // cultural foundation
 ];
 
 // --- Mobile entries ---
@@ -57,7 +43,7 @@ export const mobilePortfolios: Omit<PortfolioItem, 'id' | 'slug'>[] = [
     'Wreative App',
     'mobile',
     C.BUSINESS,
-    wreativeCover,
+    '/assets/cover/wreative.webp',
     'https://wreative.com/',
     'Brand companion app for Wreative creative agency. Clients can browse the portfolio, track project progress in real-time, communicate via in-app chat, and approve deliverables directly from their phone. Push notifications keep everyone aligned on deadlines.',
     ['React Native', 'Expo', 'Firebase', 'Push Notifications'],
@@ -67,7 +53,7 @@ export const mobilePortfolios: Omit<PortfolioItem, 'id' | 'slug'>[] = [
     'FoodDash — Food Delivery',
     'mobile',
     C.ECOMMERCE,
-    chickenExplorerCover,
+    '/assets/cover/chicken-explorer.webp',
     'https://chickenexplorer.wreative.com/',
     'Cross-platform food delivery app connecting hungry users with local restaurants. Features real-time order tracking with live GPS, multiple payment gateways (GoPay, OVO, bank transfer), smart recommendation engine, and a loyalty points system.',
     ['Flutter', 'Dart', 'Firebase', 'Google Maps API', 'Midtrans'],
@@ -77,7 +63,7 @@ export const mobilePortfolios: Omit<PortfolioItem, 'id' | 'slug'>[] = [
     'WeddingKu — Wedding Planner',
     'mobile',
     C.SERVICES,
-    pernikahanIni,
+    '/assets/cover/pernikahan-ini.webp',
     'https://pernikahanini.wreative.com/',
     'All-in-one wedding planning app for Indonesian couples. Browse vendor catalogs, manage guest lists with RSVP tracking, track budget across categories, timeline countdown, and mood board with Pinterest integration.',
     ['React Native', 'TypeScript', 'Supabase', 'Midtrans'],
@@ -87,7 +73,7 @@ export const mobilePortfolios: Omit<PortfolioItem, 'id' | 'slug'>[] = [
     'LombokRide — Transport Booking',
     'mobile',
     C.SERVICES,
-    dzataLombokTransportCover,
+    '/assets/cover/dzata-lombok-transport.webp',
     'https://dzatalomboktransport.wreative.com/',
     'Transport and tour booking app for Lombok island. Book cars, scooters, and tour packages with instant confirmation. Includes offline-capable maps, driver tracking, and multi-language support (ID/EN/JP).',
     ['Flutter', 'Google Maps SDK', 'Firebase', 'Localization'],
@@ -97,7 +83,7 @@ export const mobilePortfolios: Omit<PortfolioItem, 'id' | 'slug'>[] = [
     'SG Academy Mobile',
     'mobile',
     C.EDUCATION,
-    sgAcademyCover,
+    '/assets/cover/sg-academy.webp',
     'https://sgacademy.co.id/',
     'Mobile learning companion for SG Academy students. Access course materials offline, submit assignments, join live classes via integrated video conferencing, track learning progress with detailed analytics.',
     ['React Native', 'Zoom SDK', 'AWS S3', 'Offline-First']
@@ -106,7 +92,7 @@ export const mobilePortfolios: Omit<PortfolioItem, 'id' | 'slug'>[] = [
     'BE MODE — Fashion Shopping',
     'mobile',
     C.ECOMMERCE,
-    bemodeCover,
+    '/assets/cover/bemode.webp',
     'https://bemodeofficial.com',
     'Fashion e-commerce app with AR try-on for accessories, personalized style recommendations powered by ML, size guide with measurement input, wishlist sync across devices, and one-tap checkout.',
     ['Flutter', 'TensorFlow Lite', 'ARCore', 'Shopify API']
