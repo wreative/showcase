@@ -1,0 +1,13 @@
+---
+interface Props {
+  class?: string;
+}
+
+const { class: className = 'h-6 w-9' } = Astro.props;
+---
+
+<img
+  src="/assets/wreative.png"
+  alt="Wreative"
+  class={`invert transition-[filter] duration-300 dark:invert-0 ${className}`}
+/>
