@@ -1,0 +1,16 @@
+---
+import Icon from './Icon.astro';
+---
+
+<div class="relative flex-1">
+  <Icon
+    name="search"
+    class="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground"
+  />
+  <input
+    id="search-input"
+    type="text"
+    placeholder="Search projects..."
+    class="w-full rounded-lg border border-border bg-muted py-2 pl-10 pr-4 text-foreground transition-all placeholder:text-muted-foreground focus:border-ring focus:outline-none focus:ring-2 focus:ring-ring"
+  />
+</div>
