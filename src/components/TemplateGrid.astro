@@ -1,0 +1,23 @@
+---
+import TemplateCard from './TemplateCard.astro';
+import LoadingIndicator from './LoadingIndicator.astro';
+import type { PortfolioItem } from '@/data/portfolio';
+
+interface Props {
+  templates: PortfolioItem[];
+}
+
+const { templates } = Astro.props;
+---
+
+<div class="grid grid-cols-1 gap-3 md:grid-cols-2" id="template-grid">
+  {templates.map((template, index) => <TemplateCard template={template} index={index} />)}
+</div>
+
+<div id="grid-loading" class="hidden">
+  <LoadingIndicator />
+</div>
+
+<div id="empty-state" class="hidden py-12 text-center">
+  <p class="text-lg text-muted-foreground">Nothing found matching your criteria.</p>
+</div>
