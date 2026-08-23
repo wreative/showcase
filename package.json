@@ -16,12 +16,9 @@
   },
   "dependencies": {
     "astro": "^7.2.2",
-    "class-variance-authority": "^0.7.1",
-    "clsx": "^2.1.1",
     "lucide-static": "^1.32.0",
     "prettier-plugin-tailwindcss": "^0.8.1",
     "swiper": "^14.1.0",
-    "tailwind-merge": "^2.6.1",
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
