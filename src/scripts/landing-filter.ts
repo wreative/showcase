@@ -33,10 +33,10 @@ function initLandingFilter() {
   function render() {
     const matching = cards.filter(matches);
     matching.forEach((card, i) => {
-      card.hidden = i >= visibleCount;
+      card.classList.toggle('hidden', i >= visibleCount);
     });
     cards.filter((c) => !matching.includes(c)).forEach((card) => {
-      card.hidden = true;
+      card.classList.add('hidden');
     });
     emptyState!.classList.toggle('hidden', matching.length !== 0);
     gridLoading!.classList.toggle('hidden', !loading);
