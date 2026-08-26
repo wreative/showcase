@@ -13,6 +13,8 @@ import Icon from './Icon.astro';
 </button>
 
 <script>
+  import { onPageLoad } from '@/scripts/page-lifecycle';
+
   const STORAGE_KEY = 'wreative-theme';
 
   function currentTheme(): 'light' | 'dark' {
@@ -24,17 +26,23 @@ import Icon from './Icon.astro';
     button.setAttribute('aria-label', `Switch to ${next} mode`);
   }
 
-  document.querySelectorAll<HTMLButtonElement>('#theme-toggle').forEach((button) => {
-    updateAriaLabel(button);
-    button.addEventListener('click', () => {
-      const next = currentTheme() === 'dark' ? 'light' : 'dark';
-      document.documentElement.classList.toggle('dark', next === 'dark');
-      try {
-        localStorage.setItem(STORAGE_KEY, next);
-      } catch {
-        /* noop */
-      }
+  onPageLoad((signal) => {
+    document.querySelectorAll<HTMLButtonElement>('#theme-toggle').forEach((button) => {
       updateAriaLabel(button);
+      button.addEventListener(
+        'click',
+        () => {
+          const next = currentTheme() === 'dark' ? 'light' : 'dark';
+          document.documentElement.classList.toggle('dark', next === 'dark');
+          try {
+            localStorage.setItem(STORAGE_KEY, next);
+          } catch {
+            /* noop */
+          }
+          updateAriaLabel(button);
+        },
+        { signal },
+      );
     });
   });
 </script>
