@@ -39,51 +39,68 @@ const { categories } = Astro.props;
 </div>
 
 <script>
-  document.querySelectorAll<HTMLDivElement>('[data-category-filter]').forEach((root) => {
-    const trigger = root.querySelector<HTMLButtonElement>('#category-trigger')!;
-    const label = root.querySelector<HTMLSpanElement>('#category-trigger-label')!;
-    const menu = root.querySelector<HTMLDivElement>('#category-menu')!;
+  import { onPageLoad } from '@/scripts/page-lifecycle';
 
-    const close = () => {
-      menu.classList.add('hidden');
-      trigger.setAttribute('aria-expanded', 'false');
-    };
-    const open = () => {
-      menu.classList.remove('hidden');
-      trigger.setAttribute('aria-expanded', 'true');
-    };
+  onPageLoad((signal) => {
+    document.querySelectorAll<HTMLDivElement>('[data-category-filter]').forEach((root) => {
+      const trigger = root.querySelector<HTMLButtonElement>('#category-trigger')!;
+      const label = root.querySelector<HTMLSpanElement>('#category-trigger-label')!;
+      const menu = root.querySelector<HTMLDivElement>('#category-menu')!;
 
-    trigger.addEventListener('click', (e) => {
-      e.stopPropagation();
-      if (menu.classList.contains('hidden')) {
-        open();
-      } else {
-        close();
-      }
-    });
+      const close = () => {
+        menu.classList.add('hidden');
+        trigger.setAttribute('aria-expanded', 'false');
+      };
+      const open = () => {
+        menu.classList.remove('hidden');
+        trigger.setAttribute('aria-expanded', 'true');
+      };
 
-    menu.querySelectorAll<HTMLButtonElement>('[data-category]').forEach((item) => {
-      item.addEventListener('click', () => {
-        const category = item.dataset.category!;
-        trigger.dataset.selected = category;
-        label.textContent = category;
-        menu.querySelectorAll<HTMLButtonElement>('[data-category]').forEach((btn) => {
-          btn.classList.toggle(
-            'bg-accent',
-            btn.dataset.category === category
-          );
-          btn.classList.toggle('text-accent-foreground', btn.dataset.category === category);
-        });
-        close();
-        root.dispatchEvent(new CustomEvent('category-select', { detail: category, bubbles: true }));
+      trigger.addEventListener(
+        'click',
+        (e) => {
+          e.stopPropagation();
+          if (menu.classList.contains('hidden')) {
+            open();
+          } else {
+            close();
+          }
+        },
+        { signal },
+      );
+
+      menu.querySelectorAll<HTMLButtonElement>('[data-category]').forEach((item) => {
+        item.addEventListener(
+          'click',
+          () => {
+            const category = item.dataset.category!;
+            trigger.dataset.selected = category;
+            label.textContent = category;
+            menu.querySelectorAll<HTMLButtonElement>('[data-category]').forEach((btn) => {
+              btn.classList.toggle('bg-accent', btn.dataset.category === category);
+              btn.classList.toggle('text-accent-foreground', btn.dataset.category === category);
+            });
+            close();
+            root.dispatchEvent(new CustomEvent('category-select', { detail: category, bubbles: true }));
+          },
+          { signal },
+        );
       });
-    });
 
-    document.addEventListener('click', (e) => {
-      if (!root.contains(e.target as Node)) close();
-    });
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') close();
+      document.addEventListener(
+        'click',
+        (e) => {
+          if (!root.contains(e.target as Node)) close();
+        },
+        { signal },
+      );
+      document.addEventListener(
+        'keydown',
+        (e) => {
+          if (e.key === 'Escape') close();
+        },
+        { signal },
+      );
     });
   });
 </script>
