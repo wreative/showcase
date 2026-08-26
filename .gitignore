@@ -265,3 +265,6 @@ sketch
 
 # Astro
 .astro/
+
+# Playwright CLI
+.playwright-cli/
