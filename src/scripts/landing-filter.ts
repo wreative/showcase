@@ -1,3 +1,5 @@
+import { onPageLoad } from '@/scripts/page-lifecycle';
+
 const ITEMS_PER_PAGE = 8;
 const LOAD_DELAY_MS = 400;
 
@@ -5,7 +7,7 @@ interface CardEl extends HTMLElement {
   dataset: DOMStringMap & { title: string; platform: string; category: string };
 }
 
-function initLandingFilter() {
+function initLandingFilter(signal: AbortSignal) {
   const grid = document.getElementById('template-grid');
   const searchInput = document.getElementById('search-input') as HTMLInputElement | null;
   const platformTabs = document.getElementById('platform-tabs');
@@ -78,10 +80,14 @@ function initLandingFilter() {
     });
   });
 
-  document.addEventListener('category-select', ((e: CustomEvent<string>) => {
-    selectedCategory = e.detail;
-    resetPaging();
-  }) as EventListener);
+  document.addEventListener(
+    'category-select',
+    ((e: CustomEvent<string>) => {
+      selectedCategory = e.detail;
+      resetPaging();
+    }) as EventListener,
+    { signal },
+  );
 
   function loadMore() {
     loading = true;
@@ -101,10 +107,10 @@ function initLandingFilter() {
         window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 200;
       if (nearBottom && !loading && visibleCount < matching.length) loadMore();
     },
-    { passive: true }
+    { passive: true, signal },
   );
 
   render();
 }
 
-initLandingFilter();
+onPageLoad(initLandingFilter);
