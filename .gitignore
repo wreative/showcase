@@ -265,6 +265,7 @@ sketch
 
 # Astro
 .astro/
+dev-dist
 
 # Playwright CLI
 .playwright-cli/
