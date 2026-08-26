@@ -1,6 +1,7 @@
 ---
 import '@/index.css';
 import Seo from '@/components/Seo.astro';
+import { ClientRouter } from 'astro:transitions';
 
 interface Props {
   title: string;
@@ -60,6 +61,8 @@ const sharedJsonLd = {
 
     <Seo {...props} />
 
+    <ClientRouter />
+
     <meta name="google-site-verification" content="Ukw8g7kiNLwh8PEU_X2OvQPx5CJHdwQVM-fpbaaaCeY" />
     <meta
       name="ahrefs-site-verification"
@@ -87,12 +90,16 @@ const sharedJsonLd = {
 
     <script is:inline>
       (function () {
-        try {
-          const t = localStorage.getItem('wreative-theme') || 'dark';
-          if (t === 'dark') document.documentElement.classList.add('dark');
-        } catch {
-          // ignore
+        function applyTheme() {
+          try {
+            const t = localStorage.getItem('wreative-theme') || 'dark';
+            document.documentElement.classList.toggle('dark', t === 'dark');
+          } catch {
+            // ignore
+          }
         }
+        applyTheme();
+        document.addEventListener('astro:after-swap', applyTheme);
       })();
     </script>
   </head>
