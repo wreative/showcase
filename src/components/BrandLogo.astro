@@ -6,8 +6,5 @@ interface Props {
 const { class: className = 'h-6 w-9' } = Astro.props;
 ---
 
-<img
-  src="/assets/wreative.png"
-  alt="Wreative"
-  class={`invert transition-[filter] duration-300 dark:invert-0 ${className}`}
-/>
+<img src="/assets/wreative-light.png" alt="Wreative" class={`block dark:hidden ${className}`} />
+<img src="/assets/wreative-dark.png" alt="Wreative" class={`hidden dark:block ${className}`} />
