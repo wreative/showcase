@@ -1,0 +1,53 @@
+---
+import SearchBar from './SearchBar.astro';
+import CategoryFilter from './CategoryFilter.astro';
+import ThemeToggle from './ThemeToggle.astro';
+import BrandLogo from './BrandLogo.astro';
+
+interface Props {
+  categories: string[];
+}
+
+const { categories } = Astro.props;
+const tabs = [
+  { key: 'all', label: 'All' },
+  { key: 'website', label: 'Website' },
+  { key: 'mobile', label: 'Mobile' },
+];
+---
+
+<header class="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur-md">
+  <div class="mx-auto max-w-7xl px-4 py-4">
+    <div class="mb-4 flex items-center justify-between">
+      <a href="/" class="group flex items-center gap-2.5">
+        <BrandLogo />
+        <h1 class="text-xl font-bold text-foreground transition-colors group-hover:text-muted-foreground">
+          Wreative Showcase
+        </h1>
+      </a>
+      <ThemeToggle />
+    </div>
+
+    <div class="mb-3 flex gap-1" id="platform-tabs">
+      {tabs.map((tab) => (
+        <button
+          type="button"
+          data-platform={tab.key}
+          class:list={[
+            'rounded-lg px-4 py-1.5 text-sm font-medium transition-colors',
+            tab.key === 'all'
+              ? 'bg-foreground text-background'
+              : 'text-muted-foreground hover:bg-muted hover:text-foreground',
+          ]}
+        >
+          {tab.label}
+        </button>
+      ))}
+    </div>
+
+    <div class="flex gap-2">
+      <SearchBar />
+      <CategoryFilter categories={categories} />
+    </div>
+  </div>
+</header>

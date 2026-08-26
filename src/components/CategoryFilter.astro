@@ -1,0 +1,89 @@
+---
+import Icon from './Icon.astro';
+
+interface Props {
+  categories: string[];
+}
+
+const { categories } = Astro.props;
+---
+
+<div class="relative" data-category-filter>
+  <button
+    id="category-trigger"
+    type="button"
+    data-selected={categories[0]}
+    class="flex items-center gap-1 rounded-lg bg-primary px-4 py-2 text-sm text-primary-foreground transition-colors hover:opacity-90"
+    aria-haspopup="true"
+    aria-expanded="false"
+  >
+    <span id="category-trigger-label">{categories[0]}</span>
+    <Icon name="chevron-down" class="h-4 w-4" />
+  </button>
+  <div
+    id="category-menu"
+    role="menu"
+    class="absolute right-0 z-10 mt-1 hidden w-48 rounded-md border border-border bg-popover p-1 text-popover-foreground shadow-md"
+  >
+    {categories.map((category) => (
+      <button
+        type="button"
+        role="menuitem"
+        data-category={category}
+        class="flex w-full cursor-default select-none items-center rounded-sm px-2 py-1.5 text-left text-sm outline-none hover:bg-accent hover:text-accent-foreground"
+      >
+        {category}
+      </button>
+    ))}
+  </div>
+</div>
+
+<script>
+  document.querySelectorAll<HTMLDivElement>('[data-category-filter]').forEach((root) => {
+    const trigger = root.querySelector<HTMLButtonElement>('#category-trigger')!;
+    const label = root.querySelector<HTMLSpanElement>('#category-trigger-label')!;
+    const menu = root.querySelector<HTMLDivElement>('#category-menu')!;
+
+    const close = () => {
+      menu.classList.add('hidden');
+      trigger.setAttribute('aria-expanded', 'false');
+    };
+    const open = () => {
+      menu.classList.remove('hidden');
+      trigger.setAttribute('aria-expanded', 'true');
+    };
+
+    trigger.addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (menu.classList.contains('hidden')) {
+        open();
+      } else {
+        close();
+      }
+    });
+
+    menu.querySelectorAll<HTMLButtonElement>('[data-category]').forEach((item) => {
+      item.addEventListener('click', () => {
+        const category = item.dataset.category!;
+        trigger.dataset.selected = category;
+        label.textContent = category;
+        menu.querySelectorAll<HTMLButtonElement>('[data-category]').forEach((btn) => {
+          btn.classList.toggle(
+            'bg-accent',
+            btn.dataset.category === category
+          );
+          btn.classList.toggle('text-accent-foreground', btn.dataset.category === category);
+        });
+        close();
+        root.dispatchEvent(new CustomEvent('category-select', { detail: category, bubbles: true }));
+      });
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!root.contains(e.target as Node)) close();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') close();
+    });
+  });
+</script>

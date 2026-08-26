@@ -1,0 +1,54 @@
+---
+import type { PortfolioItem } from '@/data/portfolio';
+
+interface Props {
+  template: PortfolioItem;
+  index: number;
+}
+
+const { template, index } = Astro.props;
+const imageCount = template.gallery.filter((i) => i.type === 'image').length;
+const hasVideo = template.gallery.some((i) => i.type === 'video');
+---
+
+<a
+  href={`/project/${template.slug}`}
+  class="group relative block cursor-pointer overflow-hidden rounded-xl border border-border bg-card transition-colors duration-300 hover:border-foreground/20"
+  data-template-card
+  data-title={template.title.toLowerCase()}
+  data-platform={template.platform}
+  data-category={template.category}
+  data-index={index}
+>
+  <div class="aspect-[16/9] overflow-hidden">
+    <img
+      src={template.image}
+      alt={template.title}
+      class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+      loading="lazy"
+    />
+  </div>
+
+  <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent"></div>
+
+  <div class="absolute inset-x-0 bottom-0 p-5">
+    <div class="flex items-end justify-between gap-2">
+      <h2 class="text-lg font-semibold leading-tight text-white">{template.title}</h2>
+      <span class="shrink-0 rounded-full bg-white/15 px-2.5 py-0.5 text-xs font-medium text-white/90">
+        {template.category}
+      </span>
+    </div>
+  </div>
+
+  <span class="absolute left-3 top-3 rounded-md bg-black/50 px-2 py-0.5 text-[11px] font-medium capitalize text-white/70">
+    {template.platform}
+  </span>
+
+  {
+    template.gallery.length > 1 && (
+      <span class="absolute right-3 top-3 rounded-md bg-black/50 px-2 py-0.5 text-[11px] text-white/70">
+        {imageCount} img{hasVideo && ' + vid'}
+      </span>
+    )
+  }
+</a>

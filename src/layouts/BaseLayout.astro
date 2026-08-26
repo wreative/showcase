@@ -1,0 +1,102 @@
+---
+import '@/index.css';
+import Seo from '@/components/Seo.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  canonical: string;
+  ogImage?: string;
+  robots?: string;
+  jsonLd?: Record<string, unknown> | Record<string, unknown>[];
+}
+
+const props = Astro.props;
+
+const sharedJsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'ProfessionalService',
+      '@id': 'https://showcase.wreative.com/#org',
+      name: 'Wreative',
+      url: 'https://showcase.wreative.com',
+      description:
+        'Creative agency specializing in website and mobile application development based in Indonesia.',
+      logo: 'https://showcase.wreative.com/assets/wreative.png',
+      address: { '@type': 'PostalAddress', addressCountry: 'ID', addressRegion: 'Banten' },
+      sameAs: ['https://showcase.wreative.com'],
+    },
+    {
+      '@type': 'Person',
+      '@id': 'https://showcase.wreative.com/#person',
+      name: 'Moh Ravi Dwi Putra',
+      url: 'https://showcase.wreative.com',
+      jobTitle: 'Web Developer & Designer',
+      worksFor: { '@id': 'https://showcase.wreative.com/#org' },
+      nationality: 'ID',
+      knowsAbout: ['Web Development', 'Mobile App Development', 'WordPress', 'React', 'Flutter'],
+    },
+    {
+      '@type': 'WebSite',
+      '@id': 'https://showcase.wreative.com/#website',
+      name: 'Wreative Showcase',
+      url: 'https://showcase.wreative.com',
+      description:
+        'Portfolio showcase of website and mobile application projects by Wreative creative agency.',
+      publisher: { '@id': 'https://showcase.wreative.com/#org' },
+      inLanguage: ['en', 'id'],
+    },
+  ],
+};
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Moh Ravi Dwi Putra" />
+
+    <Seo {...props} />
+
+    <meta name="google-site-verification" content="Ukw8g7kiNLwh8PEU_X2OvQPx5CJHdwQVM-fpbaaaCeY" />
+    <meta
+      name="ahrefs-site-verification"
+      content="b850a8261da5283732a7d275f2ca5d60d7241d12a5e3ed0e6f344d91cb22721c"
+    />
+
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="msapplication-navbutton-color" content="#ffffff" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#ffffff" />
+
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/android-chrome-192x192.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <script type="application/ld+json" set:html={JSON.stringify(sharedJsonLd)} />
+
+    <script is:inline>
+      (function () {
+        try {
+          const t = localStorage.getItem('wreative-theme') || 'dark';
+          if (t === 'dark') document.documentElement.classList.add('dark');
+        } catch {
+          // ignore
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

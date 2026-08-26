@@ -1,0 +1,24 @@
+---
+interface Props {
+  title: string;
+  class?: string;
+}
+
+const { title, class: className = '' } = Astro.props;
+---
+
+<div
+  role="alert"
+  class:list={[
+    'relative w-full rounded-lg border px-4 py-3 text-sm',
+    'border-amber-500/20 bg-amber-500/5 text-amber-600 dark:text-amber-200',
+    className,
+  ]}
+>
+  <h5 class="mb-1 text-base font-semibold leading-none tracking-tight text-amber-700 dark:text-amber-100">
+    {title}
+  </h5>
+  <div class="text-sm text-amber-600/70 dark:text-amber-200/70">
+    <slot />
+  </div>
+</div>

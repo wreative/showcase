@@ -262,3 +262,9 @@ sketch
 .ionide
 
 # End of https://www.toptal.com/developers/gitignore/api/visualstudiocode,intellij+all,react,node
+
+# Astro
+.astro/
+
+# Playwright CLI
+.playwright-cli/

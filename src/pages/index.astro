@@ -1,0 +1,47 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Header from '@/components/Header.astro';
+import Alert from '@/components/Alert.astro';
+import TemplateGrid from '@/components/TemplateGrid.astro';
+import Footer from '@/components/Footer.astro';
+import { portfolios } from '@/data/portfolio';
+
+const categories = ['All', ...new Set(portfolios.map((t) => t.category))];
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: 'Wreative Showcase — Portfolio',
+  url: 'https://showcase.wreative.com/',
+  description: 'Portfolio of website and mobile application projects by Wreative creative agency.',
+  provider: { '@id': 'https://showcase.wreative.com/#org' },
+  mainEntity: { '@type': 'ItemList', numberOfItems: portfolios.length },
+};
+---
+
+<BaseLayout
+  title="Wreative Showcase — Portfolio Kreatif Indonesia"
+  description={`Portfolio showcase by Wreative — creative agency based in Indonesia. Browse ${portfolios.length} website and mobile app projects across business, education, e-commerce, government, and services categories.`}
+  canonical="https://showcase.wreative.com/"
+  jsonLd={jsonLd}
+>
+  <div class="flex min-h-screen flex-col bg-background">
+    <Header categories={categories} />
+
+    <main class="mx-auto w-full max-w-7xl flex-1 px-4 py-6">
+      <Alert title="Announcement" class="mb-6">
+        Not all websites are mirrored, and the <b>mirroring</b> is done to maintain the original theme
+        we've created, in case there are any changes from the client's side. Some functions may not
+        work properly.
+      </Alert>
+
+      <p id="platform-status" class="mb-4 hidden text-sm capitalize text-muted-foreground"></p>
+
+      <TemplateGrid templates={portfolios} />
+    </main>
+
+    <Footer brandName="Wreative" />
+  </div>
+</BaseLayout>
+
+<script src="@/scripts/landing-filter.ts"></script>
