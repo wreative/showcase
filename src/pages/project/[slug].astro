@@ -182,43 +182,46 @@ const jsonLd = {
 </BaseLayout>
 
 <script>
+  import { onPageLoad } from '@/scripts/page-lifecycle';
   import { initGallerySwiper } from '@/scripts/gallery-swiper';
   import { initLightbox } from '@/scripts/lightbox';
 
-  const galleryEl = document.getElementById('gallery-swiper');
-  if (galleryEl) {
-    const imageSrcs = Array.from(
-      galleryEl.querySelectorAll<HTMLImageElement>('[data-gallery-type="image"] img'),
-    ).map((img) => img.src);
-    const lightbox = initLightbox(imageSrcs);
-    const swiper = initGallerySwiper(galleryEl, (imageIndex) => lightbox.open(imageIndex));
+  onPageLoad(() => {
+    const galleryEl = document.getElementById('gallery-swiper');
+    if (galleryEl) {
+      const imageSrcs = Array.from(
+        galleryEl.querySelectorAll<HTMLImageElement>('[data-gallery-type="image"] img'),
+      ).map((img) => img.src);
+      const lightbox = initLightbox(imageSrcs);
+      const swiper = initGallerySwiper(galleryEl, (imageIndex) => lightbox.open(imageIndex));
 
-    // Dots pagination -- matches original GallerySwiper component's dot buttons
-    const dotsContainer = document.getElementById('gallery-dots');
-    if (dotsContainer && swiper.slides.length > 1) {
-      const total = swiper.slides.length;
-      const createDots = () => {
-        dotsContainer.innerHTML = '';
-        for (let i = 0; i < total; i++) {
-          const dot = document.createElement('button');
-          dot.type = 'button';
-          dot.className = `h-1.5 w-1.5 rounded-full transition-all ${i === swiper.activeIndex ? 'w-4 bg-foreground' : 'bg-foreground/20 hover:bg-foreground/40'}`;
-          dot.setAttribute('aria-label', `Go to slide ${i + 1}`);
-          dot.addEventListener('click', () => swiper.slideTo(i));
-          dotsContainer.appendChild(dot);
-        }
-      };
-      createDots();
-      swiper.on('slideChange', () => {
-        const dots = dotsContainer.querySelectorAll('button');
-        dots.forEach((dot, i) => {
-          const active = i === swiper.activeIndex;
-          dot.classList.toggle('w-4', active);
-          dot.classList.toggle('bg-foreground', active);
-          dot.classList.toggle('bg-foreground/20', !active);
-          dot.classList.toggle('hover:bg-foreground/40', !active);
+      // Dots pagination -- matches original GallerySwiper component's dot buttons
+      const dotsContainer = document.getElementById('gallery-dots');
+      if (dotsContainer && swiper.slides.length > 1) {
+        const total = swiper.slides.length;
+        const createDots = () => {
+          dotsContainer.innerHTML = '';
+          for (let i = 0; i < total; i++) {
+            const dot = document.createElement('button');
+            dot.type = 'button';
+            dot.className = `h-1.5 w-1.5 rounded-full transition-all ${i === swiper.activeIndex ? 'w-4 bg-foreground' : 'bg-foreground/20 hover:bg-foreground/40'}`;
+            dot.setAttribute('aria-label', `Go to slide ${i + 1}`);
+            dot.addEventListener('click', () => swiper.slideTo(i));
+            dotsContainer.appendChild(dot);
+          }
+        };
+        createDots();
+        swiper.on('slideChange', () => {
+          const dots = dotsContainer.querySelectorAll('button');
+          dots.forEach((dot, i) => {
+            const active = i === swiper.activeIndex;
+            dot.classList.toggle('w-4', active);
+            dot.classList.toggle('bg-foreground', active);
+            dot.classList.toggle('bg-foreground/20', !active);
+            dot.classList.toggle('hover:bg-foreground/40', !active);
+          });
         });
-      });
+      }
     }
-  }
+  });
 </script>
