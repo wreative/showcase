@@ -1,5 +1,5 @@
 {
   "$schema": "https://unpkg.com/knip@6/schema.json",
   "tags": ["-lintignore"],
-  "ignore": ["src/scripts/landing-filter.ts"]
+  "ignore": ["src/scripts/landing-filter.ts", "src/scripts/pwa.ts"]
 }
