@@ -1,4 +1,6 @@
 ---
+import wreativeLight from '@/assets/wreative-light.png';
+
 interface Props {
   title: string;
   description: string;
@@ -12,7 +14,7 @@ const {
   title,
   description,
   canonical,
-  ogImage = 'https://showcase.wreative.com/assets/wreative-light.png',
+  ogImage = new URL(wreativeLight.src, Astro.site).href,
   robots = 'index, follow',
   jsonLd,
 } = Astro.props;

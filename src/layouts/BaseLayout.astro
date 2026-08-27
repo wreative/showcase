@@ -3,6 +3,7 @@ import '@/index.css';
 import Seo from '@/components/Seo.astro';
 import { ClientRouter } from 'astro:transitions';
 import { pwaInfo } from 'virtual:pwa-info';
+import wreativeLight from '@/assets/wreative-light.png';
 
 interface Props {
   title: string;
@@ -25,7 +26,7 @@ const sharedJsonLd = {
       url: 'https://showcase.wreative.com',
       description:
         'Creative agency specializing in website and mobile application development based in Indonesia.',
-      logo: 'https://showcase.wreative.com/assets/wreative-light.png',
+      logo: new URL(wreativeLight.src, Astro.site).href,
       address: { '@type': 'PostalAddress', addressCountry: 'ID', addressRegion: 'Banten' },
       sameAs: ['https://showcase.wreative.com'],
     },
