@@ -10,5 +10,5 @@ interface Props {
 const { class: className = 'h-6 w-9' } = Astro.props;
 ---
 
-<Image src={wreativeLight} alt="Wreative" class={`block dark:hidden ${className}`} />
-<Image src={wreativeDark} alt="Wreative" class={`hidden dark:block ${className}`} />
+<Image src={wreativeLight} alt="Wreative" class={`block dark:hidden ${className}`} loading="eager" fetchpriority="high" />
+<Image src={wreativeDark} alt="Wreative" class={`hidden dark:block ${className}`} loading="eager" />
