@@ -1,6 +1,7 @@
 import Swiper from 'swiper';
 import { Keyboard } from 'swiper/modules';
 import 'swiper/css';
+import 'swiper/css/keyboard';
 
 export function initGallerySwiper(
   container: HTMLElement,
