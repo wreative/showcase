@@ -40,4 +40,4 @@ const jsonLdBlocks = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
 <meta name="twitter:description" content={description} />
 <meta name="twitter:image" content={ogImage} />
 
-{jsonLdBlocks.map((block) => <script type="application/ld+json" set:html={JSON.stringify(block)} />)}
+{jsonLdBlocks.map((block) => <script is:inline type="application/ld+json" set:html={JSON.stringify(block)} />)}

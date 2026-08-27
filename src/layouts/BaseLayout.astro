@@ -92,7 +92,7 @@ const sharedJsonLd = {
       rel="stylesheet"
     />
 
-    <script type="application/ld+json" set:html={JSON.stringify(sharedJsonLd)} />
+    <script is:inline type="application/ld+json" set:html={JSON.stringify(sharedJsonLd)} />
 
     <script is:inline>
       (function () {
