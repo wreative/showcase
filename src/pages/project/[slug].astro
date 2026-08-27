@@ -1,8 +1,10 @@
 ---
+import { Image } from 'astro:assets';
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import BrandLogo from '@/components/BrandLogo.astro';
 import ThemeToggle from '@/components/ThemeToggle.astro';
 import { portfolios } from '@/data/portfolio';
+import { getCoverImage } from '@/lib/covers';
 
 export function getStaticPaths() {
   return portfolios.map((template) => ({
@@ -29,7 +31,7 @@ const jsonLd = {
   title={`${template.title} — Wreative Showcase`}
   description={template.description}
   canonical={`https://showcase.wreative.com/project/${template.slug}`}
-  ogImage={template.image}
+  ogImage={getCoverImage(template.image).src}
   jsonLd={jsonLd}
 >
   <div class="min-h-screen bg-background">
@@ -64,9 +66,14 @@ const jsonLd = {
             {template.gallery.map((item) => (
               <div class="swiper-slide" data-gallery-type={item.type}>
                 {item.type === 'image' ? (
-                  <img src={item.src} alt={template.title} class="h-full w-full object-cover" loading="lazy" />
+                  <Image src={getCoverImage(item.src)} alt={template.title} class="h-full w-full object-cover" loading="lazy" />
                 ) : (
-                  <video src={item.src} poster={item.poster} controls class="h-full w-full object-cover" />
+                  <video
+                    src={item.src}
+                    poster={item.poster ? getCoverImage(item.poster).src : undefined}
+                    controls
+                    class="h-full w-full object-cover"
+                  />
                 )}
               </div>
             ))}
