@@ -15,7 +15,16 @@ const jsonLd = {
   url: 'https://showcase.wreative.com/',
   description: 'Portfolio of website and mobile application projects by Wreative creative agency.',
   provider: { '@id': 'https://showcase.wreative.com/#org' },
-  mainEntity: { '@type': 'ItemList', numberOfItems: portfolios.length },
+  mainEntity: {
+    '@type': 'ItemList',
+    numberOfItems: portfolios.length,
+    itemListElement: portfolios.map((t, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: t.title,
+      url: `https://showcase.wreative.com/project/${t.slug}`,
+    })),
+  },
 };
 ---
 
@@ -31,9 +40,9 @@ const jsonLd = {
     <main class="mx-auto w-full max-w-7xl flex-1 px-4 py-6">
       <Alert title="Announcement" class="mb-6">
         <span data-i18n-html="alert.body">
-          Not all websites are mirrored, and the <b>mirroring</b> is done to maintain the original
-          theme we've created, in case there are any changes from the client's side. Some functions
-          may not work properly.
+          Not all websites are mirrored, and the <b>mirroring</b> is done to maintain the original theme
+          we've created, in case there are any changes from the client's side. Some functions may not
+          work properly.
         </span>
       </Alert>
 

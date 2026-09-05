@@ -1,6 +1,4 @@
 ---
-import wreativeLight from '@/assets/wreative-light.png';
-
 interface Props {
   title: string;
   description: string;
@@ -14,12 +12,18 @@ const {
   title,
   description,
   canonical,
-  ogImage = new URL(wreativeLight.src, Astro.site).href,
+  ogImage = new URL('/assets/og-default.png', Astro.site).href,
   robots = 'index, follow',
   jsonLd,
 } = Astro.props;
 
 const jsonLdBlocks = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
+const isDefaultOg = !Astro.props.ogImage;
+const ogWidth = isDefaultOg ? 1200 : undefined;
+const ogHeight = isDefaultOg ? 630 : undefined;
+const ogAlt = isDefaultOg
+  ? 'Wreative Showcase — Portfolio of website and mobile app projects'
+  : `${title} — project preview`;
 ---
 
 <title>{title}</title>
@@ -30,6 +34,9 @@ const jsonLdBlocks = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
 <meta property="og:image" content={ogImage} />
+{ogWidth && <meta property="og:image:width" content={String(ogWidth)} />}
+{ogHeight && <meta property="og:image:height" content={String(ogHeight)} />}
+<meta property="og:image:alt" content={ogAlt} />
 <meta property="og:url" content={canonical} />
 <meta property="og:type" content="website" />
 <meta property="og:locale" content="id_ID" />
@@ -39,5 +46,10 @@ const jsonLdBlocks = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
 <meta name="twitter:title" content={title} />
 <meta name="twitter:description" content={description} />
 <meta name="twitter:image" content={ogImage} />
+<meta name="twitter:image:alt" content={ogAlt} />
 
-{jsonLdBlocks.map((block) => <script is:inline type="application/ld+json" set:html={JSON.stringify(block)} />)}
+{
+  jsonLdBlocks.map((block) => (
+    <script is:inline type="application/ld+json" set:html={JSON.stringify(block)} />
+  ))
+}

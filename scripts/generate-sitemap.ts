@@ -101,6 +101,7 @@ console.log(`Found ${entries.length} portfolio entries`);
 
 // --- Sitemap ---
 
+const lastmod = new Date().toISOString().slice(0, 10);
 const sitemapUrls: { loc: string; changefreq: string; priority: string }[] = [
   { loc: `${BASE_URL}/`, changefreq: 'weekly', priority: '1.0' },
 ];
@@ -119,6 +120,7 @@ ${sitemapUrls
   .map(
     (u) => `  <url>
     <loc>${u.loc}</loc>
+    <lastmod>${lastmod}</lastmod>
     <changefreq>${u.changefreq}</changefreq>
     <priority>${u.priority}</priority>
   </url>`
@@ -143,6 +145,15 @@ const llmsLines: string[] = [
   '> Author: Wreative | Location: Surabaya, Indonesia',
   '',
   `Total: ${entries.length} projects (${websites.length} websites, ${mobiles.length} mobile apps)`,
+  '',
+  '## Site Information',
+  '',
+  '- **Homepage:** https://showcase.wreative.com/',
+  '- **Sitemap:** https://showcase.wreative.com/sitemap.xml',
+  '- **Project pages:** https://showcase.wreative.com/project/<slug> (one page per project below)',
+  '- **Services:** Website development (WordPress, custom themes, e-commerce/LMS) and mobile application development.',
+  '- **Categories:** Business, Education, E-Commerce, Government, Services, Florist & Gardening.',
+  '- **Language:** English and Indonesian (en/id).',
   '',
   '## Websites',
   '',

@@ -22,8 +22,12 @@ const tabs = [
     <div class="mb-4 flex items-center justify-between">
       <a href="/" class="group flex items-center gap-2.5">
         <BrandLogo />
-        <h1 class="text-xl font-bold text-foreground transition-colors group-hover:text-muted-foreground">
-          Wreative Showcase
+        <h1
+          class="text-xl font-bold text-foreground transition-colors group-hover:text-muted-foreground"
+        >
+          Wreative Showcase<span class="sr-only">
+            — Portfolio Website &amp; Mobile App Indonesia</span
+          >
         </h1>
       </a>
       <div class="flex items-center gap-2">
@@ -33,21 +37,23 @@ const tabs = [
     </div>
 
     <div class="mb-3 flex gap-1" id="platform-tabs">
-      {tabs.map((tab) => (
-        <button
-          type="button"
-          data-platform={tab.key}
-          data-i18n={`tab.${tab.key}`}
-          class:list={[
-            'rounded-lg px-4 py-1.5 text-sm font-medium transition-colors',
-            tab.key === 'all'
-              ? 'bg-foreground text-background'
-              : 'text-muted-foreground hover:bg-muted hover:text-foreground',
-          ]}
-        >
-          {tab.label}
-        </button>
-      ))}
+      {
+        tabs.map((tab) => (
+          <button
+            type="button"
+            data-platform={tab.key}
+            data-i18n={`tab.${tab.key}`}
+            class:list={[
+              'rounded-lg px-4 py-1.5 text-sm font-medium transition-colors',
+              tab.key === 'all'
+                ? 'bg-foreground text-background'
+                : 'text-muted-foreground hover:bg-muted hover:text-foreground',
+            ]}
+          >
+            {tab.label}
+          </button>
+        ))
+      }
     </div>
 
     <div class="flex gap-2">

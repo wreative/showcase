@@ -5,6 +5,15 @@
 
 Total: 33 projects (27 websites, 6 mobile apps)
 
+## Site Information
+
+- **Homepage:** https://showcase.wreative.com/
+- **Sitemap:** https://showcase.wreative.com/sitemap.xml
+- **Project pages:** https://showcase.wreative.com/project/<slug> (one page per project below)
+- **Services:** Website development (WordPress, custom themes, e-commerce/LMS) and mobile application development.
+- **Categories:** Business, Education, E-Commerce, Government, Services, Florist & Gardening.
+- **Language:** English and Indonesian (en/id).
+
 ## Websites
 
 ### 1. Kontraktor Surabaya
