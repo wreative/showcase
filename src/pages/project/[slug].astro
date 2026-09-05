@@ -67,10 +67,16 @@ const jsonLd = {
       <section class="mb-8 overflow-hidden rounded-lg">
         <div class="gallery-swiper" id="gallery-swiper">
           <div class="swiper-wrapper">
-            {template.gallery.map((item) => (
+            {template.gallery.map((item, index) => (
               <div class="swiper-slide" data-gallery-type={item.type}>
                 {item.type === 'image' ? (
-                  <Image src={getCoverImage(item.src)} alt={template.title} class="h-full w-full object-cover" loading="lazy" />
+                  <Image
+                    src={getCoverImage(item.src)}
+                    alt={template.title}
+                    class="h-full w-full object-cover"
+                    loading={index === 0 ? 'eager' : 'lazy'}
+                    fetchpriority={index === 0 ? 'high' : undefined}
+                  />
                 ) : (
                   <video
                     src={item.src}

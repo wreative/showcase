@@ -27,7 +27,8 @@ const hasVideo = template.gallery.some((i) => i.type === 'video');
       src={getCoverImage(template.image)}
       alt={template.title}
       class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-      loading="lazy"
+      loading={index < 4 ? 'eager' : 'lazy'}
+      fetchpriority={index === 0 ? 'high' : undefined}
     />
   </div>
 
