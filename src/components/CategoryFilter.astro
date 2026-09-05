@@ -17,7 +17,7 @@ const { categories } = Astro.props;
     aria-haspopup="true"
     aria-expanded="false"
   >
-    <span id="category-trigger-label">{categories[0]}</span>
+    <span id="category-trigger-label" data-i18n-selected-category>{categories[0]}</span>
     <Icon name="chevron-down" class="h-4 w-4" />
   </button>
   <div
@@ -30,6 +30,7 @@ const { categories } = Astro.props;
         type="button"
         role="menuitem"
         data-category={category}
+        data-i18n-category={category}
         class="flex w-full cursor-default select-none items-center rounded-sm px-2 py-1.5 text-left text-sm outline-none hover:bg-accent hover:text-accent-foreground"
       >
         {category}
@@ -40,6 +41,8 @@ const { categories } = Astro.props;
 
 <script>
   import { onPageLoad } from '@/scripts/page-lifecycle';
+  import { getLanguage, translateCategory } from '@/i18n/ui';
+  import { LANGUAGE_CHANGE_EVENT } from '@/scripts/i18n';
 
   onPageLoad((signal) => {
     document.querySelectorAll<HTMLDivElement>('[data-category-filter]').forEach((root) => {
@@ -75,7 +78,7 @@ const { categories } = Astro.props;
           () => {
             const category = item.dataset.category!;
             trigger.dataset.selected = category;
-            label.textContent = category;
+            label.textContent = translateCategory(category, getLanguage());
             menu.querySelectorAll<HTMLButtonElement>('[data-category]').forEach((btn) => {
               btn.classList.toggle('bg-accent', btn.dataset.category === category);
               btn.classList.toggle('text-accent-foreground', btn.dataset.category === category);
@@ -98,6 +101,14 @@ const { categories } = Astro.props;
         'keydown',
         (e) => {
           if (e.key === 'Escape') close();
+        },
+        { signal },
+      );
+
+      document.addEventListener(
+        LANGUAGE_CHANGE_EVENT,
+        () => {
+          label.textContent = translateCategory(trigger.dataset.selected ?? 'All', getLanguage());
         },
         { signal },
       );

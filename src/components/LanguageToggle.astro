@@ -1,0 +1,41 @@
+---
+import Icon from './Icon.astro';
+---
+
+<button
+  id="language-toggle"
+  type="button"
+  class="flex items-center gap-1.5 rounded-lg border border-border bg-card p-2 text-foreground transition-colors hover:bg-accent"
+  aria-label="Switch language"
+>
+  <Icon name="globe" class="h-4 w-4" />
+  <span id="language-toggle-label" class="text-xs font-semibold uppercase">EN</span>
+</button>
+
+<script>
+  import { onPageLoad } from '@/scripts/page-lifecycle';
+  import { getLanguage, toggleLanguage } from '@/i18n/ui';
+  import { applyTranslations } from '@/scripts/i18n';
+
+  function updateLabels() {
+    const label = getLanguage().toUpperCase();
+    document.querySelectorAll<HTMLSpanElement>('#language-toggle-label').forEach((el) => {
+      el.textContent = label;
+    });
+  }
+
+  onPageLoad((signal) => {
+    updateLabels();
+    document.querySelectorAll<HTMLButtonElement>('#language-toggle').forEach((button) => {
+      button.addEventListener(
+        'click',
+        () => {
+          toggleLanguage();
+          applyTranslations();
+          updateLabels();
+        },
+        { signal },
+      );
+    });
+  });
+</script>

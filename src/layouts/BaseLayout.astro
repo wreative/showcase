@@ -108,8 +108,23 @@ const sharedJsonLd = {
         document.addEventListener('astro:after-swap', applyTheme);
       })();
     </script>
+    <script is:inline>
+      (function () {
+        function applyLang() {
+          try {
+            const stored = localStorage.getItem('wreative-lang');
+            document.documentElement.lang = stored === 'id' ? 'id' : 'en';
+          } catch {
+            // ignore
+          }
+        }
+        applyLang();
+        document.addEventListener('astro:after-swap', applyLang);
+      })();
+    </script>
     <script src="@/scripts/pwa.ts"></script>
     <script src="@/scripts/gallery-init.ts"></script>
+    <script src="@/scripts/i18n.ts"></script>
   </head>
   <body>
     <slot />

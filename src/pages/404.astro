@@ -11,13 +11,15 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
   <div class="flex min-h-screen items-center justify-center bg-background">
     <div class="px-4 text-center">
       <h1 class="mb-4 text-6xl font-bold text-foreground/20">404</h1>
-      <h2 class="mb-4 text-2xl font-bold text-foreground">Page Not Found</h2>
-      <p class="mb-8 text-muted-foreground">The page you're looking for doesn't exist or has been moved.</p>
+      <h2 class="mb-4 text-2xl font-bold text-foreground" data-i18n="notfound.heading">Page Not Found</h2>
+      <p class="mb-8 text-muted-foreground" data-i18n="notfound.body">
+        The page you're looking for doesn't exist or has been moved.
+      </p>
       <a
         href="/"
         class="inline-flex items-center gap-2 rounded-lg bg-foreground px-6 py-3 font-medium text-background transition-opacity hover:opacity-90"
       >
-        &larr; Back to Showcase
+        &larr; <span data-i18n="notfound.back">Back to Showcase</span>
       </a>
     </div>
   </div>

@@ -36,7 +36,7 @@ const hasVideo = template.gallery.some((i) => i.type === 'video');
   <div class="absolute inset-x-0 bottom-0 p-5">
     <div class="flex items-end justify-between gap-2">
       <h2 class="text-lg font-semibold leading-tight text-white">{template.title}</h2>
-      <span class="shrink-0 rounded-full bg-white/15 px-2.5 py-0.5 text-xs font-medium text-white/90">
+      <span class="shrink-0 rounded-full bg-white/15 px-2.5 py-0.5 text-xs font-medium text-white/90" data-i18n-category={template.category}>
         {template.category}
       </span>
     </div>
@@ -49,7 +49,8 @@ const hasVideo = template.gallery.some((i) => i.type === 'video');
   {
     template.gallery.length > 1 && (
       <span class="absolute right-3 top-3 rounded-md bg-black/50 px-2 py-0.5 text-[11px] text-white/70">
-        {imageCount} img{hasVideo && ' + vid'}
+        {imageCount} <span data-i18n="card.imgSuffix">img</span>{hasVideo && ' + '}
+        {hasVideo && <span data-i18n="card.vidSuffix">vid</span>}
       </span>
     )
   }

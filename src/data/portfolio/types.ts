@@ -31,6 +31,8 @@ export interface PortfolioItem {
   image: string;
   url: string;
   description: string;
+  /** Indonesian translation of the description (client-side language switcher). */
+  descriptionId?: string;
   tags: string[];
   gallery: GalleryItem[];
   playStoreUrl?: string;
@@ -53,26 +55,44 @@ export const vid = (src: string, poster?: string): GalleryVideo => ({
   poster,
 });
 
-export const entry = (
-  title: string,
-  platform: Platform,
-  category: PortfolioCategory,
-  image: string,
-  url: string,
-  description: string,
-  tags: string[],
-  gallery: GalleryItem[] = [],
-  playStoreUrl?: string,
-  appStoreUrl?: string
-): Omit<PortfolioItem, 'id' | 'slug'> => ({
+export interface PortfolioEntryInput {
+  title: string;
+  platform: Platform;
+  category: PortfolioCategory;
+  image: string;
+  url: string;
+  /** English description (default language). */
+  description: string;
+  /** Indonesian description, shown when the user switches language to ID. */
+  descriptionId?: string;
+  tags: string[];
+  gallery?: GalleryItem[];
+  playStoreUrl?: string;
+  appStoreUrl?: string;
+}
+
+export const entry = ({
   title,
   platform,
   category,
   image,
   url,
   description,
+  descriptionId,
   tags,
-  gallery: gallery.length > 0 ? gallery : [img(image)],
+  gallery,
+  playStoreUrl,
+  appStoreUrl,
+}: PortfolioEntryInput): Omit<PortfolioItem, 'id' | 'slug'> => ({
+  title,
+  platform,
+  category,
+  image,
+  url,
+  description,
+  descriptionId,
+  tags,
+  gallery: gallery && gallery.length > 0 ? gallery : [img(image)],
   playStoreUrl,
   appStoreUrl,
 });

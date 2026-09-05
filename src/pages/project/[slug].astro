@@ -3,6 +3,7 @@ import { Image } from 'astro:assets';
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import BrandLogo from '@/components/BrandLogo.astro';
 import ThemeToggle from '@/components/ThemeToggle.astro';
+import LanguageToggle from '@/components/LanguageToggle.astro';
 import { portfolios } from '@/data/portfolio';
 import { getCoverImage } from '@/lib/covers';
 import 'swiper/css';
@@ -46,10 +47,11 @@ const jsonLd = {
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="transition-transform group-hover:-translate-x-0.5">
             <path d="M19 12H5M12 19l-7-7 7-7"></path>
           </svg>
-          <span class="text-sm">Showcase</span>
+          <span class="text-sm" data-i18n="project.back">Showcase</span>
         </a>
         <div class="flex items-center gap-3">
           <ThemeToggle />
+          <LanguageToggle />
           <BrandLogo class="h-5 w-7" />
         </div>
       </div>
@@ -96,7 +98,12 @@ const jsonLd = {
           <h1 class="mb-4 text-2xl font-bold tracking-tight sm:text-3xl">
             {template.title}
           </h1>
-          <p class="mb-8 leading-relaxed text-muted-foreground">
+          <p
+            class="mb-8 leading-relaxed text-muted-foreground"
+            data-i18n-description
+            data-desc-en={template.description}
+            data-desc-id={template.descriptionId}
+          >
             {template.description}
           </p>
           <div class="flex flex-wrap gap-2">
@@ -111,7 +118,7 @@ const jsonLd = {
         <div class="space-y-4">
           {template.platform === 'mobile' && (template.playStoreUrl || template.appStoreUrl) && (
             <div>
-              <p class="mb-2 text-xs uppercase tracking-wider text-muted-foreground">
+              <p class="mb-2 text-xs uppercase tracking-wider text-muted-foreground" data-i18n="project.download">
                 Download
               </p>
               <div class="flex gap-2">
@@ -142,7 +149,7 @@ const jsonLd = {
           )}
 
           <div>
-            <p class="mb-1 text-xs uppercase tracking-wider text-muted-foreground">
+            <p class="mb-1 text-xs uppercase tracking-wider text-muted-foreground" data-i18n="project.platform">
               Platform
             </p>
             <p class="text-sm capitalize">
@@ -151,7 +158,7 @@ const jsonLd = {
           </div>
 
           <div>
-            <p class="mb-1 text-xs uppercase tracking-wider text-muted-foreground">
+            <p class="mb-1 text-xs uppercase tracking-wider text-muted-foreground" data-i18n="project.category">
               Category
             </p>
             <p class="text-sm">
@@ -160,7 +167,7 @@ const jsonLd = {
           </div>
 
           <div>
-            <p class="mb-1 text-xs uppercase tracking-wider text-muted-foreground">
+            <p class="mb-1 text-xs uppercase tracking-wider text-muted-foreground" data-i18n="project.techStack">
               Tech Stack
             </p>
             <div class="flex flex-wrap gap-1">
@@ -174,13 +181,20 @@ const jsonLd = {
 
           {template.gallery.length > 1 && (
             <div>
-              <p class="mb-1 text-xs uppercase tracking-wider text-muted-foreground">
+              <p class="mb-1 text-xs uppercase tracking-wider text-muted-foreground" data-i18n="project.media">
                 Media
               </p>
               <p class="text-sm">
-                {template.gallery.filter((i) => i.type === 'image').length} images
-                {template.gallery.some((i) => i.type === 'video') &&
-                  ` + ${template.gallery.filter((i) => i.type === 'video').length} video`}
+                <span data-i18n="project.mediaCount" data-i18n-count={template.gallery.filter((i) => i.type === 'image').length}>
+                  {template.gallery.filter((i) => i.type === 'image').length} images
+                </span>
+                {template.gallery.some((i) => i.type === 'video') && (
+                  <>
+                    {' + '}
+                    {template.gallery.filter((i) => i.type === 'video').length}{' '}
+                    <span data-i18n="project.mediaVideoSuffix">video</span>
+                  </>
+                )}
               </p>
             </div>
           )}

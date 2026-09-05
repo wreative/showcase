@@ -1,4 +1,6 @@
 import { onPageLoad } from '@/scripts/page-lifecycle';
+import { getLanguage, translations, translateCategory } from '@/i18n/ui';
+import { LANGUAGE_CHANGE_EVENT } from '@/scripts/i18n';
 
 const ITEMS_PER_PAGE = 8;
 const LOAD_DELAY_MS = 400;
@@ -45,9 +47,21 @@ function initLandingFilter(signal: AbortSignal) {
 
     if (statusEl) {
       if (selectedPlatform !== 'all') {
-        statusEl.textContent =
-          `Showing ${selectedPlatform} projects` +
-          (selectedCategory !== 'All' ? ` in ${selectedCategory}` : '');
+        const lang = getLanguage();
+        const platformKey = `platform.${selectedPlatform}` as 'platform.website' | 'platform.mobile';
+        let text = translations[lang]['status.showing'].replace(
+          '{platform}',
+          translations[lang][platformKey],
+        );
+        if (selectedCategory !== 'All') {
+          text +=
+            ' ' +
+            translations[lang]['status.inCategory'].replace(
+              '{category}',
+              translateCategory(selectedCategory, lang),
+            );
+        }
+        statusEl.textContent = text;
         statusEl.classList.remove('hidden');
       } else {
         statusEl.classList.add('hidden');
@@ -86,6 +100,14 @@ function initLandingFilter(signal: AbortSignal) {
       selectedCategory = e.detail;
       resetPaging();
     }) as EventListener,
+    { signal },
+  );
+
+  document.addEventListener(
+    LANGUAGE_CHANGE_EVENT,
+    () => {
+      render();
+    },
     { signal },
   );
 

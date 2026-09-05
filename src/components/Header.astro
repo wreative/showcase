@@ -2,6 +2,7 @@
 import SearchBar from './SearchBar.astro';
 import CategoryFilter from './CategoryFilter.astro';
 import ThemeToggle from './ThemeToggle.astro';
+import LanguageToggle from './LanguageToggle.astro';
 import BrandLogo from './BrandLogo.astro';
 
 interface Props {
@@ -25,7 +26,10 @@ const tabs = [
           Wreative Showcase
         </h1>
       </a>
-      <ThemeToggle />
+      <div class="flex items-center gap-2">
+        <LanguageToggle />
+        <ThemeToggle />
+      </div>
     </div>
 
     <div class="mb-3 flex gap-1" id="platform-tabs">
@@ -33,6 +37,7 @@ const tabs = [
         <button
           type="button"
           data-platform={tab.key}
+          data-i18n={`tab.${tab.key}`}
           class:list={[
             'rounded-lg px-4 py-1.5 text-sm font-medium transition-colors',
             tab.key === 'all'
