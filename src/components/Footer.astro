@@ -16,8 +16,18 @@ const year = new Date().getFullYear();
         <BrandLogo class="h-5 w-7" />
         <span class="text-sm font-medium text-foreground/70">{brandName}</span>
       </div>
-      <div class="text-sm text-muted-foreground">
-        &copy; {year} {brandName}. <span data-i18n="footer.rights">All rights reserved.</span>
+      <div class="text-center sm:text-right">
+        <div class="text-sm text-muted-foreground">
+          &copy; {year} {brandName}. <span data-i18n="footer.rights">All rights reserved.</span>
+        </div>
+        <div class="mt-1 text-xs text-muted-foreground/70">
+          <span data-i18n="footer.legalEntity"
+            >Operated by PT. Wreative Digital Solutions Indonesia</span
+          >
+        </div>
+        <div class="mt-0.5 text-xs text-muted-foreground/60">
+          NIB 1204250004487 &middot; NPWP 1000000001461492
+        </div>
       </div>
     </div>
   </div>

@@ -23,6 +23,20 @@ const sharedJsonLd = {
       '@type': 'ProfessionalService',
       '@id': 'https://showcase.wreative.com/#org',
       name: 'Wreative',
+      legalName: 'PT. Wreative Digital Solutions Indonesia',
+      taxID: '1000000001461492',
+      identifier: [
+        {
+          '@type': 'PropertyValue',
+          name: 'NIB',
+          value: '1204250004487',
+        },
+        {
+          '@type': 'PropertyValue',
+          name: 'NPWP',
+          value: '1000000001461492',
+        },
+      ],
       url: 'https://showcase.wreative.com',
       description:
         'Creative agency specializing in website and mobile application development based in Indonesia.',
@@ -83,7 +97,7 @@ const sharedJsonLd = {
 
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-title" content="Wreative" />
-    { pwaInfo && <Fragment set:html={pwaInfo.webManifest?.linkTag} /> }
+    {pwaInfo && <Fragment set:html={pwaInfo.webManifest?.linkTag} />}
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

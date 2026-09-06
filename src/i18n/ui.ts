@@ -31,6 +31,7 @@ const en = {
     'Not all websites are mirrored, and the <b>mirroring</b> is done to maintain the original theme we have created, in case there are any changes from the client side. Some functions may not work properly.',
 
   'footer.rights': 'All rights reserved.',
+  'footer.legalEntity': 'Operated by PT. Wreative Digital Solutions Indonesia',
 
   'notfound.heading': 'Page Not Found',
   'notfound.body': "The page you're looking for doesn't exist or has been moved.",
@@ -75,6 +76,7 @@ const id: typeof en = {
     'Tidak semua situs web dicerminkan, dan <b>pencerminan</b> dilakukan untuk menjaga tema asli yang telah kami buat, apabila terjadi perubahan dari sisi klien. Beberapa fungsi mungkin tidak berjalan dengan baik.',
 
   'footer.rights': 'Hak cipta dilindungi.',
+  'footer.legalEntity': 'Dikelola oleh PT. Wreative Digital Solutions Indonesia',
 
   'notfound.heading': 'Halaman Tidak Ditemukan',
   'notfound.body': 'Halaman yang Anda cari tidak ada atau telah dipindahkan.',
