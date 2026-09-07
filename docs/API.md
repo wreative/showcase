@@ -213,7 +213,7 @@ GET /api/portfolio/platform/mobile.json
 {
   "success": true,
   "meta": { "total": 10, "category": "Business" },
-  "data": [ /* PortfolioItem[] */ ]
+  "data": [/* PortfolioItem[] */]
 }
 ```
 
@@ -228,19 +228,19 @@ plain `404` from the static host (not the `{ "success": false }` envelope).
 
 | Field           | Type                    | Always present | Description                                                               |
 | --------------- | ----------------------- | -------------- | ------------------------------------------------------------------------- |
-| `id`            | `number`                | ✅              | Stable numeric identifier (order of definition in the data files)         |
-| `slug`          | `string`                | ✅              | URL-safe identifier, generated from the title                             |
-| `title`         | `string`                | ✅              | Project display name                                                      |
-| `platform`      | `"website" \| "mobile"` | ✅              | Project platform                                                          |
-| `category`      | `string`                | ✅              | One of the categories listed in `/api/categories.json`                    |
-| `image`         | `string` (URL)          | ✅              | Cover image, absolute URL                                                 |
-| `url`           | `string` (URL)          | ✅              | Live project URL                                                          |
-| `description`   | `string`                | ✅              | English description (default language)                                    |
-| `descriptionId` | `string \| undefined`   | ➖              | Indonesian description, shown when the site language is switched to ID    |
-| `tags`          | `string[]`              | ✅              | Tech stack / feature tags                                                 |
-| `gallery`       | `GalleryItem[]`         | ✅              | Media gallery; falls back to `[{ type: "image", src: image }]` when empty |
-| `playStoreUrl`  | `string \| undefined`   | ➖              | Google Play listing URL (mobile apps only)                                |
-| `appStoreUrl`   | `string \| undefined`   | ➖              | App Store listing URL (mobile apps only)                                  |
+| `id`            | `number`                | ✅             | Stable numeric identifier (order of definition in the data files)         |
+| `slug`          | `string`                | ✅             | URL-safe identifier, generated from the title                             |
+| `title`         | `string`                | ✅             | Project display name                                                      |
+| `platform`      | `"website" \| "mobile"` | ✅             | Project platform                                                          |
+| `category`      | `string`                | ✅             | One of the categories listed in `/api/categories.json`                    |
+| `image`         | `string` (URL)          | ✅             | Cover image, absolute URL                                                 |
+| `url`           | `string` (URL)          | ✅             | Live project URL                                                          |
+| `description`   | `string`                | ✅             | English description (default language)                                    |
+| `descriptionId` | `string \| undefined`   | ➖             | Indonesian description, shown when the site language is switched to ID    |
+| `tags`          | `string[]`              | ✅             | Tech stack / feature tags                                                 |
+| `gallery`       | `GalleryItem[]`         | ✅             | Media gallery; falls back to `[{ type: "image", src: image }]` when empty |
+| `playStoreUrl`  | `string \| undefined`   | ➖             | Google Play listing URL (mobile apps only)                                |
+| `appStoreUrl`   | `string \| undefined`   | ➖             | App Store listing URL (mobile apps only)                                  |
 
 ### `GalleryItem`
 

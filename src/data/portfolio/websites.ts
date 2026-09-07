@@ -100,7 +100,8 @@ export const websitePortfolios: Omit<PortfolioItem, 'id' | 'slug'>[] = [
     descriptionId:
       'Platform layanan properti dan rumah. Menampilkan listing properti, pemesanan layanan, dan antarmuka pencarian intuitif untuk calon pembeli dan penyewa.',
     tags: ['WordPress', 'Custom Post Types', 'SEO'],
-  }),  entry({
+  }),
+  entry({
     title: 'Wreative',
     platform: 'website',
     category: C.BUSINESS,

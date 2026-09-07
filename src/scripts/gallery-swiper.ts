@@ -5,7 +5,7 @@ import 'swiper/css/keyboard';
 
 export function initGallerySwiper(
   container: HTMLElement,
-  onImageClick: (imageIndex: number) => void,
+  onImageClick: (imageIndex: number) => void
 ) {
   const swiper = new Swiper(container, {
     modules: [Keyboard],
@@ -14,7 +14,7 @@ export function initGallerySwiper(
   });
 
   const imageSlides = Array.from(
-    container.querySelectorAll<HTMLElement>('.swiper-slide[data-gallery-type="image"]'),
+    container.querySelectorAll<HTMLElement>('.swiper-slide[data-gallery-type="image"]')
   );
   imageSlides.forEach((slide, imageIndex) => {
     slide.addEventListener('click', () => onImageClick(imageIndex));

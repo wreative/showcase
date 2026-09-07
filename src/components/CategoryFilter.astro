@@ -25,17 +25,19 @@ const { categories } = Astro.props;
     role="menu"
     class="absolute right-0 z-10 mt-1 hidden w-48 rounded-md border border-border bg-popover p-1 text-popover-foreground shadow-md"
   >
-    {categories.map((category) => (
-      <button
-        type="button"
-        role="menuitem"
-        data-category={category}
-        data-i18n-category={category}
-        class="flex w-full cursor-default select-none items-center rounded-sm px-2 py-1.5 text-left text-sm outline-none hover:bg-accent hover:text-accent-foreground"
-      >
-        {category}
-      </button>
-    ))}
+    {
+      categories.map((category) => (
+        <button
+          type="button"
+          role="menuitem"
+          data-category={category}
+          data-i18n-category={category}
+          class="flex w-full cursor-default select-none items-center rounded-sm px-2 py-1.5 text-left text-sm outline-none hover:bg-accent hover:text-accent-foreground"
+        >
+          {category}
+        </button>
+      ))
+    }
   </div>
 </div>
 
@@ -69,7 +71,7 @@ const { categories } = Astro.props;
             close();
           }
         },
-        { signal },
+        { signal }
       );
 
       menu.querySelectorAll<HTMLButtonElement>('[data-category]').forEach((item) => {
@@ -84,9 +86,11 @@ const { categories } = Astro.props;
               btn.classList.toggle('text-accent-foreground', btn.dataset.category === category);
             });
             close();
-            root.dispatchEvent(new CustomEvent('category-select', { detail: category, bubbles: true }));
+            root.dispatchEvent(
+              new CustomEvent('category-select', { detail: category, bubbles: true })
+            );
           },
-          { signal },
+          { signal }
         );
       });
 
@@ -95,14 +99,14 @@ const { categories } = Astro.props;
         (e) => {
           if (!root.contains(e.target as Node)) close();
         },
-        { signal },
+        { signal }
       );
       document.addEventListener(
         'keydown',
         (e) => {
           if (e.key === 'Escape') close();
         },
-        { signal },
+        { signal }
       );
 
       document.addEventListener(
@@ -110,7 +114,7 @@ const { categories } = Astro.props;
         () => {
           label.textContent = translateCategory(trigger.dataset.selected ?? 'All', getLanguage());
         },
-        { signal },
+        { signal }
       );
     });
   });

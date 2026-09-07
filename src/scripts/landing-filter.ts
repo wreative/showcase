@@ -17,7 +17,8 @@ function initLandingFilter(signal: AbortSignal) {
   const emptyState = document.getElementById('empty-state');
   const gridLoading = document.getElementById('grid-loading');
   const statusEl = document.getElementById('platform-status');
-  if (!grid || !searchInput || !platformTabs || !categoryTrigger || !emptyState || !gridLoading) return;
+  if (!grid || !searchInput || !platformTabs || !categoryTrigger || !emptyState || !gridLoading)
+    return;
 
   const cards = Array.from(grid.querySelectorAll<CardEl>('[data-template-card]'));
 
@@ -29,8 +30,10 @@ function initLandingFilter(signal: AbortSignal) {
 
   function matches(card: CardEl): boolean {
     const matchesSearch = card.dataset.title.includes(searchQuery.toLowerCase());
-    const matchesPlatform = selectedPlatform === 'all' || card.dataset.platform === selectedPlatform;
-    const matchesCategory = selectedCategory === 'All' || card.dataset.category === selectedCategory;
+    const matchesPlatform =
+      selectedPlatform === 'all' || card.dataset.platform === selectedPlatform;
+    const matchesCategory =
+      selectedCategory === 'All' || card.dataset.category === selectedCategory;
     return matchesSearch && matchesPlatform && matchesCategory;
   }
 
@@ -39,26 +42,29 @@ function initLandingFilter(signal: AbortSignal) {
     matching.forEach((card, i) => {
       card.classList.toggle('hidden', i >= visibleCount);
     });
-    cards.filter((c) => !matching.includes(c)).forEach((card) => {
-      card.classList.add('hidden');
-    });
+    cards
+      .filter((c) => !matching.includes(c))
+      .forEach((card) => {
+        card.classList.add('hidden');
+      });
     emptyState!.classList.toggle('hidden', matching.length !== 0);
     gridLoading!.classList.toggle('hidden', !loading);
 
     if (statusEl) {
       if (selectedPlatform !== 'all') {
         const lang = getLanguage();
-        const platformKey = `platform.${selectedPlatform}` as 'platform.website' | 'platform.mobile';
+        const platformKey = `platform.${selectedPlatform}` as
+          'platform.website' | 'platform.mobile';
         let text = translations[lang]['status.showing'].replace(
           '{platform}',
-          translations[lang][platformKey],
+          translations[lang][platformKey]
         );
         if (selectedCategory !== 'All') {
           text +=
             ' ' +
             translations[lang]['status.inCategory'].replace(
               '{category}',
-              translateCategory(selectedCategory, lang),
+              translateCategory(selectedCategory, lang)
             );
         }
         statusEl.textContent = text;
@@ -100,7 +106,7 @@ function initLandingFilter(signal: AbortSignal) {
       selectedCategory = e.detail;
       resetPaging();
     }) as EventListener,
-    { signal },
+    { signal }
   );
 
   document.addEventListener(
@@ -108,7 +114,7 @@ function initLandingFilter(signal: AbortSignal) {
     () => {
       render();
     },
-    { signal },
+    { signal }
   );
 
   function loadMore() {
@@ -129,7 +135,7 @@ function initLandingFilter(signal: AbortSignal) {
         window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 200;
       if (nearBottom && !loading && visibleCount < matching.length) loadMore();
     },
-    { passive: true, signal },
+    { passive: true, signal }
   );
 
   render();
