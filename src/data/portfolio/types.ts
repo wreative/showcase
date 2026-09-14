@@ -42,8 +42,12 @@ export interface PortfolioItem {
 export const toSlug = (title: string): string =>
   title
     .toLowerCase()
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/^-+|-+$/g, '');
+    .split('')
+    .map((char) => (/[a-z0-9]/.test(char) ? char : '-'))
+    .join('')
+    .split('-')
+    .filter(Boolean)
+    .join('-');
 
 // -- Helpers --
 
