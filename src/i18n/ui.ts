@@ -12,9 +12,11 @@ const en = {
   'tab.all': 'All',
   'tab.website': 'Website',
   'tab.mobile': 'Mobile',
+  'tab.web-app': 'Web App',
 
   'platform.website': 'website',
   'platform.mobile': 'mobile',
+  'platform.web-app': 'web app',
 
   'search.placeholder': 'Search projects...',
 

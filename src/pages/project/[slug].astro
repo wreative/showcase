@@ -6,6 +6,7 @@ import ThemeToggle from '@/components/ThemeToggle.astro';
 import LanguageToggle from '@/components/LanguageToggle.astro';
 import { portfolios } from '@/data/portfolio';
 import { getCoverImage } from '@/lib/covers';
+import { formatLabel } from '@/utils/format';
 import 'swiper/css';
 import 'swiper/css/keyboard';
 
@@ -97,7 +98,7 @@ const jsonLd = [
         <span
           class="rounded bg-muted px-2 py-0.5 text-xs font-medium capitalize text-muted-foreground"
         >
-          {template.platform}
+          {formatLabel(template.platform)}
         </span>
       </div>
 
@@ -214,7 +215,7 @@ const jsonLd = [
               Platform
             </p>
             <p class="text-sm capitalize">
-              {template.platform}
+             {formatLabel(template.platform)}
             </p>
           </div>
 

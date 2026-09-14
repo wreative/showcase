@@ -1,4 +1,4 @@
-export type Platform = 'website' | 'mobile';
+export type Platform = 'website' | 'mobile' | 'web-app';
 
 export enum PortfolioCategory {
   SERVICES = 'Services',

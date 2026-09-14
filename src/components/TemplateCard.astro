@@ -2,6 +2,7 @@
 import { Image } from 'astro:assets';
 import { getCoverImage } from '@/lib/covers';
 import type { PortfolioItem } from '@/data/portfolio';
+import { formatLabel } from '@/utils/format';
 
 interface Props {
   template: PortfolioItem;
@@ -49,7 +50,7 @@ const hasVideo = template.gallery.some((i) => i.type === 'video');
   <span
     class="absolute left-3 top-3 rounded-md bg-black/50 px-2 py-0.5 text-[11px] font-medium capitalize text-white/70"
   >
-    {template.platform}
+    {formatLabel(template.platform)}
   </span>
 
   {

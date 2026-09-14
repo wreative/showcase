@@ -1,8 +1,9 @@
 import { websitePortfolios } from './websites';
 import { mobilePortfolios } from './mobiles';
 import { type PortfolioItem, sortByPrimaryDomainLast, toSlug } from './types';
+import { webAppPortfolios } from './web-apps';
 
-const raw = [...websitePortfolios, ...mobilePortfolios];
+const raw = [...websitePortfolios, ...mobilePortfolios, ...webAppPortfolios];
 
 export const portfolios: PortfolioItem[] = sortByPrimaryDomainLast(
   raw.map((entry, index) => ({
