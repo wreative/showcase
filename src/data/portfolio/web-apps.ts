@@ -23,72 +23,111 @@ const foodAppGallery = [
   vid(demoVideo, '/assets/cover/chicken-explorer.webp'),
 ];
 
-const weddingAppGallery = [
-  img('/assets/cover/pernikahan-ini.webp'), // wedding site
-  img('/assets/cover/fajar-florist.webp'), // florist site
-  img('/assets/cover/pos-satpam.webp'), // security equipment
-  vid(demoVideo, '/assets/cover/pernikahan-ini.webp'),
-];
-
-const transportAppGallery = [
-  img('/assets/cover/dzata-lombok-transport.webp'), // transport site
-  img('/assets/cover/toilet-portabel.webp'), // portable toilet rental
-  img('/assets/cover/wahyu-dewanagari.webp'), // cultural foundation
-];
-
 // --- Web app entries ---
 
 export const webAppPortfolios: Omit<PortfolioItem, 'id' | 'slug'>[] = [
   entry({
-    title: 'Wreative App',
+    title: 'Nikifit - Women Fitness & Wellness',
     platform: 'web-app',
-    category: C.BUSINESS,
+    category: C.LIFESTYLE,
     image: '/assets/cover/wreative.webp',
     url: 'https://wreative.com/',
     description:
-      'Brand companion app for Wreative creative agency. Clients can browse the portfolio, track project progress in real-time, communicate via in-app chat, and approve deliverables directly from their phone. Push notifications keep everyone aligned on deadlines.',
+      'Application for women-only Pilates studio. This app allows users to book classes, track progress, and receive updates on schedules and promotions. Additional features include social media integration, fitness tracking, and personalized content to enhance the user experience.',
     descriptionId:
-      'Aplikasi pendamping brand untuk agensi kreatif Wreative. Klien dapat menjelajahi portofolio, memantau progres proyek secara real-time, berkomunikasi lewat chat dalam aplikasi, dan menyetujui hasil kerja langsung dari ponsel. Notifikasi push menjaga semua pihak selaras dengan tenggat waktu.',
+      'Aplikasi Studio Pilates Khusus Wanita. Aplikasi ini memungkinkan pengguna untuk memesan kelas, melacak kemajuan, dan menerima pembaruan tentang jadwal dan promosi. Fitur tambahan termasuk integrasi media sosial, pelacakan kebugaran, dan konten yang dipersonalisasi untuk meningkatkan pengalaman pengguna.',
     tags: ['React Native', 'Expo', 'Firebase', 'Push Notifications'],
     gallery: wreativeAppGallery,
   }),
   entry({
-    title: 'FoodDash - Food Delivery',
+    title: 'Tipotix - Ticketing & Event Management',
+    platform: 'web-app',
+    category: C.LIFESTYLE,
+    image: '/assets/cover/chicken-explorer.webp',
+    url: 'https://chickenexplorer.wreative.com/',
+    description:
+      'Event and Ticketing Application. This app allows users to purchase event tickets, manage schedules, and receive updates on events they are interested in.',
+    descriptionId:
+      'Aplikasi Event (Kegiatan) dan Tiket. Aplikasi ini memungkinkan pengguna untuk membeli tiket acara, mengelola jadwal, dan menerima pembaruan tentang acara yang mereka minati.',
+    tags: ['Flutter', 'Dart', 'Firebase', 'Google Maps API', 'Midtrans'],
+    gallery: foodAppGallery,
+  }),
+  entry({
+    title: 'Gabungin - All in One Application',
+    platform: 'web-app',
+    category: C.BUSINESS,
+    image: '/assets/cover/chicken-explorer.webp',
+    url: 'https://chickenexplorer.wreative.com/',
+    description:
+      'All-in-One Application Service. This app allows users to access various premium applications within the Gabungin service or Workspace.',
+    descriptionId:
+      'Layanan Aplikasi yang menggabungkan semua aplikasi menjadi satu. Aplikasi ini memungkinkan pengguna untuk mengakses berbagai aplikasi premium yang ada di dalam layanan atau Workspace Gabungin.',
+    tags: ['Flutter', 'Dart', 'Firebase', 'Google Maps API', 'Midtrans'],
+    gallery: foodAppGallery,
+  }),
+  entry({
+    title: 'Sultan Top Up - Game Top Up & Digital Products',
+    platform: 'web-app',
+    category: C.LIFESTYLE,
+    image: '/assets/cover/chicken-explorer.webp',
+    url: 'https://chickenexplorer.wreative.com/',
+    description:
+      'Game Top Up and Digital Products Service. This app allows users to top up games and purchase various other digital products.',
+    descriptionId:
+      'Layanan Top Up Game dan Produk Digital. Aplikasi ini memungkinkan pengguna untuk melakukan top up game dan membeli berbagai produk digital lainnya.',
+    tags: ['Flutter', 'Dart', 'Firebase', 'Google Maps API', 'Midtrans'],
+    gallery: foodAppGallery,
+  }),
+  entry({
+    title: 'SINFRA - Infrastruktur Information System Application',
+    platform: 'web-app',
+    category: C.GOVERNMENT,
+    image: '/assets/cover/chicken-explorer.webp',
+    url: 'https://chickenexplorer.wreative.com/',
+    description:
+      'Infrastructure Information System Application. This app is designed to provide information regarding the development of infrastructure in a specific area. It offers solutions for managing and monitoring digital infrastructure.',
+    descriptionId:
+      'Aplikasi yang dibentuk dengan tujuan memberikan informasi mengenai perkembangan pembangunan infrastruktur di wilayah tertentu. Aplikasi ini menyediakan solusi untuk mengelola dan memantau infrastruktur digital.',
+    tags: ['Flutter', 'Dart', 'Firebase', 'Google Maps API', 'Midtrans'],
+    gallery: foodAppGallery,
+  }),
+  entry({
+    title: 'Data Room KPBU - Public Private Partnership Data Room',
+    platform: 'web-app',
+    category: C.GOVERNMENT,
+    image: '/assets/cover/chicken-explorer.webp',
+    url: 'https://chickenexplorer.wreative.com/',
+    description:
+      'Public Private Partnership Data Room. This app is designed to provide a centralized platform for managing and sharing data related to public-private partnership projects or PJPK.',
+    descriptionId:
+      'Ruangan Data untuk Kerjasama Publik-Privat. Aplikasi ini dirancang untuk menyediakan platform terpusat dalam mengelola dan berbagi data yang terkait dengan proyek kerjasama publik-privat atau Penanggung Jawab Proyek Kerja Sama (PJPK).',
+    tags: ['Flutter', 'Dart', 'Firebase', 'Google Maps API', 'Midtrans'],
+    gallery: foodAppGallery,
+  }),
+  entry({
+    title: 'Sajodo - Snack & Food',
+    platform: 'web-app',
+    category: C.FOOD,
+    image: '/assets/cover/chicken-explorer.webp',
+    url: 'https://chickenexplorer.wreative.com/',
+    description:
+      'Sajodo - Snack & Food. This app is designed to provide a platform for managing and sharing data related to snack and food products.',
+    descriptionId:
+      'Sajodo - Snack & Food. Aplikasi ini dirancang untuk menyediakan platform dalam mengelola dan berbagi data yang terkait dengan produk makanan ringan dan makanan.',
+    tags: ['Flutter', 'Dart', 'Firebase', 'Google Maps API', 'Midtrans'],
+    gallery: foodAppGallery,
+  }),
+  entry({
+    title: 'Andromart - Online Store & E-Commerce',
     platform: 'web-app',
     category: C.ECOMMERCE,
     image: '/assets/cover/chicken-explorer.webp',
     url: 'https://chickenexplorer.wreative.com/',
     description:
-      'Cross-platform food delivery app connecting hungry users with local restaurants. Features real-time order tracking with live GPS, multiple payment gateways (GoPay, OVO, bank transfer), smart recommendation engine, and a loyalty points system.',
+      'Andromart - Online Store & E-Commerce. This app is designed to provide a platform for managing and sharing data related to online shopping and e-commerce. Additionally, the app also provides features to facilitate the transaction process and product management for sellers.',
     descriptionId:
-      'Aplikasi pengiriman makanan lintas platform yang menghubungkan pengguna dengan restoran lokal. Fitur pelacakan pesanan real-time dengan GPS langsung, berbagai payment gateway (GoPay, OVO, transfer bank), mesin rekomendasi cerdas, dan sistem poin loyalitas.',
+      'Aplikasi Toko Online & E-Commerce. Aplikasi ini dirancang untuk menyediakan platform dalam mengelola dan berbagi data yang terkait dengan belanja online dan e-commerce. Selain itu, aplikasi ini juga menyediakan fitur untuk mempermudah proses transaksi dan pengelolaan produk bagi para penjual.',
     tags: ['Flutter', 'Dart', 'Firebase', 'Google Maps API', 'Midtrans'],
     gallery: foodAppGallery,
-  }),
-  entry({
-    title: 'WeddingKu - Wedding Planner',
-    platform: 'web-app',
-    category: C.SERVICES,
-    image: '/assets/cover/pernikahan-ini.webp',
-    url: 'https://pernikahanini.wreative.com/',
-    description:
-      'All-in-one wedding planning app for Indonesian couples. Browse vendor catalogs, manage guest lists with RSVP tracking, track budget across categories, timeline countdown, and mood board with Pinterest integration.',
-    descriptionId:
-      'Aplikasi perencana pernikahan all-in-one untuk pasangan di Indonesia. Jelajahi katalog vendor, kelola daftar tamu dengan pelacakan RSVP, pantau anggaran per kategori, hitung mundur timeline, dan mood board dengan integrasi Pinterest.',
-    tags: ['React Native', 'TypeScript', 'Supabase', 'Midtrans'],
-    gallery: weddingAppGallery,
-  }),
-  entry({
-    title: 'LombokRide - Transport Booking',
-    platform: 'web-app',
-    category: C.SERVICES,
-    image: '/assets/cover/dzata-lombok-transport.webp',
-    url: 'https://dzatalomboktransport.wreative.com/',
-    description:
-      'Transport and tour booking app for Lombok island. Book cars, scooters, and tour packages with instant confirmation. Includes offline-capable maps, driver tracking, and multi-language support (ID/EN/JP).',
-    descriptionId:
-      'Aplikasi pemesanan transportasi dan tur untuk Pulau Lombok. Pesan mobil, motor, dan paket tur dengan konfirmasi instan. Dilengkapi peta offline, pelacakan pengemudi, dan dukungan multi-bahasa (ID/EN/JP).',
-    tags: ['Flutter', 'Google Maps SDK', 'Firebase', 'Localization'],
-    gallery: transportAppGallery,
   }),
 ];

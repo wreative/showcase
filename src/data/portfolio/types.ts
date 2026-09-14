@@ -7,6 +7,13 @@ export enum PortfolioCategory {
   ECOMMERCE = 'E-Commerce',
   GOVERNMENT = 'Government',
   FLORIST = 'Florist & Gardening',
+  LIFESTYLE = 'Lifestyle & Entertainment',
+  FOOD = 'Food & Beverage',
+  HEALTH = 'Health & Wellness',
+  TRAVEL = 'Travel & Tourism',
+  FINANCE = 'Finance & Banking',
+  TECHNOLOGY = 'Technology & Software',
+  OTHER = 'Other',
 }
 
 export interface GalleryImage {
