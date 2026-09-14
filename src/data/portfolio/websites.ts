@@ -108,9 +108,9 @@ export const websitePortfolios: Omit<PortfolioItem, 'id' | 'slug'>[] = [
     image: '/assets/cover/wreative.webp',
     url: 'https://wreative.com/',
     description:
-      "Main brand website for Wreative — a creative digital agency. Showcases the agency's portfolio, services, and team with a bold, modern design. Includes a brand overview video.",
+      "Main brand website for Wreative - a creative digital agency. Showcases the agency's portfolio, services, and team with a bold, modern design. Includes a brand overview video.",
     descriptionId:
-      'Situs web utama brand Wreative — agensi digital kreatif. Menampilkan portofolio, layanan, dan tim agensi dengan desain modern yang berani. Dilengkapi video overview brand.',
+      'Situs web utama brand Wreative - agensi digital kreatif. Menampilkan portofolio, layanan, dan tim agensi dengan desain modern yang berani. Dilengkapi video overview brand.',
     tags: ['WordPress', 'Custom Theme', 'GSAP'],
     gallery: wreativeGallery,
   }),

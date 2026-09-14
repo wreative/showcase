@@ -4,15 +4,15 @@
 // - Escape closes, ArrowLeft/ArrowRight navigate (window keydown, added on open/removed on close).
 // - Wheel zooms, clamped 0.5-5, +/-0.15 per tick (handler on the image wrapper, not the overlay).
 // - Mouse-drag pans while zoomed (scale > 1); cursor is 'grab'/'grabbing' while zoomed, 'default' otherwise.
-// - Image transform is `scale(${scale}) translate(${x / scale}px, ${y / scale}px)` (note the division —
+// - Image transform is `scale(${scale}) translate(${x / scale}px, ${y / scale}px)` (note the division -
 //   position is stored in screen pixels but must be un-scaled since it's applied inside the scale()).
 // - resetZoom() runs on every index change (prev/next) and matches Reset button.
 // - document.body.style.overflow = 'hidden' while open, restored on close.
 // - Thumbnail dots render only when images.length > 1; clicking a dot before/after the current index
-//   calls prev()/next() once (not a jump) — matches the original's single-step `onPrev`/`onNext` call.
+//   calls prev()/next() once (not a jump) - matches the original's single-step `onPrev`/`onNext` call.
 // - Prev/Next nav buttons also render only when images.length > 1.
 // - Clicking the backdrop itself (not any child) closes; toggling visibility uses the Tailwind `hidden`
-//   class (not the native `hidden` attribute/property — see commit d82eab2: `[hidden]` loses to a later
+//   class (not the native `hidden` attribute/property - see commit d82eab2: `[hidden]` loses to a later
 //   `.flex` utility class of equal specificity, so the overlay would stay visible).
 
 export interface LightboxController {

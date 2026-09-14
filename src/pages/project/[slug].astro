@@ -58,7 +58,7 @@ const jsonLd = [
 ---
 
 <BaseLayout
-  title={`${template.title} — Wreative Showcase`}
+  title={`${template.title} - Wreative Showcase`}
   description={template.description}
   canonical={`https://showcase.wreative.com/project/${template.slug}`}
   ogImage={getCoverImage(template.image).src}
@@ -110,7 +110,7 @@ const jsonLd = [
                   {item.type === 'image' ? (
                     <Image
                       src={getCoverImage(item.src)}
-                      alt={`${template.title} — screenshot ${index + 1} (${template.platform})`}
+                      alt={`${template.title} - screenshot ${index + 1} (${template.platform})`}
                       class="h-full w-full object-cover"
                       loading={index === 0 ? 'eager' : 'lazy'}
                       fetchpriority={index === 0 ? 'high' : undefined}

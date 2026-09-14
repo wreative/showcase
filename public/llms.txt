@@ -189,19 +189,19 @@ Total: 33 projects (27 websites, 6 mobile apps)
 - **Tech:** React Native, Expo, Firebase, Push Notifications
 - **Description:** https://wreative.com/
 
-### 2. FoodDash — Food Delivery
+### 2. FoodDash - Food Delivery
 - **Platform:** Mobile App
 - **URL:** [/assets/cover/chicken-explorer.webp](/assets/cover/chicken-explorer.webp)
 - **Tech:** Flutter, Dart, Firebase, Google Maps API, Midtrans
 - **Description:** https://chickenexplorer.wreative.com/
 
-### 3. WeddingKu — Wedding Planner
+### 3. WeddingKu - Wedding Planner
 - **Platform:** Mobile App
 - **URL:** [/assets/cover/pernikahan-ini.webp](/assets/cover/pernikahan-ini.webp)
 - **Tech:** React Native, TypeScript, Supabase, Midtrans
 - **Description:** https://pernikahanini.wreative.com/
 
-### 4. LombokRide — Transport Booking
+### 4. LombokRide - Transport Booking
 - **Platform:** Mobile App
 - **URL:** [/assets/cover/dzata-lombok-transport.webp](/assets/cover/dzata-lombok-transport.webp)
 - **Tech:** Flutter, Google Maps SDK, Firebase, Localization
@@ -213,7 +213,7 @@ Total: 33 projects (27 websites, 6 mobile apps)
 - **Tech:** React Native, Zoom SDK, AWS S3, Offline-First
 - **Description:** https://sgacademy.co.id/
 
-### 6. BE MODE — Fashion Shopping
+### 6. BE MODE - Fashion Shopping
 - **Platform:** Mobile App
 - **URL:** [/assets/cover/bemode.webp](/assets/cover/bemode.webp)
 - **Tech:** Flutter, TensorFlow Lite, ARCore, Shopify API

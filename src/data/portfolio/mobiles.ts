@@ -1,6 +1,6 @@
 import { type PortfolioItem, PortfolioCategory as C, entry, img, vid } from './types';
 
-// Mobile app screenshot placeholders — reuse existing covers with diverse visuals.
+// Mobile app screenshot placeholders - reuse existing covers with diverse visuals.
 // Replace these with real app screenshots when available.
 
 const demoVideo = 'https://www.w3schools.com/html/mov_bbb.mp4';
@@ -53,7 +53,7 @@ export const mobilePortfolios: Omit<PortfolioItem, 'id' | 'slug'>[] = [
     gallery: wreativeAppGallery,
   }),
   entry({
-    title: 'FoodDash — Food Delivery',
+    title: 'FoodDash - Food Delivery',
     platform: 'mobile',
     category: C.ECOMMERCE,
     image: '/assets/cover/chicken-explorer.webp',
@@ -66,7 +66,7 @@ export const mobilePortfolios: Omit<PortfolioItem, 'id' | 'slug'>[] = [
     gallery: foodAppGallery,
   }),
   entry({
-    title: 'WeddingKu — Wedding Planner',
+    title: 'WeddingKu - Wedding Planner',
     platform: 'mobile',
     category: C.SERVICES,
     image: '/assets/cover/pernikahan-ini.webp',
@@ -79,7 +79,7 @@ export const mobilePortfolios: Omit<PortfolioItem, 'id' | 'slug'>[] = [
     gallery: weddingAppGallery,
   }),
   entry({
-    title: 'LombokRide — Transport Booking',
+    title: 'LombokRide - Transport Booking',
     platform: 'mobile',
     category: C.SERVICES,
     image: '/assets/cover/dzata-lombok-transport.webp',
@@ -104,7 +104,7 @@ export const mobilePortfolios: Omit<PortfolioItem, 'id' | 'slug'>[] = [
     tags: ['React Native', 'Zoom SDK', 'AWS S3', 'Offline-First'],
   }),
   entry({
-    title: 'BE MODE — Fashion Shopping',
+    title: 'BE MODE - Fashion Shopping',
     platform: 'mobile',
     category: C.ECOMMERCE,
     image: '/assets/cover/bemode.webp',

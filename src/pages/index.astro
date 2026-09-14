@@ -11,7 +11,7 @@ const categories = ['All', ...new Set(portfolios.map((t) => t.category))];
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'CollectionPage',
-  name: 'Wreative Showcase — Portfolio',
+  name: 'Wreative Showcase - Portfolio',
   url: 'https://showcase.wreative.com/',
   description: 'Portfolio of website and mobile application projects by Wreative creative agency.',
   provider: { '@id': 'https://showcase.wreative.com/#org' },
@@ -29,8 +29,8 @@ const jsonLd = {
 ---
 
 <BaseLayout
-  title="Wreative Showcase — Portfolio Kreatif Indonesia"
-  description={`Portfolio showcase by Wreative — creative agency based in Indonesia. Browse ${portfolios.length} website and mobile app projects across business, education, e-commerce, government, and services categories.`}
+  title="Wreative Showcase - Portfolio Kreatif Indonesia"
+  description={`Portfolio showcase by Wreative - creative agency based in Indonesia. Browse ${portfolios.length} website and mobile app projects across business, education, e-commerce, government, and services categories.`}
   canonical="https://showcase.wreative.com/"
   jsonLd={jsonLd}
 >

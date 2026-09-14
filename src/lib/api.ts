@@ -1,6 +1,6 @@
 // Shared helpers for the static JSON file endpoints in src/pages/api.
 // The site uses Astro's static output mode, so these endpoints are prerendered
-// into .json files at build time — no server adapter and no extra packages needed.
+// into .json files at build time - no server adapter and no extra packages needed.
 
 import { type GalleryItem, type PortfolioItem } from '@/data/portfolio/types';
 import { getCoverImage } from '@/lib/covers';
