@@ -43,7 +43,7 @@ export const webAppPortfolios: Omit<PortfolioItem, 'id' | 'slug'>[] = [
     title: 'Tipotix - Ticketing & Event Management',
     platform: 'web-app',
     category: C.LIFESTYLE,
-    image: '/assets/cover/chicken-explorer.webp',
+    image: '/assets/cover/wreative.webp',
     url: 'https://chickenexplorer.wreative.com/',
     description:
       'Event and Ticketing Application. This app allows users to purchase event tickets, manage schedules, and receive updates on events they are interested in.',
@@ -56,7 +56,7 @@ export const webAppPortfolios: Omit<PortfolioItem, 'id' | 'slug'>[] = [
     title: 'Gabungin - All in One Application',
     platform: 'web-app',
     category: C.BUSINESS,
-    image: '/assets/cover/chicken-explorer.webp',
+    image: '/assets/cover/wreative.webp',
     url: 'https://chickenexplorer.wreative.com/',
     description:
       'All-in-One Application Service. This app allows users to access various premium applications within the Gabungin service or Workspace.',
@@ -69,7 +69,7 @@ export const webAppPortfolios: Omit<PortfolioItem, 'id' | 'slug'>[] = [
     title: 'Sultan Top Up - Game Top Up & Digital Products',
     platform: 'web-app',
     category: C.LIFESTYLE,
-    image: '/assets/cover/chicken-explorer.webp',
+    image: '/assets/cover/wreative.webp',
     url: 'https://chickenexplorer.wreative.com/',
     description:
       'Game Top Up and Digital Products Service. This app allows users to top up games and purchase various other digital products.',
@@ -82,7 +82,7 @@ export const webAppPortfolios: Omit<PortfolioItem, 'id' | 'slug'>[] = [
     title: 'SINFRA - Infrastruktur Information System Application',
     platform: 'web-app',
     category: C.GOVERNMENT,
-    image: '/assets/cover/chicken-explorer.webp',
+    image: '/assets/cover/wreative.webp',
     url: 'https://chickenexplorer.wreative.com/',
     description:
       'Infrastructure Information System Application. This app is designed to provide information regarding the development of infrastructure in a specific area. It offers solutions for managing and monitoring digital infrastructure.',
@@ -95,7 +95,7 @@ export const webAppPortfolios: Omit<PortfolioItem, 'id' | 'slug'>[] = [
     title: 'Data Room KPBU - Public Private Partnership Data Room',
     platform: 'web-app',
     category: C.GOVERNMENT,
-    image: '/assets/cover/chicken-explorer.webp',
+    image: '/assets/cover/wreative.webp',
     url: 'https://chickenexplorer.wreative.com/',
     description:
       'Public Private Partnership Data Room. This app is designed to provide a centralized platform for managing and sharing data related to public-private partnership projects or PJPK.',
@@ -108,7 +108,7 @@ export const webAppPortfolios: Omit<PortfolioItem, 'id' | 'slug'>[] = [
     title: 'Sajodo - Snack & Food',
     platform: 'web-app',
     category: C.FOOD,
-    image: '/assets/cover/chicken-explorer.webp',
+    image: '/assets/cover/wreative.webp',
     url: 'https://chickenexplorer.wreative.com/',
     description:
       'Sajodo - Snack & Food. This app is designed to provide a platform for managing and sharing data related to snack and food products.',
@@ -121,7 +121,7 @@ export const webAppPortfolios: Omit<PortfolioItem, 'id' | 'slug'>[] = [
     title: 'Andromart - Online Store & E-Commerce',
     platform: 'web-app',
     category: C.ECOMMERCE,
-    image: '/assets/cover/chicken-explorer.webp',
+    image: '/assets/cover/wreative.webp',
     url: 'https://chickenexplorer.wreative.com/',
     description:
       'Andromart - Online Store & E-Commerce. This app is designed to provide a platform for managing and sharing data related to online shopping and e-commerce. Additionally, the app also provides features to facilitate the transaction process and product management for sellers.',
