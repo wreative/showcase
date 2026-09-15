@@ -55,7 +55,7 @@ export const mobilePortfolios: Omit<PortfolioItem, 'id' | 'slug'>[] = [
   entry({
     title: 'TikCheck - Event Ticketing',
     platform: 'mobile',
-    category: C.ECOMMERCE,
+    category: C.OTHER,
     image: '/assets/cover/chicken-explorer.webp',
     url: 'https://chickenexplorer.wreative.com/',
     description:
@@ -68,7 +68,7 @@ export const mobilePortfolios: Omit<PortfolioItem, 'id' | 'slug'>[] = [
   entry({
     title: 'TBCeria - TBC Health Companion',
     platform: 'mobile',
-    category: C.SERVICES,
+    category: C.HEALTH,
     image: '/assets/cover/pernikahan-ini.webp',
     url: 'https://pernikahanini.wreative.com/',
     description:
@@ -81,7 +81,7 @@ export const mobilePortfolios: Omit<PortfolioItem, 'id' | 'slug'>[] = [
   entry({
     title: 'Sijalu - Wound Information Network System',
     platform: 'mobile',
-    category: C.SERVICES,
+    category: C.HEALTH,
     image: '/assets/cover/dzata-lombok-transport.webp',
     url: 'https://dzatalomboktransport.wreative.com/',
     description:
@@ -103,7 +103,7 @@ export const mobilePortfolios: Omit<PortfolioItem, 'id' | 'slug'>[] = [
   entry({
     title: 'Ceting Gmeil - Pregnancy Companion App',
     platform: 'mobile',
-    category: C.SERVICES,
+    category: C.HEALTH,
     image: '/assets/cover/dzata-lombok-transport.webp',
     url: 'https://dzatalomboktransport.wreative.com/',
     description:
@@ -123,7 +123,7 @@ export const mobilePortfolios: Omit<PortfolioItem, 'id' | 'slug'>[] = [
   entry({
     title: 'Mitra Jaya Cellular - PPOB Mobile Platform',
     platform: 'mobile',
-    category: C.SERVICES,
+    category: C.LIFESTYLE,
     image: '/assets/cover/dzata-lombok-transport.webp',
     url: 'https://dzatalomboktransport.wreative.com/',
     description:
@@ -136,7 +136,7 @@ export const mobilePortfolios: Omit<PortfolioItem, 'id' | 'slug'>[] = [
   entry({
     title: 'Momora - Parenting Growth Companion',
     platform: 'mobile',
-    category: C.SERVICES,
+    category: C.HEALTH,
     image: '/assets/cover/dzata-lombok-transport.webp',
     url: 'https://dzatalomboktransport.wreative.com/',
     description:
@@ -149,7 +149,7 @@ export const mobilePortfolios: Omit<PortfolioItem, 'id' | 'slug'>[] = [
   entry({
     title: 'Voilla - Learning Management System',
     platform: 'mobile',
-    category: C.SERVICES,
+    category: C.EDUCATION,
     image: '/assets/cover/dzata-lombok-transport.webp',
     url: 'https://dzatalomboktransport.wreative.com/',
     description:
@@ -175,7 +175,7 @@ export const mobilePortfolios: Omit<PortfolioItem, 'id' | 'slug'>[] = [
   entry({
     title: 'Tridentacare - Dental Damage Detection App',
     platform: 'mobile',
-    category: C.SERVICES,
+    category: C.HEALTH,
     image: '/assets/cover/dzata-lombok-transport.webp',
     url: 'https://dzatalomboktransport.wreative.com/',
     description:
@@ -198,7 +198,7 @@ export const mobilePortfolios: Omit<PortfolioItem, 'id' | 'slug'>[] = [
   entry({
     title: 'MelCalm - Wellness Screening',
     platform: 'mobile',
-    category: C.SERVICES,
+    category: C.HEALTH,
     image: '/assets/cover/dzata-lombok-transport.webp',
     url: 'https://dzatalomboktransport.wreative.com/',
     description:
@@ -224,7 +224,7 @@ export const mobilePortfolios: Omit<PortfolioItem, 'id' | 'slug'>[] = [
   entry({
     title: 'IKA Pens - Alumni Network App',
     platform: 'mobile',
-    category: C.SERVICES,
+    category: C.LIFESTYLE,
     image: '/assets/cover/dzata-lombok-transport.webp',
     url: 'https://dzatalomboktransport.wreative.com/',
     description:
