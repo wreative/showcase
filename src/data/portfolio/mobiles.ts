@@ -49,70 +49,183 @@ export const mobilePortfolios: Omit<PortfolioItem, 'id' | 'slug'>[] = [
       'Brand companion app for Wreative creative agency. Clients can browse the portfolio, track project progress in real-time, communicate via in-app chat, and approve deliverables directly from their phone. Push notifications keep everyone aligned on deadlines.',
     descriptionId:
       'Aplikasi pendamping brand untuk agensi kreatif Wreative. Klien dapat menjelajahi portofolio, memantau progres proyek secara real-time, berkomunikasi lewat chat dalam aplikasi, dan menyetujui hasil kerja langsung dari ponsel. Notifikasi push menjaga semua pihak selaras dengan tenggat waktu.',
-    tags: ['React Native', 'Expo', 'Firebase', 'Push Notifications'],
+    tags: ['Flutter', 'Dart', 'WebView', 'Firebase Crashlytics', 'API Integration'],
     gallery: wreativeAppGallery,
   }),
   entry({
-    title: 'FoodDash - Food Delivery',
+    title: 'TikCheck - Event Ticketing',
     platform: 'mobile',
     category: C.ECOMMERCE,
     image: '/assets/cover/chicken-explorer.webp',
     url: 'https://chickenexplorer.wreative.com/',
     description:
-      'Cross-platform food delivery app connecting hungry users with local restaurants. Features real-time order tracking with live GPS, multiple payment gateways (GoPay, OVO, bank transfer), smart recommendation engine, and a loyalty points system.',
+      'Ticketing app for security personnel and event management. Features include QR scanning for entry, guest list management, push notifications for event updates, and calendar integration. Admins can manage events, tickets, and analytics reports.',
     descriptionId:
-      'Aplikasi pengiriman makanan lintas platform yang menghubungkan pengguna dengan restoran lokal. Fitur pelacakan pesanan real-time dengan GPS langsung, berbagai payment gateway (GoPay, OVO, transfer bank), mesin rekomendasi cerdas, dan sistem poin loyalitas.',
-    tags: ['Flutter', 'Dart', 'Firebase', 'Google Maps API', 'Midtrans'],
+      'Aplikasi Tiket untuk Petugas Keamanan dan Manajemen Acara. Fitur termasuk pemindaian QR untuk masuk, manajemen daftar tamu, notifikasi push untuk pembaruan acara, dan integrasi kalender. Admin dapat mengelola acara, tiket, dan laporan analitik.',
+    tags: ['Flutter', 'Dart', 'Firebase', 'Sync System', 'Sentry', 'API Integration', 'SQLLite'],
     gallery: foodAppGallery,
   }),
   entry({
-    title: 'WeddingKu - Wedding Planner',
+    title: 'TBCeria - TBC Health Companion',
     platform: 'mobile',
     category: C.SERVICES,
     image: '/assets/cover/pernikahan-ini.webp',
     url: 'https://pernikahanini.wreative.com/',
     description:
-      'All-in-one wedding planning app for Indonesian couples. Browse vendor catalogs, manage guest lists with RSVP tracking, track budget across categories, timeline countdown, and mood board with Pinterest integration.',
+      'Health companion app for tuberculosis patients in Indonesia. Features include symptom tracking, medication reminders, online doctor consultations, and integration with local health services.',
     descriptionId:
-      'Aplikasi perencana pernikahan all-in-one untuk pasangan di Indonesia. Jelajahi katalog vendor, kelola daftar tamu dengan pelacakan RSVP, pantau anggaran per kategori, hitung mundur timeline, dan mood board dengan integrasi Pinterest.',
-    tags: ['React Native', 'TypeScript', 'Supabase', 'Midtrans'],
+      'Aplikasi untuk penderita TBC di Indonesia. Fitur termasuk pelacakan gejala, pengingat obat, konsultasi dokter online, dan integrasi dengan layanan kesehatan lokal.',
+    tags: ['Flutter', 'Dart', 'API Integration', 'Push Notifications', 'Sentry', 'Chat System'],
     gallery: weddingAppGallery,
   }),
   entry({
-    title: 'LombokRide - Transport Booking',
+    title: 'Sijalu - Wound Information Network System',
     platform: 'mobile',
     category: C.SERVICES,
     image: '/assets/cover/dzata-lombok-transport.webp',
     url: 'https://dzatalomboktransport.wreative.com/',
     description:
-      'Transport and tour booking app for Lombok island. Book cars, scooters, and tour packages with instant confirmation. Includes offline-capable maps, driver tracking, and multi-language support (ID/EN/JP).',
+      'A Wound Information Network System app for patients and medical professionals. Features include wound tracking, treatment reminders, online doctor consultations, and integration with local healthcare services.',
     descriptionId:
-      'Aplikasi pemesanan transportasi dan tur untuk Pulau Lombok. Pesan mobil, motor, dan paket tur dengan konfirmasi instan. Dilengkapi peta offline, pelacakan pengemudi, dan dukungan multi-bahasa (ID/EN/JP).',
-    tags: ['Flutter', 'Google Maps SDK', 'Firebase', 'Localization'],
+      'Aplikasi Sistem Jaringan Informasi Luka untuk pasien dan tenaga medis. Fitur termasuk pelacakan luka, pengingat perawatan, konsultasi dokter online, dan integrasi dengan layanan kesehatan lokal.',
+    tags: [
+      'Flutter',
+      'Dart',
+      'Firebase',
+      'Localization',
+      'Sentry',
+      'API Integration',
+      'Health API Integration',
+      'WebView',
+    ],
     gallery: transportAppGallery,
   }),
   entry({
-    title: 'SG Academy Mobile',
+    title: 'Ceting Gmeil - Aplikasi Ibu Hamil',
     platform: 'mobile',
-    category: C.EDUCATION,
-    image: '/assets/cover/sg-academy.webp',
-    url: 'https://sgacademy.co.id/',
+    category: C.SERVICES,
+    image: '/assets/cover/dzata-lombok-transport.webp',
+    url: 'https://dzatalomboktransport.wreative.com/',
     description:
-      'Mobile learning companion for SG Academy students. Access course materials offline, submit assignments, join live classes via integrated video conferencing, track learning progress with detailed analytics.',
+      'A Wound Information Network System app for patients and medical professionals. Features include wound tracking, treatment reminders, online doctor consultations, and integration with local healthcare services.',
     descriptionId:
-      'Aplikasi pendamping belajar untuk siswa SG Academy. Akses materi kursus secara offline, kumpulkan tugas, ikuti kelas langsung melalui konferensi video terintegrasi, dan pantau progres belajar dengan analitik terperinci.',
-    tags: ['React Native', 'Zoom SDK', 'AWS S3', 'Offline-First'],
+      'Aplikasi Sistem Jaringan Informasi Luka untuk pasien dan tenaga medis. Fitur termasuk pelacakan luka, pengingat perawatan, konsultasi dokter online, dan integrasi dengan layanan kesehatan lokal.',
+    tags: ['Flutter', 'Dart', 'Push Notifications', 'Sentry', 'API Integration'],
+    gallery: transportAppGallery,
   }),
   entry({
-    title: 'BE MODE - Fashion Shopping',
+    title: 'Mitra Jaya Cellular - PPOB',
     platform: 'mobile',
-    category: C.ECOMMERCE,
-    image: '/assets/cover/bemode.webp',
-    url: 'https://bemodeofficial.com',
+    category: C.SERVICES,
+    image: '/assets/cover/dzata-lombok-transport.webp',
+    url: 'https://dzatalomboktransport.wreative.com/',
     description:
-      'Fashion e-commerce app with AR try-on for accessories, personalized style recommendations powered by ML, size guide with measurement input, wishlist sync across devices, and one-tap checkout.',
+      'A Wound Information Network System app for patients and medical professionals. Features include wound tracking, treatment reminders, online doctor consultations, and integration with local healthcare services.',
     descriptionId:
-      'Aplikasi e-commerce fashion dengan fitur coba AR untuk aksesori, rekomendasi gaya personal berbasis ML, panduan ukuran dengan input pengukuran, sinkronisasi wishlist antar perangkat, dan checkout satu ketukan.',
-    tags: ['Flutter', 'TensorFlow Lite', 'ARCore', 'Shopify API'],
+      'Aplikasi Sistem Jaringan Informasi Luka untuk pasien dan tenaga medis. Fitur termasuk pelacakan luka, pengingat perawatan, konsultasi dokter online, dan integrasi dengan layanan kesehatan lokal.',
+    tags: ['Flutter', 'Dart', 'Sentry', 'API Integration', 'PPOB', 'Marketplace'],
+    gallery: transportAppGallery,
+  }),
+  entry({
+    title:
+      'Momora - aplikasi parenting yang membantu monitoring tumbuh kembang bayi, konsumsi konten edukasi, dan kebutuhan belanja bayi.',
+    platform: 'mobile',
+    category: C.SERVICES,
+    image: '/assets/cover/dzata-lombok-transport.webp',
+    url: 'https://dzatalomboktransport.wreative.com/',
+    description:
+      'A Wound Information Network System app for patients and medical professionals. Features include wound tracking, treatment reminders, online doctor consultations, and integration with local healthcare services.',
+    descriptionId:
+      'Aplikasi Sistem Jaringan Informasi Luka untuk pasien dan tenaga medis. Fitur termasuk pelacakan luka, pengingat perawatan, konsultasi dokter online, dan integrasi dengan layanan kesehatan lokal.',
+    tags: ['Flutter', 'Dart', 'Push Notifications', 'Sentry', 'API Integration', 'Supabase'],
+    gallery: transportAppGallery,
+  }),
+  entry({
+    title: 'Voilla - Learning Management System',
+    platform: 'mobile',
+    category: C.SERVICES,
+    image: '/assets/cover/dzata-lombok-transport.webp',
+    url: 'https://dzatalomboktransport.wreative.com/',
+    description:
+      'A Wound Information Network System app for patients and medical professionals. Features include wound tracking, treatment reminders, online doctor consultations, and integration with local healthcare services.',
+    descriptionId:
+      'Aplikasi Sistem Jaringan Informasi Luka untuk pasien dan tenaga medis. Fitur termasuk pelacakan luka, pengingat perawatan, konsultasi dokter online, dan integrasi dengan layanan kesehatan lokal.',
+    tags: ['Flutter', 'Dart', 'Sentry', 'API Integration', 'LMS'],
+    gallery: transportAppGallery,
+  }),
+  entry({
+    title: 'Sigap - Sistem Informasi & Pertolongan Cepat',
+    platform: 'mobile',
+    category: C.SERVICES,
+    image: '/assets/cover/dzata-lombok-transport.webp',
+    url: 'https://dzatalomboktransport.wreative.com/',
+    description:
+      'A Wound Information Network System app for patients and medical professionals. Features include wound tracking, treatment reminders, online doctor consultations, and integration with local healthcare services.',
+    descriptionId:
+      'Aplikasi Sistem Jaringan Informasi Luka untuk pasien dan tenaga medis. Fitur termasuk pelacakan luka, pengingat perawatan, konsultasi dokter online, dan integrasi dengan layanan kesehatan lokal.',
+    tags: ['Laravel', 'NativePHP', 'Sentry', 'Livewire', 'Tailwind CSS'],
+    gallery: transportAppGallery,
+  }),
+  entry({
+    title: 'Tridentacare - Aplikasi Deteksi Kerusakan Gigi',
+    platform: 'mobile',
+    category: C.SERVICES,
+    image: '/assets/cover/dzata-lombok-transport.webp',
+    url: 'https://dzatalomboktransport.wreative.com/',
+    description:
+      'A Wound Information Network System app for patients and medical professionals. Features include wound tracking, treatment reminders, online doctor consultations, and integration with local healthcare services.',
+    descriptionId:
+      'Aplikasi Sistem Jaringan Informasi Luka untuk pasien dan tenaga medis. Fitur termasuk pelacakan luka, pengingat perawatan, konsultasi dokter online, dan integrasi dengan layanan kesehatan lokal.',
+    tags: [
+      'Flutter',
+      'Dart',
+      'Object Detection & Segmentation',
+      'API Integration',
+      'Node.js',
+      'YOLO Model',
+      'TensorFlow',
+      'Keras',
+      'Express.js',
+    ],
+    gallery: transportAppGallery,
+  }),
+  entry({
+    title: 'MelCalm - Wellness Screening',
+    platform: 'mobile',
+    category: C.SERVICES,
+    image: '/assets/cover/dzata-lombok-transport.webp',
+    url: 'https://dzatalomboktransport.wreative.com/',
+    description:
+      'A Wound Information Network System app for patients and medical professionals. Features include wound tracking, treatment reminders, online doctor consultations, and integration with local healthcare services.',
+    descriptionId:
+      'Aplikasi Sistem Jaringan Informasi Luka untuk pasien dan tenaga medis. Fitur termasuk pelacakan luka, pengingat perawatan, konsultasi dokter online, dan integrasi dengan layanan kesehatan lokal.',
+    tags: ['Flutter', 'Dart', 'Firebase', 'Firebase Crashlytics'],
+    gallery: transportAppGallery,
+  }),
+  entry({
+    title: 'HMM - Hardware Maintenance Management',
+    platform: 'mobile',
+    category: C.SERVICES,
+    image: '/assets/cover/dzata-lombok-transport.webp',
+    url: 'https://dzatalomboktransport.wreative.com/',
+    description:
+      'A Wound Information Network System app for patients and medical professionals. Features include wound tracking, treatment reminders, online doctor consultations, and integration with local healthcare services.',
+    descriptionId:
+      'Aplikasi Sistem Jaringan Informasi Luka untuk pasien dan tenaga medis. Fitur termasuk pelacakan luka, pengingat perawatan, konsultasi dokter online, dan integrasi dengan layanan kesehatan lokal.',
+    tags: ['Flutter', 'Dart', 'API Integration'],
+    gallery: transportAppGallery,
+  }),
+  entry({
+    title: 'IKA Pens - Aplikasi Alumni Politeknik Elektronika Negeri Surabaya (PENS)',
+    platform: 'mobile',
+    category: C.SERVICES,
+    image: '/assets/cover/dzata-lombok-transport.webp',
+    url: 'https://dzatalomboktransport.wreative.com/',
+    description:
+      'A Wound Information Network System app for patients and medical professionals. Features include wound tracking, treatment reminders, online doctor consultations, and integration with local healthcare services.',
+    descriptionId:
+      'Aplikasi Sistem Jaringan Informasi Luka untuk pasien dan tenaga medis. Fitur termasuk pelacakan luka, pengingat perawatan, konsultasi dokter online, dan integrasi dengan layanan kesehatan lokal.',
+    tags: ['Flutter', 'Dart', 'API Integration'],
+    gallery: transportAppGallery,
   }),
 ];
