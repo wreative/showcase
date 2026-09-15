@@ -3,7 +3,7 @@
 > Portfolio of website and mobile application projects by Wreative creative agency.
 > Author: Wreative | Location: Surabaya, Indonesia
 
-Total: 33 projects (27 websites, 6 mobile apps)
+Total: 40 projects (27 websites, 13 mobile apps)
 
 ## Site Information
 
@@ -186,38 +186,80 @@ Total: 33 projects (27 websites, 6 mobile apps)
 ### 1. Wreative App
 - **Platform:** Mobile App
 - **URL:** [/assets/cover/wreative.webp](/assets/cover/wreative.webp)
-- **Tech:** React Native, Expo, Firebase, Push Notifications
+- **Tech:** Flutter, Dart, WebView, Firebase Crashlytics, API Integration
 - **Description:** https://wreative.com/
 
-### 2. FoodDash - Food Delivery
+### 2. TikCheck - Event Ticketing
 - **Platform:** Mobile App
 - **URL:** [/assets/cover/chicken-explorer.webp](/assets/cover/chicken-explorer.webp)
-- **Tech:** Flutter, Dart, Firebase, Google Maps API, Midtrans
+- **Tech:** Flutter, Dart, Firebase, Sync System, Sentry, API Integration, SQLLite
 - **Description:** https://chickenexplorer.wreative.com/
 
-### 3. WeddingKu - Wedding Planner
+### 3. TBCeria - TBC Health Companion
 - **Platform:** Mobile App
 - **URL:** [/assets/cover/pernikahan-ini.webp](/assets/cover/pernikahan-ini.webp)
-- **Tech:** React Native, TypeScript, Supabase, Midtrans
+- **Tech:** Flutter, Dart, API Integration, Push Notifications, Sentry, Chat System
 - **Description:** https://pernikahanini.wreative.com/
 
-### 4. LombokRide - Transport Booking
+### 4. Sijalu - Wound Information Network System
 - **Platform:** Mobile App
 - **URL:** [/assets/cover/dzata-lombok-transport.webp](/assets/cover/dzata-lombok-transport.webp)
-- **Tech:** Flutter, Google Maps SDK, Firebase, Localization
+- **Tech:** Flutter, Dart, Firebase, Localization, Sentry, API Integration, Health API Integration, WebView
 - **Description:** https://dzatalomboktransport.wreative.com/
 
-### 5. SG Academy Mobile
+### 5. Ceting Gmeil - Pregnancy Companion App
 - **Platform:** Mobile App
-- **URL:** [/assets/cover/sg-academy.webp](/assets/cover/sg-academy.webp)
-- **Tech:** React Native, Zoom SDK, AWS S3, Offline-First
-- **Description:** https://sgacademy.co.id/
+- **URL:** [/assets/cover/dzata-lombok-transport.webp](/assets/cover/dzata-lombok-transport.webp)
+- **Tech:** Flutter, Dart, Pregnancy Tracking, Push Notifications, Healthcare API, Sentry
+- **Description:** https://dzatalomboktransport.wreative.com/
 
-### 6. BE MODE - Fashion Shopping
+### 6. Mitra Jaya Cellular - PPOB Mobile Platform
 - **Platform:** Mobile App
-- **URL:** [/assets/cover/bemode.webp](/assets/cover/bemode.webp)
-- **Tech:** Flutter, TensorFlow Lite, ARCore, Shopify API
-- **Description:** https://bemodeofficial.com
+- **URL:** [/assets/cover/dzata-lombok-transport.webp](/assets/cover/dzata-lombok-transport.webp)
+- **Tech:** Flutter, Dart, Sentry, API Integration, PPOB, Marketplace
+- **Description:** https://dzatalomboktransport.wreative.com/
+
+### 7. Momora - Parenting Growth Companion
+- **Platform:** Mobile App
+- **URL:** [/assets/cover/dzata-lombok-transport.webp](/assets/cover/dzata-lombok-transport.webp)
+- **Tech:** Flutter, Dart, Push Notifications, Sentry, API Integration, Supabase
+- **Description:** https://dzatalomboktransport.wreative.com/
+
+### 8. Voilla - Learning Management System
+- **Platform:** Mobile App
+- **URL:** [/assets/cover/dzata-lombok-transport.webp](/assets/cover/dzata-lombok-transport.webp)
+- **Tech:** Flutter, Dart, Sentry, API Integration, LMS
+- **Description:** https://dzatalomboktransport.wreative.com/
+
+### 9. Sigap - Emergency Response Information System
+- **Platform:** Mobile App
+- **URL:** [/assets/cover/dzata-lombok-transport.webp](/assets/cover/dzata-lombok-transport.webp)
+- **Tech:** Laravel, NativePHP, Sentry, Livewire, Tailwind CSS
+- **Description:** https://dzatalomboktransport.wreative.com/
+
+### 10. Tridentacare - Dental Damage Detection App
+- **Platform:** Mobile App
+- **URL:** [/assets/cover/dzata-lombok-transport.webp](/assets/cover/dzata-lombok-transport.webp)
+- **Tech:** Flutter, Dart, Object Detection & Segmentation, API Integration, Node.js, YOLO Model, TensorFlow, Keras, Express.js
+- **Description:** https://dzatalomboktransport.wreative.com/
+
+### 11. MelCalm - Wellness Screening
+- **Platform:** Mobile App
+- **URL:** [/assets/cover/dzata-lombok-transport.webp](/assets/cover/dzata-lombok-transport.webp)
+- **Tech:** Flutter, Dart, Firebase, Firebase Crashlytics
+- **Description:** https://dzatalomboktransport.wreative.com/
+
+### 12. HMM - Hardware Maintenance Management
+- **Platform:** Mobile App
+- **URL:** [/assets/cover/dzata-lombok-transport.webp](/assets/cover/dzata-lombok-transport.webp)
+- **Tech:** Flutter, Dart, API Integration
+- **Description:** https://dzatalomboktransport.wreative.com/
+
+### 13. IKA Pens - Alumni Network App
+- **Platform:** Mobile App
+- **URL:** [/assets/cover/dzata-lombok-transport.webp](/assets/cover/dzata-lombok-transport.webp)
+- **Tech:** Flutter, Dart, API Integration
+- **Description:** https://dzatalomboktransport.wreative.com/
 
 ---
 This llms.txt follows the [llms.txt specification](https://llmstxt.org/).

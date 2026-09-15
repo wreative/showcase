@@ -4,6 +4,10 @@ export default {
   content: ['./src/**/*.{astro,ts,tsx}'],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['Be Vietnam Pro', 'sans-serif'],
+        brand: ['Space Grotesk', 'sans-serif'],
+      },
       borderRadius: {
         lg: 'var(--radius)',
         md: 'calc(var(--radius) - 2px)',
