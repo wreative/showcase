@@ -14,7 +14,11 @@ const year = new Date().getFullYear();
     <div class="flex flex-col items-center justify-between gap-4 sm:flex-row">
       <div class="flex items-center gap-2">
         <BrandLogo class="h-5 w-7" />
-        <span class="font-brand text-sm font-medium text-foreground/70">{brandName}</span>
+        <span class="font-brand text-sm font-medium text-foreground/70">
+          {brandName}<span class="text-[1.35em] leading-none text-[#EB5250]" aria-hidden="true"
+            >.</span
+          >{' '}Showcase
+        </span>
       </div>
       <div class="text-center sm:text-right">
         <div class="text-sm text-muted-foreground">
