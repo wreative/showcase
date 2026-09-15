@@ -110,7 +110,14 @@ export const mobilePortfolios: Omit<PortfolioItem, 'id' | 'slug'>[] = [
       'A pregnancy companion app for expectant mothers that helps monitor maternal health, track wellness milestones, receive timely reminders, and access trusted medical guidance anytime. It supports better prenatal care with education, notifications, and caregiver communication.',
     descriptionId:
       'A pregnancy companion app for expectant mothers that helps monitor maternal health, track wellness milestones, receive timely reminders, and access trusted medical guidance anytime. It supports better prenatal care with education, notifications, and caregiver communication.',
-    tags: ['Flutter', 'Dart', 'Pregnancy Tracking', 'Push Notifications', 'Healthcare API', 'Sentry'],
+    tags: [
+      'Flutter',
+      'Dart',
+      'Pregnancy Tracking',
+      'Push Notifications',
+      'Healthcare API',
+      'Sentry',
+    ],
     gallery: transportAppGallery,
   }),
   entry({
