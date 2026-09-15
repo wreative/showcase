@@ -109,7 +109,7 @@ export const mobilePortfolios: Omit<PortfolioItem, 'id' | 'slug'>[] = [
     description:
       'A pregnancy companion app for expectant mothers that helps monitor maternal health, track wellness milestones, receive timely reminders, and access trusted medical guidance anytime. It supports better prenatal care with education, notifications, and caregiver communication.',
     descriptionId:
-      'A pregnancy companion app for expectant mothers that helps monitor maternal health, track wellness milestones, receive timely reminders, and access trusted medical guidance anytime. It supports better prenatal care with education, notifications, and caregiver communication.',
+      'Aplikasi pendamping kehamilan untuk ibu hamil yang membantu memantau kesehatan ibu, melacak tonggak perkembangan kesehatan, menerima pengingat tepat waktu, dan mengakses panduan medis tepercaya kapan saja. Aplikasi ini mendukung perawatan pranatal yang lebih baik melalui edukasi, pemberitahuan, dan komunikasi dengan tenaga kesehatan.',
     tags: [
       'Flutter',
       'Dart',
@@ -129,7 +129,7 @@ export const mobilePortfolios: Omit<PortfolioItem, 'id' | 'slug'>[] = [
     description:
       'A mobile utility and bill payment platform for cellular service operators, enabling customers to purchase data bundles, top-ups, and digital transactions in a secure, convenient app. It helps streamline service operations and keeps transactions fast and efficient.',
     descriptionId:
-      'A mobile utility and bill payment platform for cellular service operators, enabling customers to purchase data bundles, top-ups, and digital transactions in a secure, convenient app. It helps streamline service operations and keeps transactions fast and efficient.',
+      'Sebuah platform seluler untuk layanan utilitas dan pembayaran tagihan yang ditujukan bagi operator layanan seluler, yang memungkinkan pelanggan membeli paket data, mengisi ulang pulsa, dan melakukan transaksi digital melalui aplikasi yang aman dan praktis. Platform ini membantu memperlancar operasional layanan serta memastikan transaksi berlangsung cepat dan efisien.',
     tags: ['Flutter', 'Dart', 'Sentry', 'API Integration', 'PPOB', 'Marketplace'],
     gallery: transportAppGallery,
   }),
@@ -142,7 +142,7 @@ export const mobilePortfolios: Omit<PortfolioItem, 'id' | 'slug'>[] = [
     description:
       'A parenting app that helps families track baby growth, access educational content, and manage essential baby purchases in one place. It combines development monitoring with practical parenting guidance for a smoother child-care journey.',
     descriptionId:
-      'A parenting app that helps families track baby growth, access educational content, and manage essential baby purchases in one place. It combines development monitoring with practical parenting guidance for a smoother child-care journey.',
+      'Sebuah aplikasi parenting yang membantu keluarga memantau pertumbuhan bayi, mengakses konten edukatif, dan mengelola pembelian kebutuhan bayi yang penting dalam satu platform. Aplikasi ini menggabungkan pemantauan perkembangan dengan panduan praktis dalam mengasuh anak untuk perjalanan pengasuhan yang lebih lancar.',
     tags: ['Flutter', 'Dart', 'Push Notifications', 'Sentry', 'API Integration', 'Supabase'],
     gallery: transportAppGallery,
   }),
@@ -155,7 +155,7 @@ export const mobilePortfolios: Omit<PortfolioItem, 'id' | 'slug'>[] = [
     description:
       'A mobile learning platform that helps students and educators manage courses, assignments, classroom materials, and learning progress in one place. It supports digital education through structured content access, communication, and performance tracking.',
     descriptionId:
-      'A mobile learning platform that helps students and educators manage courses, assignments, classroom materials, and learning progress in one place. It supports digital education through structured content access, communication, and performance tracking.',
+      'Sebuah platform pembelajaran seluler yang membantu siswa dan pendidik mengelola kursus, tugas, materi pembelajaran, dan kemajuan belajar dalam satu tempat. Platform ini mendukung pendidikan digital melalui akses konten yang terstruktur, komunikasi, dan pemantauan kinerja.',
     tags: ['Flutter', 'Dart', 'Sentry', 'API Integration', 'LMS'],
     gallery: transportAppGallery,
   }),
@@ -168,7 +168,7 @@ export const mobilePortfolios: Omit<PortfolioItem, 'id' | 'slug'>[] = [
     description:
       'An emergency response management app designed for fast reporting, coordinated action, and public safety support. It helps teams share real-time updates, streamline response workflows, and improve readiness in critical situations.',
     descriptionId:
-      'An emergency response management app designed for fast reporting, coordinated action, and public safety support. It helps teams share real-time updates, streamline response workflows, and improve readiness in critical situations.',
+      'Aplikasi manajemen tanggap darurat yang dirancang untuk pelaporan cepat, tindakan terkoordinasi, dan dukungan keselamatan masyarakat. Aplikasi ini membantu tim berbagi informasi terkini secara real-time, menyederhanakan alur kerja tanggap darurat, serta meningkatkan kesiapan dalam situasi kritis.',
     tags: ['Laravel', 'NativePHP', 'Sentry', 'Livewire', 'Tailwind CSS'],
     gallery: transportAppGallery,
   }),
@@ -181,7 +181,7 @@ export const mobilePortfolios: Omit<PortfolioItem, 'id' | 'slug'>[] = [
     description:
       'An AI-powered dental care app that helps detect oral damage through image-based analysis and guided assessment. It supports early diagnosis, patient awareness, and better decision-making for dental health management.',
     descriptionId:
-      'An AI-powered dental care app that helps detect oral damage through image-based analysis and guided assessment. It supports early diagnosis, patient awareness, and better decision-making for dental health management.',
+      'Sebuah aplikasi perawatan gigi berbasis kecerdasan buatan (AI) yang membantu mendeteksi kerusakan pada rongga mulut melalui analisis berbasis gambar dan penilaian terpandu. Aplikasi ini mendukung diagnosis dini, peningkatan kesadaran pasien, serta pengambilan keputusan yang lebih baik dalam pengelolaan kesehatan gigi.',
     tags: [
       'Flutter',
       'Dart',
@@ -204,7 +204,7 @@ export const mobilePortfolios: Omit<PortfolioItem, 'id' | 'slug'>[] = [
     description:
       'A wellness screening app designed to support physical and emotional well-being through health assessments, guidance, and personalized recommendations. It helps users better understand their condition and make healthier daily decisions.',
     descriptionId:
-      'A wellness screening app designed to support physical and emotional well-being through health assessments, guidance, and personalized recommendations. It helps users better understand their condition and make healthier daily decisions.',
+      'Sebuah aplikasi skrining kesehatan yang dirancang untuk mendukung kesejahteraan fisik dan emosional melalui penilaian kesehatan, panduan, dan rekomendasi yang disesuaikan dengan kebutuhan masing-masing pengguna. Aplikasi ini membantu pengguna memahami kondisi mereka dengan lebih baik dan mengambil keputusan sehari-hari yang lebih sehat.',
     tags: ['Flutter', 'Dart', 'Firebase', 'Firebase Crashlytics'],
     gallery: transportAppGallery,
   }),
@@ -217,7 +217,7 @@ export const mobilePortfolios: Omit<PortfolioItem, 'id' | 'slug'>[] = [
     description:
       'A maintenance management app for tracking equipment conditions, scheduling repairs, and managing technical service workflows. It helps organizations reduce downtime and improve asset reliability across operations.',
     descriptionId:
-      'A maintenance management app for tracking equipment conditions, scheduling repairs, and managing technical service workflows. It helps organizations reduce downtime and improve asset reliability across operations.',
+      'Aplikasi manajemen pemeliharaan untuk memantau kondisi peralatan, menjadwalkan perbaikan, dan mengelola alur kerja layanan teknis. Aplikasi ini membantu organisasi mengurangi waktu henti dan meningkatkan keandalan aset di seluruh operasi.',
     tags: ['Flutter', 'Dart', 'API Integration'],
     gallery: transportAppGallery,
   }),
@@ -230,7 +230,7 @@ export const mobilePortfolios: Omit<PortfolioItem, 'id' | 'slug'>[] = [
     description:
       'An alumni engagement app for graduates of the Polytechnic Elektronika Negeri Surabaya, connecting members through updates, community features, and event participation. It strengthens professional relationships and keeps alumni informed about opportunities and activities.',
     descriptionId:
-      'An alumni engagement app for graduates of the Polytechnic Elektronika Negeri Surabaya, connecting members through updates, community features, and event participation. It strengthens professional relationships and keeps alumni informed about opportunities and activities.',
+      'Sebuah aplikasi keterlibatan alumni untuk lulusan Politeknik Elektronika Negeri Surabaya, yang menghubungkan para anggotanya melalui pembaruan informasi, fitur komunitas, dan partisipasi dalam acara. Aplikasi ini memperkuat hubungan profesional serta memastikan para alumni tetap mendapat informasi mengenai peluang dan kegiatan.',
     tags: ['Flutter', 'Dart', 'API Integration'],
     gallery: transportAppGallery,
   }),

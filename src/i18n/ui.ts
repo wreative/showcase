@@ -57,13 +57,13 @@ const en = {
 
 const id: typeof en = {
   'tab.all': 'Semua',
-  'tab.website': 'Situs Web',
+  'tab.website': 'Website',
   'tab.mobile': 'Mobile',
-  'tab.web-app': 'Aplikasi Web',
+  'tab.web-app': 'Web App',
 
-  'platform.website': 'situs web',
+  'platform.website': 'website',
   'platform.mobile': 'mobile',
-  'platform.web-app': 'aplikasi web',
+  'platform.web-app': 'web app',
 
   'search.placeholder': 'Cari proyek...',
 

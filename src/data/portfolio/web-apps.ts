@@ -141,9 +141,9 @@ export const webAppPortfolios: Omit<PortfolioItem, 'id' | 'slug'>[] = [
     image: '/assets/cover/wreative.webp',
     url: 'https://chickenexplorer.wreative.com/',
     description:
-      'Sajodo - Snack & Food. This app is designed to provide a platform for managing and sharing data related to snack and food products.',
+      'This app is designed to provide a platform for managing and sharing data related to snack and food products.',
     descriptionId:
-      'Sajodo - Snack & Food. Aplikasi ini dirancang untuk menyediakan platform dalam mengelola dan berbagi data yang terkait dengan produk makanan ringan dan makanan.',
+      'Aplikasi ini dirancang untuk menyediakan platform dalam mengelola dan berbagi data yang terkait dengan produk makanan ringan dan makanan.',
     tags: ['Laravel', 'CSS', 'JavaScript', 'MySQL'],
     gallery: foodAppGallery,
   }),
@@ -154,7 +154,7 @@ export const webAppPortfolios: Omit<PortfolioItem, 'id' | 'slug'>[] = [
     image: '/assets/cover/wreative.webp',
     url: 'https://chickenexplorer.wreative.com/',
     description:
-      'Andromart - Online Store & E-Commerce. This app is designed to provide a platform for managing and sharing data related to online shopping and e-commerce. Additionally, the app also provides features to facilitate the transaction process and product management for sellers.',
+      'Online Store & E-Commerce. This app is designed to provide a platform for managing and sharing data related to online shopping and e-commerce. Additionally, the app also provides features to facilitate the transaction process and product management for sellers.',
     descriptionId:
       'Aplikasi Toko Online & E-Commerce. Aplikasi ini dirancang untuk menyediakan platform dalam mengelola dan berbagi data yang terkait dengan belanja online dan e-commerce. Selain itu, aplikasi ini juga menyediakan fitur untuk mempermudah proses transaksi dan pengelolaan produk bagi para penjual.',
     tags: ['Laravel', 'CSS', 'JavaScript', 'MySQL', 'Datatables'],
