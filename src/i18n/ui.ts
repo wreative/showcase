@@ -59,9 +59,11 @@ const id: typeof en = {
   'tab.all': 'Semua',
   'tab.website': 'Situs Web',
   'tab.mobile': 'Mobile',
+  'tab.web-app': 'Aplikasi Web',
 
   'platform.website': 'situs web',
   'platform.mobile': 'mobile',
+  'platform.web-app': 'aplikasi web',
 
   'search.placeholder': 'Cari proyek...',
 
