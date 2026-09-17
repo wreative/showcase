@@ -6,11 +6,11 @@ const demoVideo = 'https://www.w3schools.com/html/mov_bbb.mp4';
 
 const wreativeGallery = [
   img('/assets/cover/wreative.webp'),
-  img('/assets/cover/wreative-store.webp'),
-  img('/assets/cover/home-baraka.webp'),
-  img('/assets/cover/aviso.webp'),
-  lottie('/assets/lottie/scene.json', { loop: true, autoplay: true }),
-  vid(demoVideo, '/assets/cover/wreative.webp'),
+  // img('/assets/cover/wreative-store.webp'),
+  // img('/assets/cover/home-baraka.webp'),
+  // img('/assets/cover/aviso.webp'),
+  lottie('/assets/lottie/33.json', { loop: true, autoplay: true }),
+  // vid(demoVideo, '/assets/cover/wreative.webp'),
 ];
 
 const fajarFloristGallery = [
