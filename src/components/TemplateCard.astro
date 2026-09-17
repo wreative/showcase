@@ -30,7 +30,7 @@ const lottieItem = template.gallery.find((i): i is GalleryLottie => i.type === '
   data-category={template.category}
   data-index={index}
 >
-  <div class="aspect-[16/9] overflow-hidden">
+  <div class="overflow-hidden">
     {
       lottieItem ? (
         <LottiePlayer
@@ -38,13 +38,13 @@ const lottieItem = template.gallery.find((i): i is GalleryLottie => i.type === '
           loop={lottieItem.loop}
           autoplay={lottieItem.autoplay}
           fit="cover"
-          class="h-full w-full"
+          class="aspect-[16/9] h-full w-full"
         />
       ) : (
         <Image
           src={getCoverImage(template.image)}
           alt={template.title}
-          class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+          class="aspect-[16/9] h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
           loading={index < 4 ? 'eager' : 'lazy'}
           fetchpriority={index === 0 ? 'high' : undefined}
         />
