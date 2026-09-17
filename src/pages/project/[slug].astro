@@ -113,7 +113,7 @@ const jsonLd = [
                     <Image
                       src={getCoverImage(item.src)}
                       alt={`${template.title} - screenshot ${index + 1} (${template.platform})`}
-                      class="h-full w-full object-cover"
+                      class="aspect-[16/9] h-full w-full object-cover"
                       loading={index === 0 ? 'eager' : 'lazy'}
                       fetchpriority={index === 0 ? 'high' : undefined}
                     />
@@ -123,14 +123,14 @@ const jsonLd = [
                       loop={item.loop}
                       autoplay={item.autoplay}
                       fit="cover"
-                      class="aspect-[1920/955] h-auto w-full"
+                      class="aspect-[16/9] h-auto w-full"
                     />
                   ) : (
                     <video
                       src={item.src}
                       poster={item.poster ? getCoverImage(item.poster).src : undefined}
                       controls
-                      class="h-full w-full object-cover"
+                      class="aspect-[16/9] h-full w-full object-cover"
                     />
                   )}
                 </div>

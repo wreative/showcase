@@ -2,7 +2,9 @@
 import { Image } from 'astro:assets';
 import { getCoverImage } from '@/lib/covers';
 import type { PortfolioItem } from '@/data/portfolio';
+import type { GalleryLottie } from '@/data/portfolio/types';
 import { formatLabel } from '@/utils/format';
+import LottiePlayer from '@/components/LottiePlayer.astro';
 
 interface Props {
   template: PortfolioItem;
@@ -13,6 +15,10 @@ const { template, index } = Astro.props;
 const imageCount = template.gallery.filter((i) => i.type === 'image').length;
 const hasVideo = template.gallery.some((i) => i.type === 'video');
 const hasLottie = template.gallery.some((i) => i.type === 'lottie');
+// If the portfolio has a Lottie animation in its gallery, the card plays it
+// instead of showing the static cover image (16:9 animations fill the 16:9
+// card exactly; `cover` handles other ratios).
+const lottieItem = template.gallery.find((i): i is GalleryLottie => i.type === 'lottie');
 ---
 
 <a
@@ -25,13 +31,25 @@ const hasLottie = template.gallery.some((i) => i.type === 'lottie');
   data-index={index}
 >
   <div class="aspect-[16/9] overflow-hidden">
-    <Image
-      src={getCoverImage(template.image)}
-      alt={template.title}
-      class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-      loading={index < 4 ? 'eager' : 'lazy'}
-      fetchpriority={index === 0 ? 'high' : undefined}
-    />
+    {
+      lottieItem ? (
+        <LottiePlayer
+          src={lottieItem.src}
+          loop={lottieItem.loop}
+          autoplay={lottieItem.autoplay}
+          fit="cover"
+          class="h-full w-full"
+        />
+      ) : (
+        <Image
+          src={getCoverImage(template.image)}
+          alt={template.title}
+          class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+          loading={index < 4 ? 'eager' : 'lazy'}
+          fetchpriority={index === 0 ? 'high' : undefined}
+        />
+      )
+    }
   </div>
 
   <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent"></div>
