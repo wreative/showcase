@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "@lottiefiles/dotlottie-wc": "^0.9.28",
-    "astro": "^7.2.2",
+    "astro": "^7.2.8",
     "lucide-static": "^1.32.0",
     "prettier-plugin-tailwindcss": "^0.8.1",
     "swiper": "^14.1.0",
