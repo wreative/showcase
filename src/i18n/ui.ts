@@ -47,9 +47,11 @@ const en = {
   'project.media': 'Media',
   'project.mediaCount': '{count} images',
   'project.mediaVideoSuffix': 'video',
+  'project.mediaLottieSuffix': 'animation',
 
   'card.imgSuffix': 'img',
   'card.vidSuffix': 'vid',
+  'card.lottieSuffix': 'ani',
 
   'status.showing': 'Showing {platform} projects',
   'status.inCategory': 'in {category}',
@@ -94,9 +96,11 @@ const id: typeof en = {
   'project.media': 'Media',
   'project.mediaCount': '{count} gambar',
   'project.mediaVideoSuffix': 'video',
+  'project.mediaLottieSuffix': 'animasi',
 
   'card.imgSuffix': 'gbr',
   'card.vidSuffix': 'vid',
+  'card.lottieSuffix': 'ani',
 
   'status.showing': 'Menampilkan proyek {platform}',
   'status.inCategory': 'di {category}',

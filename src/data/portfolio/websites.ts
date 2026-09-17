@@ -1,4 +1,4 @@
-import { type PortfolioItem, PortfolioCategory as C, entry, img, vid } from './types';
+import { type PortfolioItem, PortfolioCategory as C, entry, img, vid, lottie } from './types';
 
 const demoVideo = 'https://www.w3schools.com/html/mov_bbb.mp4';
 
@@ -9,6 +9,7 @@ const wreativeGallery = [
   img('/assets/cover/wreative-store.webp'),
   img('/assets/cover/home-baraka.webp'),
   img('/assets/cover/aviso.webp'),
+  lottie('/assets/lottie/scene.json', { loop: true, autoplay: true }),
   vid(demoVideo, '/assets/cover/wreative.webp'),
 ];
 

@@ -12,6 +12,7 @@ interface Props {
 const { template, index } = Astro.props;
 const imageCount = template.gallery.filter((i) => i.type === 'image').length;
 const hasVideo = template.gallery.some((i) => i.type === 'video');
+const hasLottie = template.gallery.some((i) => i.type === 'lottie');
 ---
 
 <a
@@ -59,6 +60,8 @@ const hasVideo = template.gallery.some((i) => i.type === 'video');
         {imageCount} <span data-i18n="card.imgSuffix">img</span>
         {hasVideo && ' + '}
         {hasVideo && <span data-i18n="card.vidSuffix">vid</span>}
+        {hasLottie && ' + '}
+        {hasLottie && <span data-i18n="card.lottieSuffix">ani</span>}
       </span>
     )
   }

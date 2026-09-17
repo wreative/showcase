@@ -16,6 +16,7 @@ const isExternalUrl = (path: string): boolean => /^https?:\/\//i.test(path);
 function resolveMediaUrl(path: string): string {
   if (isExternalUrl(path)) return path;
   if (path.startsWith('/assets/cover/')) return new URL(getCoverImage(path).src, SITE_URL).href;
+  if (path.startsWith('/assets/lottie/')) return new URL(path, SITE_URL).href;
   return new URL(path, SITE_URL).href;
 }
 

@@ -7,6 +7,7 @@ import LanguageToggle from '@/components/LanguageToggle.astro';
 import { portfolios } from '@/data/portfolio';
 import { getCoverImage } from '@/lib/covers';
 import { formatLabel } from '@/utils/format';
+import LottiePlayer from '@/components/LottiePlayer.astro';
 import 'swiper/css';
 import 'swiper/css/keyboard';
 
@@ -115,6 +116,13 @@ const jsonLd = [
                       class="h-full w-full object-cover"
                       loading={index === 0 ? 'eager' : 'lazy'}
                       fetchpriority={index === 0 ? 'high' : undefined}
+                    />
+                  ) : item.type === 'lottie' ? (
+                    <LottiePlayer
+                      src={item.src}
+                      loop={item.loop}
+                      autoplay={item.autoplay}
+                      class="h-full w-full"
                     />
                   ) : (
                     <video
@@ -270,6 +278,13 @@ const jsonLd = [
                       {' + '}
                       {template.gallery.filter((i) => i.type === 'video').length}{' '}
                       <span data-i18n="project.mediaVideoSuffix">video</span>
+                    </>
+                  )}
+                  {template.gallery.some((i) => i.type === 'lottie') && (
+                    <>
+                      {' + '}
+                      {template.gallery.filter((i) => i.type === 'lottie').length}{' '}
+                      <span data-i18n="project.mediaLottieSuffix">animation</span>
                     </>
                   )}
                 </p>

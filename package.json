@@ -15,6 +15,7 @@
     "prebuild": "npm run generate-sitemap"
   },
   "dependencies": {
+    "@lottiefiles/dotlottie-wc": "^0.9.28",
     "astro": "^7.2.2",
     "lucide-static": "^1.32.0",
     "prettier-plugin-tailwindcss": "^0.8.1",
