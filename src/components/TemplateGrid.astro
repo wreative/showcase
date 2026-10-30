@@ -10,7 +10,7 @@ interface Props {
 const { templates } = Astro.props;
 ---
 
-<div class="grid grid-cols-1 gap-3 md:grid-cols-2" id="template-grid">
+<div class="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6 xl:grid-cols-3" id="template-grid">
   {templates.map((template, index) => <TemplateCard template={template} index={index} />)}
 </div>
 

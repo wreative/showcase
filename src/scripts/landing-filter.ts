@@ -2,7 +2,8 @@ import { onPageLoad } from '@/scripts/page-lifecycle';
 import { getLanguage, translations, translateCategory } from '@/i18n/ui';
 import { LANGUAGE_CHANGE_EVENT } from '@/scripts/i18n';
 
-const ITEMS_PER_PAGE = 8;
+// 3 columns at xl (1280px) need a multiple of 3; 2 columns need a multiple of 2.
+const pageSize = () => (window.matchMedia('(min-width: 1280px)').matches ? 9 : 8);
 const LOAD_DELAY_MS = 400;
 
 interface CardEl extends HTMLElement {
@@ -25,7 +26,7 @@ function initLandingFilter(signal: AbortSignal) {
   let searchQuery = '';
   let selectedPlatform: 'all' | 'website' | 'mobile' = 'all';
   let selectedCategory = categoryTrigger.dataset.selected ?? 'All';
-  let visibleCount = ITEMS_PER_PAGE;
+  let visibleCount = pageSize();
   let loading = false;
 
   function matches(card: CardEl): boolean {
@@ -76,7 +77,7 @@ function initLandingFilter(signal: AbortSignal) {
   }
 
   function resetPaging() {
-    visibleCount = ITEMS_PER_PAGE;
+    visibleCount = pageSize();
     render();
   }
 
@@ -122,7 +123,7 @@ function initLandingFilter(signal: AbortSignal) {
     loading = true;
     render();
     setTimeout(() => {
-      visibleCount += ITEMS_PER_PAGE;
+      visibleCount += pageSize();
       loading = false;
       render();
     }, LOAD_DELAY_MS);
