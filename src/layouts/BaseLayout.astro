@@ -115,6 +115,17 @@ const sharedJsonLd = {
       rel="stylesheet"
     />
 
+    <!-- Google tag (gtag.js) -->
+    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-5LZD68DKT6"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-5LZD68DKT6');
+    </script>
+
     <script is:inline type="application/ld+json" set:html={JSON.stringify(sharedJsonLd)} />
 
     <script is:inline>
