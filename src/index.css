@@ -134,7 +134,7 @@
     animation: rise-in 0.3s var(--ease-out) both;
   }
 
-  button:active:not(:disabled),
+  button:active:not(:disabled):not([class*="-translate-y-1/2"]),
   a[data-template-card]:active {
     transform: scale(0.98);
     transition: transform 0.1s var(--ease-out);
