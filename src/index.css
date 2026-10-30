@@ -134,10 +134,18 @@
     animation: rise-in 0.3s var(--ease-out) both;
   }
 
-  button:active:not(:disabled):not([class*="-translate-y-1/2"]),
+  /* `scale` (not `transform`) so the press composes with Tailwind's
+     -translate-y-1/2 on gallery/lightbox arrows instead of replacing it. */
+  button:active:not(:disabled),
   a[data-template-card]:active {
-    transform: scale(0.98);
-    transition: transform 0.1s var(--ease-out);
+    scale: 0.96;
+  }
+
+  button,
+  a[data-template-card] {
+    transition-property: color, background-color, border-color, opacity, box-shadow, scale;
+    transition-duration: 0.15s;
+    transition-timing-function: var(--ease-out);
   }
 
   @view-transition {
