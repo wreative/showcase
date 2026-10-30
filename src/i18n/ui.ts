@@ -1,12 +1,12 @@
-export const LANGUAGES = {
+const LANGUAGES = {
   en: 'English',
   id: 'Bahasa Indonesia',
 } as const;
 
 export type Language = keyof typeof LANGUAGES;
 
-export const DEFAULT_LANGUAGE: Language = 'en';
-export const LANGUAGE_STORAGE_KEY = 'wreative-lang';
+const DEFAULT_LANGUAGE: Language = 'en';
+const LANGUAGE_STORAGE_KEY = 'wreative-lang';
 
 const en = {
   'tab.all': 'All',
@@ -130,14 +130,14 @@ const id: typeof en = {
 
 export const translations: Record<Language, typeof en> = { en, id };
 
-export type TranslationKey = keyof typeof en;
+type TranslationKey = keyof typeof en;
 
 export function getLanguage(): Language {
   const lang = document.documentElement.lang;
   return lang === 'id' ? 'id' : DEFAULT_LANGUAGE;
 }
 
-export function setLanguage(lang: Language): void {
+function setLanguage(lang: Language): void {
   try {
     localStorage.setItem(LANGUAGE_STORAGE_KEY, lang);
   } catch {

@@ -1,5 +1,15 @@
 {
   "$schema": "https://unpkg.com/knip@6/schema.json",
   "tags": ["-lintignore"],
-  "ignore": ["src/scripts/landing-filter.ts", "src/scripts/pwa.ts"]
+  "ignore": [
+    "src/scripts/landing-filter.ts",
+    "src/scripts/pwa.ts",
+    "src/scripts/gallery-init.ts",
+    "src/scripts/gallery-swiper.ts",
+    "src/scripts/lightbox.ts",
+    "src/scripts/lottie-player.ts",
+    "scripts/generate-og-default.ts",
+    ".remember/**"
+  ],
+  "ignoreDependencies": ["@lottiefiles/dotlottie-wc"]
 }

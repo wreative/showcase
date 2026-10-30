@@ -1,4 +1,4 @@
-export type Platform = 'website' | 'mobile' | 'web-app';
+type Platform = 'website' | 'mobile' | 'web-app';
 
 export enum PortfolioCategory {
   SERVICES = 'Services',
@@ -10,9 +10,6 @@ export enum PortfolioCategory {
   LIFESTYLE = 'Lifestyle & Entertainment',
   FOOD = 'Food & Beverage',
   HEALTH = 'Health & Wellness',
-  TRAVEL = 'Travel & Tourism',
-  FINANCE = 'Finance & Banking',
-  TECHNOLOGY = 'Technology & Software',
   OTHER = 'Other',
 }
 
