@@ -81,7 +81,7 @@ function initLandingFilter(signal: AbortSignal) {
   }
 
   searchInput.addEventListener('input', () => {
-    searchQuery = searchInput.value;
+    searchQuery = searchInput.value.trim();
     resetPaging();
   });
 
