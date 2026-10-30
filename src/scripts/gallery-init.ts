@@ -21,7 +21,7 @@ export function setup() {
     el.querySelectorAll<HTMLImageElement>('[data-gallery-type="image"] img')
   ).map((img) => img.src);
 
-  const lightbox = initLightbox(imageSrcs);
+  const lightbox = initLightbox(imageSrcs, document.querySelector('h1')?.textContent?.trim() ?? '');
   const swiper = initGallerySwiper(el, (imageIndex) => lightbox.open(imageIndex));
 
   destroySwiper = () => {

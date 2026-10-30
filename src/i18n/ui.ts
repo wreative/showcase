@@ -19,6 +19,16 @@ const en = {
   'platform.web-app': 'web app',
 
   'search.placeholder': 'Search projects...',
+  'search.label': 'Search projects',
+  'lightbox.label': 'Image viewer',
+  'lightbox.close': 'Close image viewer',
+  'lightbox.prev': 'Previous image',
+  'lightbox.next': 'Next image',
+  'lightbox.zoomin': 'Zoom in',
+  'lightbox.zoomout': 'Zoom out',
+  'lightbox.reset': 'Reset zoom',
+  'lightbox.goto': 'Go to image',
+  'lightbox.image': 'Gallery image',
 
   'category.All': 'All',
   'category.Services': 'Services',
@@ -69,6 +79,16 @@ const id: typeof en = {
   'platform.web-app': 'web app',
 
   'search.placeholder': 'Cari proyek...',
+  'search.label': 'Cari proyek',
+  'lightbox.label': 'Penampil gambar',
+  'lightbox.close': 'Tutup penampil gambar',
+  'lightbox.prev': 'Gambar sebelumnya',
+  'lightbox.next': 'Gambar berikutnya',
+  'lightbox.zoomin': 'Perbesar',
+  'lightbox.zoomout': 'Perkecil',
+  'lightbox.reset': 'Atur ulang zoom',
+  'lightbox.goto': 'Ke gambar',
+  'lightbox.image': 'Gambar galeri',
 
   'category.All': 'Semua',
   'category.Services': 'Layanan',

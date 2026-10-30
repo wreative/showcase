@@ -20,7 +20,9 @@ export interface LightboxController {
   close(): void;
 }
 
-export function initLightbox(images: string[]): LightboxController {
+import { getLanguage, translations } from '@/i18n/ui';
+
+export function initLightbox(images: string[], title = ''): LightboxController {
   let currentIndex = 0;
   let scale = 1;
   let position = { x: 0, y: 0 };
@@ -31,18 +33,22 @@ export function initLightbox(images: string[]): LightboxController {
 
   const overlay = document.createElement('div');
   overlay.className = 'fixed inset-0 z-[100] hidden items-center justify-center bg-black/95';
+  overlay.setAttribute('role', 'dialog');
+  overlay.setAttribute('aria-modal', 'true');
+  overlay.dataset.i18nAria = 'lightbox.label';
+  const tr = (k: 'lightbox.image' | 'lightbox.goto') => translations[getLanguage()][k];
   overlay.innerHTML = `
-    <button type="button" data-action="close" aria-label="Close lightbox" class="absolute right-4 top-4 z-10 rounded-full bg-white/10 p-2 text-white transition-colors hover:bg-white/20">
+    <button type="button" data-action="close" aria-label="Close lightbox" data-i18n-aria="lightbox.close" class="absolute right-4 top-4 z-10 flex h-11 w-11 items-center justify-center bg-black/60 text-white transition-colors hover:bg-black/80">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12" /></svg>
     </button>
-    <div data-el="counter" class="absolute left-4 top-4 z-10 text-sm tabular-nums text-white/70"></div>
+    <div data-el="counter" class="absolute left-4 top-4 z-10 bg-black/60 px-2 py-1 text-sm tabular-nums text-white"></div>
     ${
       hasMultiple
         ? `
-    <button type="button" data-action="prev" aria-label="Previous image" class="absolute left-4 top-1/2 z-10 -translate-y-1/2 rounded-full bg-white/10 p-2 text-white transition-colors hover:bg-white/20">
+    <button type="button" data-action="prev" aria-label="Previous image" data-i18n-aria="lightbox.prev" class="absolute left-4 top-1/2 z-10 -translate-y-1/2 flex h-11 w-11 items-center justify-center bg-black/60 text-white transition-colors hover:bg-black/80">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6" /></svg>
     </button>
-    <button type="button" data-action="next" aria-label="Next image" class="absolute right-4 top-1/2 z-10 -translate-y-1/2 rounded-full bg-white/10 p-2 text-white transition-colors hover:bg-white/20">
+    <button type="button" data-action="next" aria-label="Next image" data-i18n-aria="lightbox.next" class="absolute right-4 top-1/2 z-10 -translate-y-1/2 flex h-11 w-11 items-center justify-center bg-black/60 text-white transition-colors hover:bg-black/80">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6" /></svg>
     </button>`
         : ''
@@ -50,18 +56,18 @@ export function initLightbox(images: string[]): LightboxController {
     <div data-el="imgwrap" class="flex max-h-[90vh] max-w-[90vw] items-center justify-center overflow-hidden">
       <img data-el="img" class="max-h-[90vh] max-w-full select-none object-contain transition-transform duration-200" draggable="false" />
     </div>
-    <div class="absolute bottom-4 left-1/2 flex -translate-x-1/2 items-center gap-2 rounded-full bg-white/10 px-3 py-1.5 backdrop-blur-sm">
-      <button type="button" data-action="zoomout" aria-label="Zoom out" class="p-1 text-white/70 transition-colors hover:text-white">
+    <div class="absolute bottom-4 left-1/2 flex -translate-x-1/2 items-center gap-1 bg-black/60 px-2">
+      <button type="button" data-action="zoomout" aria-label="Zoom out" data-i18n-aria="lightbox.zoomout" class="flex h-11 w-11 items-center justify-center text-white transition-colors hover:text-white/80">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14" /></svg>
       </button>
-      <span data-el="zoomlabel" class="min-w-[3ch] text-center text-xs tabular-nums text-white/70">100%</span>
-      <button type="button" data-action="zoomin" aria-label="Zoom in" class="p-1 text-white/70 transition-colors hover:text-white">
+      <span data-el="zoomlabel" class="min-w-[3ch] text-center text-xs tabular-nums text-white">100%</span>
+      <button type="button" data-action="zoomin" aria-label="Zoom in" data-i18n-aria="lightbox.zoomin" class="flex h-11 w-11 items-center justify-center text-white transition-colors hover:text-white/80">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14" /></svg>
       </button>
-      <div class="mx-1 h-4 w-px bg-white/20"></div>
-      <button type="button" data-action="reset" aria-label="Reset zoom" class="p-1 text-xs text-white/70 transition-colors hover:text-white">Reset</button>
+      <div class="mx-1 h-4 w-px bg-white/40"></div>
+      <button type="button" data-action="reset" aria-label="Reset zoom" data-i18n-aria="lightbox.reset" class="flex h-11 items-center px-2 text-xs text-white transition-colors hover:text-white/80">Reset</button>
     </div>
-    ${hasMultiple ? `<div data-el="dots" class="absolute bottom-14 left-1/2 flex -translate-x-1/2 gap-1.5"></div>` : ''}
+    ${hasMultiple ? `<div data-el="dots" class="absolute bottom-16 left-1/2 flex -translate-x-1/2"></div>` : ''}
   `;
   document.body.appendChild(overlay);
 
@@ -75,7 +81,7 @@ export function initLightbox(images: string[]): LightboxController {
     dotsEl.innerHTML = images
       .map(
         (_, i) =>
-          `<button type="button" data-dot="${i}" aria-label="Go to image ${i + 1}" class="h-1.5 w-1.5 rounded-full transition-all bg-white/40 hover:bg-white/60"></button>`
+          `<button type="button" data-dot="${i}" aria-label="${tr('lightbox.goto')} ${i + 1}" class="flex h-11 w-5 items-center justify-center"><span class="block h-1.5 w-1.5 bg-white/50 transition-all"></span></button>`
       )
       .join('');
   }
@@ -96,14 +102,14 @@ export function initLightbox(images: string[]): LightboxController {
   function render() {
     resetZoom();
     imgEl.src = images[currentIndex];
-    imgEl.alt = `Gallery image ${currentIndex + 1}`;
+    imgEl.alt = `${title || tr('lightbox.image')} - ${currentIndex + 1}`;
     counterEl.textContent = `${currentIndex + 1} / ${images.length}`;
     dotEls.forEach((dot, i) => {
       const active = i === currentIndex;
-      dot.classList.toggle('w-4', active);
-      dot.classList.toggle('bg-white', active);
-      dot.classList.toggle('bg-white/40', !active);
-      dot.classList.toggle('hover:bg-white/60', !active);
+      const bar = dot.firstElementChild!;
+      bar.classList.toggle('w-4', active);
+      bar.classList.toggle('bg-white', active);
+      bar.classList.toggle('bg-white/50', !active);
     });
   }
 
@@ -148,19 +154,30 @@ export function initLightbox(images: string[]): LightboxController {
     if (e.key === 'ArrowRight') next();
   }
 
+  let opener: Element | null = null;
+  const siblings = () => Array.from(document.body.children).filter((el) => el !== overlay) as HTMLElement[];
+
   function open(index: number) {
+    opener = document.activeElement;
+    overlay.querySelectorAll<HTMLElement>('[data-i18n-aria]').forEach((el) => {
+      el.setAttribute('aria-label', (translations[getLanguage()] as Record<string, string>)[el.dataset.i18nAria!]);
+    });
+    siblings().forEach((el) => el.setAttribute('inert', ''));
     currentIndex = index;
     overlay.classList.remove('hidden');
     overlay.classList.add('flex');
     render();
     document.body.style.overflow = 'hidden';
     window.addEventListener('keydown', handleKey);
+    overlay.querySelector<HTMLElement>('[data-action="close"]')?.focus();
   }
   function close() {
     overlay.classList.add('hidden');
     overlay.classList.remove('flex');
     document.body.style.overflow = '';
     window.removeEventListener('keydown', handleKey);
+    siblings().forEach((el) => el.removeAttribute('inert'));
+    (opener as HTMLElement | null)?.focus?.();
   }
 
   overlay.addEventListener('click', (e) => {

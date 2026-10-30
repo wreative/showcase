@@ -22,6 +22,10 @@ export function applyTranslations(lang: Language = getLanguage()): void {
     (el as HTMLInputElement).placeholder = translate(lang, el.dataset.i18nPlaceholder!);
   });
 
+  document.querySelectorAll<HTMLElement>('[data-i18n-aria]').forEach((el) => {
+    el.setAttribute('aria-label', translate(lang, el.dataset.i18nAria!));
+  });
+
   document.querySelectorAll<HTMLElement>('[data-i18n-category]').forEach((el) => {
     el.textContent = translateCategory(el.dataset.i18nCategory!, lang);
   });
