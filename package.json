@@ -16,14 +16,14 @@
   },
   "dependencies": {
     "@lottiefiles/dotlottie-wc": "^0.9.28",
-    "astro": "^7.2.2",
+    "astro": "7.4.4",
     "lucide-static": "^1.32.0",
     "prettier-plugin-tailwindcss": "^0.8.1",
     "swiper": "^14.1.0",
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
-    "@astrojs/check": "^0.9.10",
+    "@astrojs/check": "0.9.12",
     "@astrojs/tailwind": "^6.0.2",
     "@eslint/js": "^9.39.5",
     "@types/node": "^22.20.1",
