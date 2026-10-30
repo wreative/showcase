@@ -56,7 +56,7 @@ const lottieItem = template.gallery.find((i): i is GalleryLottie => i.type === '
 
   <div class="absolute inset-x-0 bottom-0 p-5">
     <div class="flex items-end justify-between gap-2">
-      <h2 class="min-w-0 line-clamp-2 break-words text-lg font-semibold leading-tight text-white">{template.title}</h2>
+      <h2 class="min-w-0 line-clamp-2 break-words text-lg font-semibold leading-tight tracking-tight text-white">{template.title}</h2>
       <span
         class="max-w-[45%] shrink-0 truncate bg-white/15 px-2.5 py-0.5 text-xs font-medium text-white/90"
         data-i18n-category={template.category}
@@ -67,14 +67,14 @@ const lottieItem = template.gallery.find((i): i is GalleryLottie => i.type === '
   </div>
 
   <span
-    class="absolute left-3 top-3 rounded-md bg-black/50 px-2 py-0.5 text-[11px] font-medium capitalize text-white/70"
+    class="absolute left-3 top-3 rounded-md bg-black/50 px-2 py-0.5 text-xs font-medium capitalize text-white"
   >
     {formatLabel(template.platform)}
   </span>
 
   {
     template.gallery.length > 1 && (
-      <span class="absolute right-3 top-3 rounded-md bg-black/50 px-2 py-0.5 text-[11px] text-white/70">
+      <span class="absolute right-3 top-3 rounded-md bg-black/50 px-2 py-0.5 text-xs tabular-nums text-white">
         {imageCount} <span data-i18n="card.imgSuffix">img</span>
         {hasVideo && ' + '}
         {hasVideo && <span data-i18n="card.vidSuffix">vid</span>}

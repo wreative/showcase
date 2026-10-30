@@ -72,6 +72,15 @@
     outline-offset: 2px;
   }
 
+  h1, h2, h3, h4 {
+    @apply font-brand;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
   html {
     scrollbar-color: hsl(var(--border)) hsl(var(--background));
   }
