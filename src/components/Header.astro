@@ -42,6 +42,7 @@ const tabs = [
         tabs.map((tab) => (
           <button
             type="button"
+            aria-pressed={tab.key === 'all' ? 'true' : 'false'}
             data-platform={tab.key}
             data-i18n={`tab.${tab.key}`}
             class:list={[

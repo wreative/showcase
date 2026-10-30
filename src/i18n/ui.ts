@@ -55,6 +55,7 @@ const en = {
 
   'status.showing': 'Showing {platform} projects',
   'status.inCategory': 'in {category}',
+  'empty.none': 'Nothing found matching your criteria.',
 };
 
 const id: typeof en = {
@@ -104,6 +105,7 @@ const id: typeof en = {
 
   'status.showing': 'Menampilkan proyek {platform}',
   'status.inCategory': 'di {category}',
+  'empty.none': 'Tidak ada proyek yang cocok dengan kriteria Anda.',
 };
 
 export const translations: Record<Language, typeof en> = { en, id };

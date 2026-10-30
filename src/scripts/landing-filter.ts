@@ -90,6 +90,7 @@ function initLandingFilter(signal: AbortSignal) {
       selectedPlatform = tab.dataset.platform as 'all' | 'website' | 'mobile';
       platformTabs.querySelectorAll<HTMLButtonElement>('[data-platform]').forEach((t) => {
         const active = t === tab;
+        t.setAttribute('aria-pressed', String(active));
         t.classList.toggle('bg-foreground', active);
         t.classList.toggle('text-background', active);
         t.classList.toggle('text-muted-foreground', !active);
