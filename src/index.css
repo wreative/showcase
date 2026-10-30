@@ -99,6 +99,17 @@
   /* Firefox */
 }
 
+@layer components {
+  /* Small uppercase label above a value (project page meta) */
+  .eyebrow {
+    @apply text-xs uppercase tracking-wider text-muted-foreground;
+  }
+  /* Neutral metadata tag (category, platform) */
+  .chip {
+    @apply rounded bg-muted px-2 py-0.5 text-xs font-medium text-muted-foreground;
+  }
+}
+
 /* Motion: one authored moment (cards rise in, staggered) + state feedback.
    Cards re-run the entrance whenever filtering/paging un-hides them. */
 :root {
