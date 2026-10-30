@@ -138,3 +138,31 @@
     animation-duration: 0.18s;
   }
 }
+
+/* Adapt: touch targets, iOS input zoom, notch safe-area */
+@media (pointer: coarse) {
+  header button,
+  header input {
+    min-height: 44px;
+  }
+  header [data-theme-toggle],
+  header #theme-toggle,
+  header #language-toggle {
+    min-width: 44px;
+  }
+}
+@media (max-width: 767px) {
+  header input[type='search'] {
+    font-size: 16px;
+  }
+}
+header > div {
+  padding-left: max(1rem, env(safe-area-inset-left));
+  padding-right: max(1rem, env(safe-area-inset-right));
+}
+@media (min-width: 640px) {
+  header > div {
+    padding-left: max(1.5rem, env(safe-area-inset-left));
+    padding-right: max(1.5rem, env(safe-area-inset-right));
+  }
+}

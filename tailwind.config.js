@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  future: { hoverOnlyWhenSupported: true },
   darkMode: ['class'],
   content: ['./src/**/*.{astro,ts,tsx}'],
   theme: {
