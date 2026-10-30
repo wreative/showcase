@@ -12,11 +12,12 @@ const {
   title,
   description,
   canonical,
-  ogImage = new URL('/assets/og-default.png', Astro.site).href,
+  ogImage: ogImageProp,
   robots = 'index, follow',
   jsonLd,
 } = Astro.props;
 
+const ogImage = new URL(ogImageProp ?? '/assets/og-default.png', Astro.site).href;
 const jsonLdBlocks = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
 const isDefaultOg = !Astro.props.ogImage;
 const ogWidth = isDefaultOg ? 1200 : undefined;
