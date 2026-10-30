@@ -5,14 +5,33 @@ import Alert from '@/components/Alert.astro';
 import TemplateGrid from '@/components/TemplateGrid.astro';
 import Footer from '@/components/Footer.astro';
 import { portfolios } from '@/data/portfolio';
+import { alternatesFor, localePath, SITE_URL, type Locale } from '@/utils/locale';
+
+interface Props {
+  lang: Locale;
+}
+
+const { lang } = Astro.props;
 
 const categories = ['All', ...new Set(portfolios.map((t) => t.category))];
+
+const copy =
+  lang === 'id'
+    ? {
+        title: 'Wreative Showcase - Portofolio PT. Wreative Digital Solutions Indonesia',
+        description: `Portofolio Wreative, agensi kreatif di Surabaya, Indonesia. Lihat ${portfolios.length} proyek website dan aplikasi mobile untuk bisnis, pendidikan, e-commerce, pemerintahan, dan jasa.`,
+      }
+    : {
+        title: 'Wreative Showcase - Portfolio PT. Wreative Digital Solutions Indonesia',
+        description: `Portfolio showcase by Wreative - creative agency based in Surabaya, Indonesia. Browse ${portfolios.length} website and mobile app projects across business, education, e-commerce, government, and services categories.`,
+      };
 
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'CollectionPage',
   name: 'Wreative Showcase - Portfolio',
-  url: 'https://showcase.wreative.com/',
+  url: `${SITE_URL}${localePath(lang, '/')}`,
+  inLanguage: lang,
   description: 'Portfolio of website and mobile application projects by Wreative creative agency.',
   provider: { '@id': 'https://showcase.wreative.com/#org' },
   mainEntity: {
@@ -22,25 +41,27 @@ const jsonLd = {
       '@type': 'ListItem',
       position: i + 1,
       name: t.title,
-      url: `https://showcase.wreative.com/project/${t.slug}`,
+      url: `${SITE_URL}${localePath(lang, `/project/${t.slug}`)}`,
     })),
   },
 };
 ---
 
 <BaseLayout
-  title="Wreative Showcase - Portfolio PT. Wreative Digital Solutions Indonesia"
-  description={`Portfolio showcase by Wreative - creative agency based in Indonesia. Browse ${portfolios.length} website and mobile app projects across business, education, e-commerce, government, and services categories.`}
-  canonical="https://showcase.wreative.com/"
+  title={copy.title}
+  description={copy.description}
+  canonical={`${SITE_URL}${localePath(lang, '/')}`}
+  lang={lang}
+  alternates={alternatesFor('/')}
   jsonLd={jsonLd}
 >
   <div class="flex min-h-screen flex-col bg-background">
-    <Header categories={categories} />
+    <Header categories={categories} lang={lang} />
 
     <main class="mx-auto w-full max-w-7xl flex-1 px-4 py-6 sm:px-6 md:py-10 lg:px-8">
       <p id="platform-status" class="mb-4 hidden text-sm capitalize text-muted-foreground"></p>
 
-      <TemplateGrid templates={portfolios} />
+      <TemplateGrid templates={portfolios} lang={lang} />
 
       <Alert title="Announcement" class="mt-10 md:mt-14">
         <span data-i18n-html="alert.body">

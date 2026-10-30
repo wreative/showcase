@@ -1,295 +1,883 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://showcase.wreative.com/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://showcase.wreative.com/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://showcase.wreative.com/id/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://showcase.wreative.com/"/>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://showcase.wreative.com/id/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://showcase.wreative.com/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://showcase.wreative.com/id/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://showcase.wreative.com/"/>
     <lastmod>2026-10-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://showcase.wreative.com/project/spesialis-karangan-bunga-indonesia</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://showcase.wreative.com/project/spesialis-karangan-bunga-indonesia"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://showcase.wreative.com/id/project/spesialis-karangan-bunga-indonesia"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://showcase.wreative.com/project/spesialis-karangan-bunga-indonesia"/>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://showcase.wreative.com/id/project/spesialis-karangan-bunga-indonesia</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://showcase.wreative.com/project/spesialis-karangan-bunga-indonesia"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://showcase.wreative.com/id/project/spesialis-karangan-bunga-indonesia"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://showcase.wreative.com/project/spesialis-karangan-bunga-indonesia"/>
     <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://showcase.wreative.com/project/be-mode-indonesia</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://showcase.wreative.com/project/be-mode-indonesia"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://showcase.wreative.com/id/project/be-mode-indonesia"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://showcase.wreative.com/project/be-mode-indonesia"/>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://showcase.wreative.com/id/project/be-mode-indonesia</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://showcase.wreative.com/project/be-mode-indonesia"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://showcase.wreative.com/id/project/be-mode-indonesia"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://showcase.wreative.com/project/be-mode-indonesia"/>
     <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://showcase.wreative.com/project/sg-academy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://showcase.wreative.com/project/sg-academy"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://showcase.wreative.com/id/project/sg-academy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://showcase.wreative.com/project/sg-academy"/>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://showcase.wreative.com/id/project/sg-academy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://showcase.wreative.com/project/sg-academy"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://showcase.wreative.com/id/project/sg-academy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://showcase.wreative.com/project/sg-academy"/>
     <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://showcase.wreative.com/project/roby-saputra-grup</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://showcase.wreative.com/project/roby-saputra-grup"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://showcase.wreative.com/id/project/roby-saputra-grup"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://showcase.wreative.com/project/roby-saputra-grup"/>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://showcase.wreative.com/id/project/roby-saputra-grup</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://showcase.wreative.com/project/roby-saputra-grup"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://showcase.wreative.com/id/project/roby-saputra-grup"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://showcase.wreative.com/project/roby-saputra-grup"/>
     <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://showcase.wreative.com/project/kontraktor-surabaya</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://showcase.wreative.com/project/kontraktor-surabaya"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://showcase.wreative.com/id/project/kontraktor-surabaya"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://showcase.wreative.com/project/kontraktor-surabaya"/>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://showcase.wreative.com/id/project/kontraktor-surabaya</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://showcase.wreative.com/project/kontraktor-surabaya"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://showcase.wreative.com/id/project/kontraktor-surabaya"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://showcase.wreative.com/project/kontraktor-surabaya"/>
     <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://showcase.wreative.com/project/wase-bumi-indonesia</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://showcase.wreative.com/project/wase-bumi-indonesia"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://showcase.wreative.com/id/project/wase-bumi-indonesia"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://showcase.wreative.com/project/wase-bumi-indonesia"/>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://showcase.wreative.com/id/project/wase-bumi-indonesia</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://showcase.wreative.com/project/wase-bumi-indonesia"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://showcase.wreative.com/id/project/wase-bumi-indonesia"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://showcase.wreative.com/project/wase-bumi-indonesia"/>
     <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://showcase.wreative.com/project/cubicle-toilet</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://showcase.wreative.com/project/cubicle-toilet"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://showcase.wreative.com/id/project/cubicle-toilet"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://showcase.wreative.com/project/cubicle-toilet"/>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://showcase.wreative.com/id/project/cubicle-toilet</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://showcase.wreative.com/project/cubicle-toilet"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://showcase.wreative.com/id/project/cubicle-toilet"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://showcase.wreative.com/project/cubicle-toilet"/>
     <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://showcase.wreative.com/project/pt-adikarya-pesona-intinusa</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://showcase.wreative.com/project/pt-adikarya-pesona-intinusa"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://showcase.wreative.com/id/project/pt-adikarya-pesona-intinusa"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://showcase.wreative.com/project/pt-adikarya-pesona-intinusa"/>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://showcase.wreative.com/id/project/pt-adikarya-pesona-intinusa</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://showcase.wreative.com/project/pt-adikarya-pesona-intinusa"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://showcase.wreative.com/id/project/pt-adikarya-pesona-intinusa"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://showcase.wreative.com/project/pt-adikarya-pesona-intinusa"/>
     <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://showcase.wreative.com/project/wreative-store</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://showcase.wreative.com/project/wreative-store"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://showcase.wreative.com/id/project/wreative-store"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://showcase.wreative.com/project/wreative-store"/>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://showcase.wreative.com/id/project/wreative-store</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://showcase.wreative.com/project/wreative-store"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://showcase.wreative.com/id/project/wreative-store"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://showcase.wreative.com/project/wreative-store"/>
     <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://showcase.wreative.com/project/home-baraka</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://showcase.wreative.com/project/home-baraka"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://showcase.wreative.com/id/project/home-baraka"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://showcase.wreative.com/project/home-baraka"/>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://showcase.wreative.com/id/project/home-baraka</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://showcase.wreative.com/project/home-baraka"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://showcase.wreative.com/id/project/home-baraka"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://showcase.wreative.com/project/home-baraka"/>
     <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://showcase.wreative.com/project/wreative</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://showcase.wreative.com/project/wreative"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://showcase.wreative.com/id/project/wreative"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://showcase.wreative.com/project/wreative"/>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://showcase.wreative.com/id/project/wreative</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://showcase.wreative.com/project/wreative"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://showcase.wreative.com/id/project/wreative"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://showcase.wreative.com/project/wreative"/>
     <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://showcase.wreative.com/project/fajar-florist</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://showcase.wreative.com/project/fajar-florist"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://showcase.wreative.com/id/project/fajar-florist"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://showcase.wreative.com/project/fajar-florist"/>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://showcase.wreative.com/id/project/fajar-florist</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://showcase.wreative.com/project/fajar-florist"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://showcase.wreative.com/id/project/fajar-florist"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://showcase.wreative.com/project/fajar-florist"/>
     <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://showcase.wreative.com/project/first-media-surabaya</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://showcase.wreative.com/project/first-media-surabaya"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://showcase.wreative.com/id/project/first-media-surabaya"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://showcase.wreative.com/project/first-media-surabaya"/>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://showcase.wreative.com/id/project/first-media-surabaya</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://showcase.wreative.com/project/first-media-surabaya"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://showcase.wreative.com/id/project/first-media-surabaya"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://showcase.wreative.com/project/first-media-surabaya"/>
     <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://showcase.wreative.com/project/dpu-bina-marga-musi</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://showcase.wreative.com/project/dpu-bina-marga-musi"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://showcase.wreative.com/id/project/dpu-bina-marga-musi"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://showcase.wreative.com/project/dpu-bina-marga-musi"/>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://showcase.wreative.com/id/project/dpu-bina-marga-musi</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://showcase.wreative.com/project/dpu-bina-marga-musi"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://showcase.wreative.com/id/project/dpu-bina-marga-musi"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://showcase.wreative.com/project/dpu-bina-marga-musi"/>
     <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://showcase.wreative.com/project/chicken-explorer</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://showcase.wreative.com/project/chicken-explorer"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://showcase.wreative.com/id/project/chicken-explorer"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://showcase.wreative.com/project/chicken-explorer"/>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://showcase.wreative.com/id/project/chicken-explorer</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://showcase.wreative.com/project/chicken-explorer"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://showcase.wreative.com/id/project/chicken-explorer"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://showcase.wreative.com/project/chicken-explorer"/>
     <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://showcase.wreative.com/project/kurir-pulsa</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://showcase.wreative.com/project/kurir-pulsa"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://showcase.wreative.com/id/project/kurir-pulsa"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://showcase.wreative.com/project/kurir-pulsa"/>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://showcase.wreative.com/id/project/kurir-pulsa</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://showcase.wreative.com/project/kurir-pulsa"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://showcase.wreative.com/id/project/kurir-pulsa"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://showcase.wreative.com/project/kurir-pulsa"/>
     <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://showcase.wreative.com/project/panji-semesta</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://showcase.wreative.com/project/panji-semesta"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://showcase.wreative.com/id/project/panji-semesta"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://showcase.wreative.com/project/panji-semesta"/>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://showcase.wreative.com/id/project/panji-semesta</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://showcase.wreative.com/project/panji-semesta"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://showcase.wreative.com/id/project/panji-semesta"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://showcase.wreative.com/project/panji-semesta"/>
     <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://showcase.wreative.com/project/dzata-lombok-transport</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://showcase.wreative.com/project/dzata-lombok-transport"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://showcase.wreative.com/id/project/dzata-lombok-transport"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://showcase.wreative.com/project/dzata-lombok-transport"/>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://showcase.wreative.com/id/project/dzata-lombok-transport</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://showcase.wreative.com/project/dzata-lombok-transport"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://showcase.wreative.com/id/project/dzata-lombok-transport"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://showcase.wreative.com/project/dzata-lombok-transport"/>
     <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://showcase.wreative.com/project/pernikahan-ini</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://showcase.wreative.com/project/pernikahan-ini"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://showcase.wreative.com/id/project/pernikahan-ini"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://showcase.wreative.com/project/pernikahan-ini"/>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://showcase.wreative.com/id/project/pernikahan-ini</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://showcase.wreative.com/project/pernikahan-ini"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://showcase.wreative.com/id/project/pernikahan-ini"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://showcase.wreative.com/project/pernikahan-ini"/>
     <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://showcase.wreative.com/project/pos-satpam</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://showcase.wreative.com/project/pos-satpam"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://showcase.wreative.com/id/project/pos-satpam"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://showcase.wreative.com/project/pos-satpam"/>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://showcase.wreative.com/id/project/pos-satpam</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://showcase.wreative.com/project/pos-satpam"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://showcase.wreative.com/id/project/pos-satpam"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://showcase.wreative.com/project/pos-satpam"/>
     <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://showcase.wreative.com/project/toilet-portabel</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://showcase.wreative.com/project/toilet-portabel"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://showcase.wreative.com/id/project/toilet-portabel"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://showcase.wreative.com/project/toilet-portabel"/>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://showcase.wreative.com/id/project/toilet-portabel</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://showcase.wreative.com/project/toilet-portabel"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://showcase.wreative.com/id/project/toilet-portabel"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://showcase.wreative.com/project/toilet-portabel"/>
     <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://showcase.wreative.com/project/pt-modern-coco-international</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://showcase.wreative.com/project/pt-modern-coco-international"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://showcase.wreative.com/id/project/pt-modern-coco-international"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://showcase.wreative.com/project/pt-modern-coco-international"/>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://showcase.wreative.com/id/project/pt-modern-coco-international</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://showcase.wreative.com/project/pt-modern-coco-international"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://showcase.wreative.com/id/project/pt-modern-coco-international"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://showcase.wreative.com/project/pt-modern-coco-international"/>
     <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://showcase.wreative.com/project/sakpattana-jawa-timur</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://showcase.wreative.com/project/sakpattana-jawa-timur"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://showcase.wreative.com/id/project/sakpattana-jawa-timur"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://showcase.wreative.com/project/sakpattana-jawa-timur"/>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://showcase.wreative.com/id/project/sakpattana-jawa-timur</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://showcase.wreative.com/project/sakpattana-jawa-timur"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://showcase.wreative.com/id/project/sakpattana-jawa-timur"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://showcase.wreative.com/project/sakpattana-jawa-timur"/>
     <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://showcase.wreative.com/project/cv-putra-kubota</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://showcase.wreative.com/project/cv-putra-kubota"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://showcase.wreative.com/id/project/cv-putra-kubota"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://showcase.wreative.com/project/cv-putra-kubota"/>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://showcase.wreative.com/id/project/cv-putra-kubota</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://showcase.wreative.com/project/cv-putra-kubota"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://showcase.wreative.com/id/project/cv-putra-kubota"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://showcase.wreative.com/project/cv-putra-kubota"/>
     <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://showcase.wreative.com/project/wahyu-dewanagari</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://showcase.wreative.com/project/wahyu-dewanagari"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://showcase.wreative.com/id/project/wahyu-dewanagari"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://showcase.wreative.com/project/wahyu-dewanagari"/>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://showcase.wreative.com/id/project/wahyu-dewanagari</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://showcase.wreative.com/project/wahyu-dewanagari"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://showcase.wreative.com/id/project/wahyu-dewanagari"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://showcase.wreative.com/project/wahyu-dewanagari"/>
     <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://showcase.wreative.com/project/aviso</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://showcase.wreative.com/project/aviso"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://showcase.wreative.com/id/project/aviso"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://showcase.wreative.com/project/aviso"/>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://showcase.wreative.com/id/project/aviso</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://showcase.wreative.com/project/aviso"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://showcase.wreative.com/id/project/aviso"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://showcase.wreative.com/project/aviso"/>
     <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://showcase.wreative.com/project/lpk-furinkazan</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://showcase.wreative.com/project/lpk-furinkazan"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://showcase.wreative.com/id/project/lpk-furinkazan"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://showcase.wreative.com/project/lpk-furinkazan"/>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://showcase.wreative.com/id/project/lpk-furinkazan</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://showcase.wreative.com/project/lpk-furinkazan"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://showcase.wreative.com/id/project/lpk-furinkazan"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://showcase.wreative.com/project/lpk-furinkazan"/>
     <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://showcase.wreative.com/project/wreative-app</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://showcase.wreative.com/project/wreative-app"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://showcase.wreative.com/id/project/wreative-app"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://showcase.wreative.com/project/wreative-app"/>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://showcase.wreative.com/id/project/wreative-app</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://showcase.wreative.com/project/wreative-app"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://showcase.wreative.com/id/project/wreative-app"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://showcase.wreative.com/project/wreative-app"/>
     <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://showcase.wreative.com/project/tikcheck-event-ticketing</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://showcase.wreative.com/project/tikcheck-event-ticketing"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://showcase.wreative.com/id/project/tikcheck-event-ticketing"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://showcase.wreative.com/project/tikcheck-event-ticketing"/>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://showcase.wreative.com/id/project/tikcheck-event-ticketing</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://showcase.wreative.com/project/tikcheck-event-ticketing"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://showcase.wreative.com/id/project/tikcheck-event-ticketing"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://showcase.wreative.com/project/tikcheck-event-ticketing"/>
     <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://showcase.wreative.com/project/tbceria-tbc-health-companion</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://showcase.wreative.com/project/tbceria-tbc-health-companion"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://showcase.wreative.com/id/project/tbceria-tbc-health-companion"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://showcase.wreative.com/project/tbceria-tbc-health-companion"/>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://showcase.wreative.com/id/project/tbceria-tbc-health-companion</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://showcase.wreative.com/project/tbceria-tbc-health-companion"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://showcase.wreative.com/id/project/tbceria-tbc-health-companion"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://showcase.wreative.com/project/tbceria-tbc-health-companion"/>
     <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://showcase.wreative.com/project/sijalu-wound-information-network-system</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://showcase.wreative.com/project/sijalu-wound-information-network-system"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://showcase.wreative.com/id/project/sijalu-wound-information-network-system"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://showcase.wreative.com/project/sijalu-wound-information-network-system"/>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://showcase.wreative.com/id/project/sijalu-wound-information-network-system</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://showcase.wreative.com/project/sijalu-wound-information-network-system"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://showcase.wreative.com/id/project/sijalu-wound-information-network-system"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://showcase.wreative.com/project/sijalu-wound-information-network-system"/>
     <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://showcase.wreative.com/project/ceting-gmeil-pregnancy-companion-app</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://showcase.wreative.com/project/ceting-gmeil-pregnancy-companion-app"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://showcase.wreative.com/id/project/ceting-gmeil-pregnancy-companion-app"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://showcase.wreative.com/project/ceting-gmeil-pregnancy-companion-app"/>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://showcase.wreative.com/id/project/ceting-gmeil-pregnancy-companion-app</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://showcase.wreative.com/project/ceting-gmeil-pregnancy-companion-app"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://showcase.wreative.com/id/project/ceting-gmeil-pregnancy-companion-app"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://showcase.wreative.com/project/ceting-gmeil-pregnancy-companion-app"/>
     <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://showcase.wreative.com/project/mitra-jaya-cellular-ppob-mobile-platform</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://showcase.wreative.com/project/mitra-jaya-cellular-ppob-mobile-platform"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://showcase.wreative.com/id/project/mitra-jaya-cellular-ppob-mobile-platform"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://showcase.wreative.com/project/mitra-jaya-cellular-ppob-mobile-platform"/>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://showcase.wreative.com/id/project/mitra-jaya-cellular-ppob-mobile-platform</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://showcase.wreative.com/project/mitra-jaya-cellular-ppob-mobile-platform"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://showcase.wreative.com/id/project/mitra-jaya-cellular-ppob-mobile-platform"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://showcase.wreative.com/project/mitra-jaya-cellular-ppob-mobile-platform"/>
     <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://showcase.wreative.com/project/momora-parenting-growth-companion</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://showcase.wreative.com/project/momora-parenting-growth-companion"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://showcase.wreative.com/id/project/momora-parenting-growth-companion"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://showcase.wreative.com/project/momora-parenting-growth-companion"/>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://showcase.wreative.com/id/project/momora-parenting-growth-companion</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://showcase.wreative.com/project/momora-parenting-growth-companion"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://showcase.wreative.com/id/project/momora-parenting-growth-companion"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://showcase.wreative.com/project/momora-parenting-growth-companion"/>
     <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://showcase.wreative.com/project/voilla-learning-management-system</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://showcase.wreative.com/project/voilla-learning-management-system"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://showcase.wreative.com/id/project/voilla-learning-management-system"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://showcase.wreative.com/project/voilla-learning-management-system"/>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://showcase.wreative.com/id/project/voilla-learning-management-system</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://showcase.wreative.com/project/voilla-learning-management-system"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://showcase.wreative.com/id/project/voilla-learning-management-system"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://showcase.wreative.com/project/voilla-learning-management-system"/>
     <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://showcase.wreative.com/project/sigap-emergency-response-information-system</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://showcase.wreative.com/project/sigap-emergency-response-information-system"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://showcase.wreative.com/id/project/sigap-emergency-response-information-system"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://showcase.wreative.com/project/sigap-emergency-response-information-system"/>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://showcase.wreative.com/id/project/sigap-emergency-response-information-system</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://showcase.wreative.com/project/sigap-emergency-response-information-system"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://showcase.wreative.com/id/project/sigap-emergency-response-information-system"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://showcase.wreative.com/project/sigap-emergency-response-information-system"/>
     <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://showcase.wreative.com/project/tridentacare-dental-damage-detection-app</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://showcase.wreative.com/project/tridentacare-dental-damage-detection-app"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://showcase.wreative.com/id/project/tridentacare-dental-damage-detection-app"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://showcase.wreative.com/project/tridentacare-dental-damage-detection-app"/>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://showcase.wreative.com/id/project/tridentacare-dental-damage-detection-app</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://showcase.wreative.com/project/tridentacare-dental-damage-detection-app"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://showcase.wreative.com/id/project/tridentacare-dental-damage-detection-app"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://showcase.wreative.com/project/tridentacare-dental-damage-detection-app"/>
     <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://showcase.wreative.com/project/melcalm-wellness-screening</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://showcase.wreative.com/project/melcalm-wellness-screening"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://showcase.wreative.com/id/project/melcalm-wellness-screening"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://showcase.wreative.com/project/melcalm-wellness-screening"/>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://showcase.wreative.com/id/project/melcalm-wellness-screening</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://showcase.wreative.com/project/melcalm-wellness-screening"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://showcase.wreative.com/id/project/melcalm-wellness-screening"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://showcase.wreative.com/project/melcalm-wellness-screening"/>
     <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://showcase.wreative.com/project/hmm-hardware-maintenance-management</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://showcase.wreative.com/project/hmm-hardware-maintenance-management"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://showcase.wreative.com/id/project/hmm-hardware-maintenance-management"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://showcase.wreative.com/project/hmm-hardware-maintenance-management"/>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://showcase.wreative.com/id/project/hmm-hardware-maintenance-management</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://showcase.wreative.com/project/hmm-hardware-maintenance-management"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://showcase.wreative.com/id/project/hmm-hardware-maintenance-management"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://showcase.wreative.com/project/hmm-hardware-maintenance-management"/>
     <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://showcase.wreative.com/project/ika-pens-alumni-network-app</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://showcase.wreative.com/project/ika-pens-alumni-network-app"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://showcase.wreative.com/id/project/ika-pens-alumni-network-app"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://showcase.wreative.com/project/ika-pens-alumni-network-app"/>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://showcase.wreative.com/id/project/ika-pens-alumni-network-app</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://showcase.wreative.com/project/ika-pens-alumni-network-app"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://showcase.wreative.com/id/project/ika-pens-alumni-network-app"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://showcase.wreative.com/project/ika-pens-alumni-network-app"/>
     <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://showcase.wreative.com/project/nikifit-women-fitness-wellness</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://showcase.wreative.com/project/nikifit-women-fitness-wellness"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://showcase.wreative.com/id/project/nikifit-women-fitness-wellness"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://showcase.wreative.com/project/nikifit-women-fitness-wellness"/>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://showcase.wreative.com/id/project/nikifit-women-fitness-wellness</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://showcase.wreative.com/project/nikifit-women-fitness-wellness"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://showcase.wreative.com/id/project/nikifit-women-fitness-wellness"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://showcase.wreative.com/project/nikifit-women-fitness-wellness"/>
     <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://showcase.wreative.com/project/tipotix-ticketing-event-management</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://showcase.wreative.com/project/tipotix-ticketing-event-management"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://showcase.wreative.com/id/project/tipotix-ticketing-event-management"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://showcase.wreative.com/project/tipotix-ticketing-event-management"/>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://showcase.wreative.com/id/project/tipotix-ticketing-event-management</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://showcase.wreative.com/project/tipotix-ticketing-event-management"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://showcase.wreative.com/id/project/tipotix-ticketing-event-management"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://showcase.wreative.com/project/tipotix-ticketing-event-management"/>
     <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://showcase.wreative.com/project/gabungin-all-in-one-application</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://showcase.wreative.com/project/gabungin-all-in-one-application"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://showcase.wreative.com/id/project/gabungin-all-in-one-application"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://showcase.wreative.com/project/gabungin-all-in-one-application"/>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://showcase.wreative.com/id/project/gabungin-all-in-one-application</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://showcase.wreative.com/project/gabungin-all-in-one-application"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://showcase.wreative.com/id/project/gabungin-all-in-one-application"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://showcase.wreative.com/project/gabungin-all-in-one-application"/>
     <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://showcase.wreative.com/project/sultan-top-up-game-top-up-digital-products</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://showcase.wreative.com/project/sultan-top-up-game-top-up-digital-products"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://showcase.wreative.com/id/project/sultan-top-up-game-top-up-digital-products"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://showcase.wreative.com/project/sultan-top-up-game-top-up-digital-products"/>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://showcase.wreative.com/id/project/sultan-top-up-game-top-up-digital-products</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://showcase.wreative.com/project/sultan-top-up-game-top-up-digital-products"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://showcase.wreative.com/id/project/sultan-top-up-game-top-up-digital-products"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://showcase.wreative.com/project/sultan-top-up-game-top-up-digital-products"/>
     <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://showcase.wreative.com/project/sinfra-infrastruktur-information-system-application</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://showcase.wreative.com/project/sinfra-infrastruktur-information-system-application"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://showcase.wreative.com/id/project/sinfra-infrastruktur-information-system-application"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://showcase.wreative.com/project/sinfra-infrastruktur-information-system-application"/>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://showcase.wreative.com/id/project/sinfra-infrastruktur-information-system-application</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://showcase.wreative.com/project/sinfra-infrastruktur-information-system-application"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://showcase.wreative.com/id/project/sinfra-infrastruktur-information-system-application"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://showcase.wreative.com/project/sinfra-infrastruktur-information-system-application"/>
     <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://showcase.wreative.com/project/data-room-kpbu-public-private-partnership-data-room</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://showcase.wreative.com/project/data-room-kpbu-public-private-partnership-data-room"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://showcase.wreative.com/id/project/data-room-kpbu-public-private-partnership-data-room"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://showcase.wreative.com/project/data-room-kpbu-public-private-partnership-data-room"/>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://showcase.wreative.com/id/project/data-room-kpbu-public-private-partnership-data-room</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://showcase.wreative.com/project/data-room-kpbu-public-private-partnership-data-room"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://showcase.wreative.com/id/project/data-room-kpbu-public-private-partnership-data-room"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://showcase.wreative.com/project/data-room-kpbu-public-private-partnership-data-room"/>
     <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://showcase.wreative.com/project/sajodo-snack-food</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://showcase.wreative.com/project/sajodo-snack-food"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://showcase.wreative.com/id/project/sajodo-snack-food"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://showcase.wreative.com/project/sajodo-snack-food"/>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://showcase.wreative.com/id/project/sajodo-snack-food</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://showcase.wreative.com/project/sajodo-snack-food"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://showcase.wreative.com/id/project/sajodo-snack-food"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://showcase.wreative.com/project/sajodo-snack-food"/>
     <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://showcase.wreative.com/project/andromart-online-store-e-commerce</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://showcase.wreative.com/project/andromart-online-store-e-commerce"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://showcase.wreative.com/id/project/andromart-online-store-e-commerce"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://showcase.wreative.com/project/andromart-online-store-e-commerce"/>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://showcase.wreative.com/id/project/andromart-online-store-e-commerce</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://showcase.wreative.com/project/andromart-online-store-e-commerce"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://showcase.wreative.com/id/project/andromart-online-store-e-commerce"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://showcase.wreative.com/project/andromart-online-store-e-commerce"/>
     <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

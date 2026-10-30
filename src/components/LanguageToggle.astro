@@ -15,6 +15,7 @@ import Icon from './Icon.astro';
 <script>
   import { onPageLoad } from '@/scripts/page-lifecycle';
   import { getLanguage, toggleLanguage } from '@/i18n/ui';
+  import { navigate } from 'astro:transitions/client';
   import { applyTranslations } from '@/scripts/i18n';
 
   function updateLabels() {
@@ -30,7 +31,14 @@ import Icon from './Icon.astro';
       button.addEventListener(
         'click',
         () => {
+          const next = getLanguage() === 'en' ? 'id' : 'en';
+          const alt = document.querySelector<HTMLLinkElement>(`link[rel="alternate"][hreflang="${next}"]`);
           toggleLanguage();
+          if (alt) {
+            // Localized route: go to the other-language URL (own canonical + hreflang).
+            void navigate(new URL(alt.href).pathname);
+            return;
+          }
           applyTranslations();
           updateLabels();
         },

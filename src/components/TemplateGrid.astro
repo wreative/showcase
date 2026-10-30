@@ -5,13 +5,14 @@ import type { PortfolioItem } from '@/data/portfolio';
 
 interface Props {
   templates: PortfolioItem[];
+  lang?: 'en' | 'id';
 }
 
-const { templates } = Astro.props;
+const { templates, lang = 'en' } = Astro.props;
 ---
 
 <div class="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6 xl:grid-cols-3" id="template-grid">
-  {templates.map((template, index) => <TemplateCard template={template} index={index} />)}
+  {templates.map((template, index) => <TemplateCard template={template} index={index} lang={lang} />)}
 </div>
 
 <div id="grid-loading" class="hidden">

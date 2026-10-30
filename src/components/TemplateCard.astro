@@ -3,15 +3,17 @@ import { Image } from 'astro:assets';
 import { getCoverImage } from '@/lib/covers';
 import type { PortfolioItem } from '@/data/portfolio';
 import type { GalleryLottie } from '@/data/portfolio/types';
+import { localePath } from '@/utils/locale';
 import { formatLabel } from '@/utils/format';
 import LottiePlayer from '@/components/LottiePlayer.astro';
 
 interface Props {
   template: PortfolioItem;
   index: number;
+  lang?: 'en' | 'id';
 }
 
-const { template, index } = Astro.props;
+const { template, index, lang = 'en' } = Astro.props;
 const imageCount = template.gallery.filter((i) => i.type === 'image').length;
 const hasVideo = template.gallery.some((i) => i.type === 'video');
 const hasLottie = template.gallery.some((i) => i.type === 'lottie');
@@ -22,7 +24,7 @@ const lottieItem = template.gallery.find((i): i is GalleryLottie => i.type === '
 ---
 
 <a
-  href={`/project/${template.slug}`}
+  href={localePath(lang, `/project/${template.slug}`)}
   class="group relative block cursor-pointer overflow-hidden rounded-xl border border-border bg-card transition-colors duration-300 hover:border-foreground/20"
   data-template-card
   data-title={template.title.toLowerCase()}

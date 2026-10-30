@@ -4,7 +4,8 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
 import BrandLogo from '@/components/BrandLogo.astro';
 import ThemeToggle from '@/components/ThemeToggle.astro';
 import LanguageToggle from '@/components/LanguageToggle.astro';
-import { portfolios } from '@/data/portfolio';
+import type { PortfolioItem } from '@/data/portfolio';
+import { alternatesFor, localePath, SITE_URL, type Locale } from '@/utils/locale';
 import { getCoverImage } from '@/lib/covers';
 import { formatLabel } from '@/utils/format';
 import LottiePlayer from '@/components/LottiePlayer.astro';
@@ -13,27 +14,27 @@ import 'swiper/css';
 import 'swiper/css/keyboard';
 import 'swiper/css/navigation';
 
-const SITE_URL = 'https://showcase.wreative.com';
-
-export function getStaticPaths() {
-  return portfolios.map((template) => ({
-    params: { slug: template.slug },
-    props: { template },
-  }));
+interface Props {
+  template: PortfolioItem;
+  lang: Locale;
 }
 
-const { template } = Astro.props;
+const { template, lang } = Astro.props;
+const path = `/project/${template.slug}`;
+const pageUrl = `${SITE_URL}${localePath(lang, path)}`;
+const description = (lang === 'id' && template.descriptionId) || template.description;
 
 const jsonLd = [
   {
     '@context': 'https://schema.org',
     '@type': 'CreativeWork',
     name: template.title,
-    description: template.description,
-    url: `${SITE_URL}/project/${template.slug}`,
+    description,
+    url: pageUrl,
     image: new URL(getCoverImage(template.image).src, SITE_URL).href,
-    mainEntityOfPage: `${SITE_URL}/project/${template.slug}`,
-    inLanguage: 'en',
+    mainEntityOfPage: pageUrl,
+    inLanguage: lang,
+    sameAs: template.url,
     creator: { '@id': `${SITE_URL}/#person` },
     provider: { '@id': `${SITE_URL}/#org` },
     keywords: template.tags.join(', '),
@@ -43,12 +44,12 @@ const jsonLd = [
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE_URL}/` },
+      { '@type': 'ListItem', position: 1, name: lang === 'id' ? 'Beranda' : 'Home', item: `${SITE_URL}${localePath(lang, '/')}` },
       {
         '@type': 'ListItem',
         position: 2,
         name: template.title,
-        item: `${SITE_URL}/project/${template.slug}`,
+        item: pageUrl,
       },
     ],
   },
@@ -57,8 +58,10 @@ const jsonLd = [
 
 <BaseLayout
   title={`${template.title} - Wreative Showcase`}
-  description={template.description}
-  canonical={`https://showcase.wreative.com/project/${template.slug}`}
+  description={description}
+  canonical={pageUrl}
+  lang={lang}
+  alternates={alternatesFor(path)}
   ogImage={getCoverImage(template.image).src}
   jsonLd={jsonLd}
 >
@@ -66,7 +69,7 @@ const jsonLd = [
     <header class="sticky top-0 z-40 border-b border-border bg-background/80 backdrop-blur-md">
       <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
         <a
-          href="/"
+          href={localePath(lang, '/')}
           class="group flex items-center gap-2 text-muted-foreground transition-colors hover:text-foreground"
         >
           <svg
@@ -176,7 +179,7 @@ const jsonLd = [
             data-desc-en={template.description}
             data-desc-id={template.descriptionId}
           >
-            {template.description}
+            {description}
           </p>
           <div class="flex flex-wrap gap-2">
             {

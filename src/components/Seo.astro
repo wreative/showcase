@@ -5,6 +5,8 @@ interface Props {
   canonical: string;
   ogImage?: string;
   robots?: string;
+  lang?: 'en' | 'id';
+  alternates?: { en: string; id: string };
   jsonLd?: Record<string, unknown> | Record<string, unknown>[];
 }
 
@@ -14,6 +16,8 @@ const {
   canonical,
   ogImage: ogImageProp,
   robots = 'index, follow',
+  lang = 'en',
+  alternates,
   jsonLd,
 } = Astro.props;
 
@@ -31,6 +35,15 @@ const ogAlt = isDefaultOg
 <meta name="description" content={description} />
 <meta name="robots" content={robots} />
 <link rel="canonical" href={canonical} />
+{
+  alternates && (
+    <>
+      <link rel="alternate" hreflang="en" href={alternates.en} />
+      <link rel="alternate" hreflang="id" href={alternates.id} />
+      <link rel="alternate" hreflang="x-default" href={alternates.en} />
+    </>
+  )
+}
 
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
@@ -40,7 +53,8 @@ const ogAlt = isDefaultOg
 <meta property="og:image:alt" content={ogAlt} />
 <meta property="og:url" content={canonical} />
 <meta property="og:type" content="website" />
-<meta property="og:locale" content="id_ID" />
+<meta property="og:locale" content={lang === 'id' ? 'id_ID' : 'en_US'} />
+<meta property="og:locale:alternate" content={lang === 'id' ? 'en_US' : 'id_ID'} />
 <meta property="og:site_name" content="Wreative Showcase" />
 
 <meta name="twitter:card" content="summary_large_image" />

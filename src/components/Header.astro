@@ -5,11 +5,14 @@ import ThemeToggle from './ThemeToggle.astro';
 import LanguageToggle from './LanguageToggle.astro';
 import BrandLogo from './BrandLogo.astro';
 
+import { localePath, type Locale } from '@/utils/locale';
+
 interface Props {
   categories: string[];
+  lang?: Locale;
 }
 
-const { categories } = Astro.props;
+const { categories, lang = 'en' } = Astro.props;
 const tabs = [
   { key: 'all', label: 'All' },
   { key: 'website', label: 'Website' },
@@ -21,7 +24,7 @@ const tabs = [
 <header class="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur-md">
   <div class="mx-auto max-w-7xl px-4 py-3 sm:px-6 lg:px-8">
     <div class="mb-3 flex items-center justify-between">
-      <a href="/" class="group flex items-center gap-2.5">
+      <a href={localePath(lang, '/')} class="group flex items-center gap-2.5">
         <BrandLogo />
         <h1
           class="font-brand text-xl font-bold text-foreground transition-colors group-hover:text-muted-foreground"
