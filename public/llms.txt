@@ -3,16 +3,17 @@
 > Portfolio of website and mobile application projects by Wreative creative agency.
 > Author: Wreative | Location: Surabaya, Indonesia
 
-Total: 48 projects (27 websites, 13 mobile apps)
+Total: 48 projects (27 websites, 8 web apps, 13 mobile apps)
 
 ## Site Information
 
-- **Homepage:** https://showcase.wreative.com/
+- **Homepage (English):** https://showcase.wreative.com/
+- **Homepage (Indonesian):** https://showcase.wreative.com/id/
 - **Sitemap:** https://showcase.wreative.com/sitemap.xml
-- **Project pages:** https://showcase.wreative.com/project/<slug> (one page per project below)
+- **Project pages:** https://showcase.wreative.com/project/<slug> (English) and https://showcase.wreative.com/id/project/<slug> (Indonesian), one page per project below
 - **Services:** Website development (WordPress, custom themes, e-commerce/LMS) and mobile application development.
 - **Categories:** Business, Education, E-Commerce, Government, Services, Florist & Gardening.
-- **Language:** English and Indonesian (en/id).
+- **Language:** English (/) and Indonesian (/id/), linked with hreflang.
 - **Legal entity:** PT. Wreative Digital Solutions Indonesia (legally established Indonesian company).
 - **NIB:** 1204250004487
 - **NPWP:** 1000000001461492
@@ -22,242 +23,340 @@ Total: 48 projects (27 websites, 13 mobile apps)
 ### 1. Spesialis Karangan Bunga Indonesia
 - **Platform:** Website
 - **URL:** [https://spesialiskaranganbungaindonesia.com](https://spesialiskaranganbungaindonesia.com)
+- **Showcase page:** https://showcase.wreative.com/project/spesialis-karangan-bunga-indonesia (id: https://showcase.wreative.com/id/project/spesialis-karangan-bunga-indonesia)
 - **Tech:** WordPress, WooCommerce, Custom Theme
 - **Description:** Specialist flower arrangement and bouquet service. Stunning product galleries, occasion-based collections, and nationwide delivery information.
 
 ### 2. BE MODE Indonesia
 - **Platform:** Website
 - **URL:** [https://bemodeofficial.com](https://bemodeofficial.com)
+- **Showcase page:** https://showcase.wreative.com/project/be-mode-indonesia (id: https://showcase.wreative.com/id/project/be-mode-indonesia)
 - **Tech:** WordPress, WooCommerce, Fashion Theme
 - **Description:** Fashion and lifestyle e-commerce brand. Trendy product displays, lookbook galleries, size guides, and seamless checkout flow.
 
 ### 3. SG Academy
 - **Platform:** Website
 - **URL:** [https://sgacademy.co.id/](https://sgacademy.co.id/)
+- **Showcase page:** https://showcase.wreative.com/project/sg-academy (id: https://showcase.wreative.com/id/project/sg-academy)
 - **Tech:** WordPress, LMS, Registration System
 - **Description:** Professional training academy website. Course catalog, instructor profiles, online enrollment, and learning management system integration.
 
 ### 4. Roby Saputra Grup
 - **Platform:** Website
 - **URL:** [https://robysaputragrup.com/](https://robysaputragrup.com/)
+- **Showcase page:** https://showcase.wreative.com/project/roby-saputra-grup (id: https://showcase.wreative.com/id/project/roby-saputra-grup)
 - **Tech:** WordPress, Corporate Theme, Multi-Site
 - **Description:** Business group holding company profile. Multi-division overview, leadership team, and corporate achievements showcase.
 
 ### 5. Kontraktor Surabaya
 - **Platform:** Website
 - **URL:** [https://kontraktorsurabaya.wreative.com/](https://kontraktorsurabaya.wreative.com/)
+- **Showcase page:** https://showcase.wreative.com/project/kontraktor-surabaya (id: https://showcase.wreative.com/id/project/kontraktor-surabaya)
 - **Tech:** WordPress, Elementor, SEO
 - **Description:** Professional contracting services website for Surabaya region. Clean layout showcasing construction services, project portfolio, and client testimonials with easy contact integration.
 
 ### 6. Wase Bumi Indonesia
 - **Platform:** Website
 - **URL:** [https://wasebumiindonesia.wreative.com/](https://wasebumiindonesia.wreative.com/)
+- **Showcase page:** https://showcase.wreative.com/project/wase-bumi-indonesia (id: https://showcase.wreative.com/id/project/wase-bumi-indonesia)
 - **Tech:** WordPress, Custom Theme, ACF
 - **Description:** Corporate business website for a natural resource company. Features company profile, service offerings, and a modern design that reflects the brand's commitment to sustainability.
 
 ### 7. Cubicle Toilet
 - **Platform:** Website
 - **URL:** [https://cubicletoilet.wreative.com/](https://cubicletoilet.wreative.com/)
+- **Showcase page:** https://showcase.wreative.com/project/cubicle-toilet (id: https://showcase.wreative.com/id/project/cubicle-toilet)
 - **Tech:** WordPress, WooCommerce, Elementor
 - **Description:** Specialized cubicle and toilet partition services website. Product catalog with detailed specifications, project gallery, and inquiry system for commercial clients.
 
 ### 8. PT. Adikarya Pesona Intinusa
 - **Platform:** Website
 - **URL:** [https://adikaryapesona.wreative.com/](https://adikaryapesona.wreative.com/)
+- **Showcase page:** https://showcase.wreative.com/project/pt-adikarya-pesona-intinusa (id: https://showcase.wreative.com/id/project/pt-adikarya-pesona-intinusa)
 - **Tech:** WordPress, LMS Integration, Custom Theme
 - **Description:** Educational institution website with modern design. Includes course listings, faculty profiles, online registration, and student portal integration.
 
 ### 9. Wreative Store
 - **Platform:** Website
 - **URL:** [https://store.wreative.com](https://store.wreative.com)
+- **Showcase page:** https://showcase.wreative.com/project/wreative-store (id: https://showcase.wreative.com/id/project/wreative-store)
 - **Tech:** WordPress, WooCommerce, Payment Gateway
 - **Description:** E-commerce storefront for digital products and services. Clean product layouts, smooth checkout experience, and integrated payment gateway. Features a product walkthrough video.
 
 ### 10. Home Baraka
 - **Platform:** Website
 - **URL:** [https://homebaraka.wreative.com/](https://homebaraka.wreative.com/)
+- **Showcase page:** https://showcase.wreative.com/project/home-baraka (id: https://showcase.wreative.com/id/project/home-baraka)
 - **Tech:** WordPress, Custom Post Types, SEO
 - **Description:** Property and home services platform. Features property listings, service bookings, and an intuitive search interface for potential buyers and renters.
 
 ### 11. Wreative
 - **Platform:** Website
 - **URL:** [https://wreative.com/](https://wreative.com/)
+- **Showcase page:** https://showcase.wreative.com/project/wreative (id: https://showcase.wreative.com/id/project/wreative)
 - **Tech:** WordPress, Custom Theme, GSAP
 - **Description:** Main brand website for Wreative - a creative digital agency. Showcases the agency's portfolio, services, and team with a bold, modern design. Includes a brand overview video.
 
 ### 12. Fajar Florist
 - **Platform:** Website
 - **URL:** [https://fajarflorist.wreative.com/](https://fajarflorist.wreative.com/)
+- **Showcase page:** https://showcase.wreative.com/project/fajar-florist (id: https://showcase.wreative.com/id/project/fajar-florist)
 - **Tech:** WordPress, WooCommerce, Custom Theme
 - **Description:** Online florist and flower arrangement business. Beautiful product displays, seasonal collections, and easy ordering system for delivery across the city.
 
 ### 13. First Media Surabaya
 - **Platform:** Website
 - **URL:** [https://firstmediasurabaya.wreative.com/](https://firstmediasurabaya.wreative.com/)
+- **Showcase page:** https://showcase.wreative.com/project/first-media-surabaya (id: https://showcase.wreative.com/id/project/first-media-surabaya)
 - **Tech:** WordPress, Custom Forms, SEO
 - **Description:** Local internet service provider website for Surabaya. Service plans comparison, coverage area maps, and customer support portal.
 
 ### 14. DPU Bina Marga Musi
 - **Platform:** Website
 - **URL:** [https://dpubinamargamusi.wreative.com/](https://dpubinamargamusi.wreative.com/)
+- **Showcase page:** https://showcase.wreative.com/project/dpu-bina-marga-musi (id: https://showcase.wreative.com/id/project/dpu-bina-marga-musi)
 - **Tech:** WordPress, Government Theme, Accessibility
 - **Description:** Government public works department website. Features project transparency reports, public service announcements, and infrastructure development updates.
 
 ### 15. Chicken Explorer
 - **Platform:** Website
 - **URL:** [https://chickenexplorer.wreative.com/](https://chickenexplorer.wreative.com/)
+- **Showcase page:** https://showcase.wreative.com/project/chicken-explorer (id: https://showcase.wreative.com/id/project/chicken-explorer)
 - **Tech:** WordPress, WooCommerce, Maps Integration
 - **Description:** Food and culinary brand e-commerce site. Menu showcase, online ordering system, and location finder for multiple restaurant branches.
 
 ### 16. Kurir Pulsa
 - **Platform:** Website
 - **URL:** [https://kurirpulsa.wreative.com/](https://kurirpulsa.wreative.com/)
+- **Showcase page:** https://showcase.wreative.com/project/kurir-pulsa (id: https://showcase.wreative.com/id/project/kurir-pulsa)
 - **Tech:** WordPress, API Integration, WooCommerce
 - **Description:** Digital products and top-up service platform. Fast transaction processing, user dashboard, and automated order fulfillment system.
 
 ### 17. Panji Semesta
 - **Platform:** Website
 - **URL:** [https://panjisemesta.wreative.com/](https://panjisemesta.wreative.com/)
+- **Showcase page:** https://showcase.wreative.com/project/panji-semesta (id: https://showcase.wreative.com/id/project/panji-semesta)
 - **Tech:** WordPress, Corporate Theme, Contact Forms
 - **Description:** General trading and business company profile. Modern corporate design with service overview, partner network, and business inquiry forms.
 
 ### 18. Dzata Lombok Transport
 - **Platform:** Website
 - **URL:** [https://dzatalomboktransport.wreative.com/](https://dzatalomboktransport.wreative.com/)
+- **Showcase page:** https://showcase.wreative.com/project/dzata-lombok-transport (id: https://showcase.wreative.com/id/project/dzata-lombok-transport)
 - **Tech:** WordPress, Booking System, SEO
 - **Description:** Transportation and travel services in Lombok. Booking system, fleet showcase, tour packages, and customer review integration.
 
 ### 19. Pernikahan Ini
 - **Platform:** Website
 - **URL:** [https://pernikahanini.wreative.com/](https://pernikahanini.wreative.com/)
+- **Showcase page:** https://showcase.wreative.com/project/pernikahan-ini (id: https://showcase.wreative.com/id/project/pernikahan-ini)
 - **Tech:** WordPress, Custom Directory, Forms
 - **Description:** Wedding services and planning platform. Vendor directories, wedding packages, gallery showcase, and planning tools for couples.
 
 ### 20. Pos Satpam
 - **Platform:** Website
 - **URL:** [https://possatpam.wreative.com/](https://possatpam.wreative.com/)
+- **Showcase page:** https://showcase.wreative.com/project/pos-satpam (id: https://showcase.wreative.com/id/project/pos-satpam)
 - **Tech:** WordPress, WooCommerce, Catalog Theme
 - **Description:** Security guard post and equipment supplier. Product catalog with specifications, project references, and quotation request system.
 
 ### 21. Toilet Portabel
 - **Platform:** Website
 - **URL:** [https://toiletportabel.wreative.com/](https://toiletportabel.wreative.com/)
+- **Showcase page:** https://showcase.wreative.com/project/toilet-portabel (id: https://showcase.wreative.com/id/project/toilet-portabel)
 - **Tech:** WordPress, Booking Calendar, SEO
 - **Description:** Portable toilet rental and services. Product listings with pricing, event booking calendar, and service area information.
 
 ### 22. PT Modern Coco International
 - **Platform:** Website
 - **URL:** [https://ptmoderncocointernational.wreative.com/](https://ptmoderncocointernational.wreative.com/)
+- **Showcase page:** https://showcase.wreative.com/project/pt-modern-coco-international (id: https://showcase.wreative.com/id/project/pt-modern-coco-international)
 - **Tech:** WordPress, Multilingual, Corporate Theme
 - **Description:** International trading company corporate website. Global business profile, product sourcing information, and international partner network.
 
 ### 23. Sakpattana Jawa Timur
 - **Platform:** Website
 - **URL:** [https://sakpattanajawatimur.wreative.com/](https://sakpattanajawatimur.wreative.com/)
+- **Showcase page:** https://showcase.wreative.com/project/sakpattana-jawa-timur (id: https://showcase.wreative.com/id/project/sakpattana-jawa-timur)
 - **Tech:** WordPress, Regional Theme, SEO
 - **Description:** Regional business branch website for East Java. Local services, regional news, and community engagement features.
 
 ### 24. CV Putra Kubota
 - **Platform:** Website
 - **URL:** [https://cvputrakubota.wreative.com/](https://cvputrakubota.wreative.com/)
+- **Showcase page:** https://showcase.wreative.com/project/cv-putra-kubota (id: https://showcase.wreative.com/id/project/cv-putra-kubota)
 - **Tech:** WordPress, Product Catalog, Contact Forms
 - **Description:** Agricultural equipment and machinery dealer. Product catalog with specs, spare parts ordering, and service center locator.
 
 ### 25. Wahyu Dewanagari
 - **Platform:** Website
 - **URL:** [https://wahyudewanagari.wreative.com/](https://wahyudewanagari.wreative.com/)
+- **Showcase page:** https://showcase.wreative.com/project/wahyu-dewanagari (id: https://showcase.wreative.com/id/project/wahyu-dewanagari)
 - **Tech:** WordPress, Events Calendar, Gallery
 - **Description:** Cultural and arts foundation website. Event calendar, gallery of cultural performances, and community program information.
 
 ### 26. Aviso
 - **Platform:** Website
 - **URL:** [https://aviso.wreative.com/](https://aviso.wreative.com/)
+- **Showcase page:** https://showcase.wreative.com/project/aviso (id: https://showcase.wreative.com/id/project/aviso)
 - **Tech:** WordPress, Consulting Theme, Case Studies
 - **Description:** Business consulting and advisory services. Service packages, consultant profiles, case studies, and client success stories.
 
 ### 27. LPK Furinkazan
 - **Platform:** Website
 - **URL:** [https://lpkfurinkazan.wreative.com/](https://lpkfurinkazan.wreative.com/)
+- **Showcase page:** https://showcase.wreative.com/project/lpk-furinkazan (id: https://showcase.wreative.com/id/project/lpk-furinkazan)
 - **Tech:** WordPress, LMS, Registration Forms
 - **Description:** Japanese language and culture training institute. Course levels, instructor credentials, student testimonials, and Japan placement program information.
+
+## Web Apps
+
+### 1. Nikifit - Women Fitness & Wellness
+- **Platform:** Web App
+- **URL:** [https://wreative.com/](https://wreative.com/)
+- **Showcase page:** https://showcase.wreative.com/project/nikifit-women-fitness-wellness (id: https://showcase.wreative.com/id/project/nikifit-women-fitness-wellness)
+- **Tech:** Laravel, Livewire, Tailwind CSS, Alpine.js, MySQL
+- **Description:** Application for women-only Pilates studio. This app allows users to book classes, track progress, and receive updates on schedules and promotions. Additional features include social media integration, fitness tracking, and personalized content to enhance the user experience.
+
+### 2. Tipotix - Ticketing & Event Management
+- **Platform:** Web App
+- **URL:** [https://chickenexplorer.wreative.com/](https://chickenexplorer.wreative.com/)
+- **Showcase page:** https://showcase.wreative.com/project/tipotix-ticketing-event-management (id: https://showcase.wreative.com/id/project/tipotix-ticketing-event-management)
+- **Tech:** Laravel, Livewire, Tailwind CSS, Alpine.js, MySQL, FilamentPHP, Midtrans, Sync System, Sentry
+- **Description:** Event and Ticketing Application. This app allows users to purchase event tickets, manage schedules, and receive updates on events they are interested in.
+
+### 3. Gabungin - All in One Application
+- **Platform:** Web App
+- **URL:** [https://chickenexplorer.wreative.com/](https://chickenexplorer.wreative.com/)
+- **Showcase page:** https://showcase.wreative.com/project/gabungin-all-in-one-application (id: https://showcase.wreative.com/id/project/gabungin-all-in-one-application)
+- **Tech:** Next.js, Tailwind CSS, TypeScript, MySQL, TriPay, Base UI, Browser Extension, Framer Motion, Sentry
+- **Description:** All-in-One Application Service. This app allows users to access various premium applications within the Gabungin service or Workspace.
+
+### 4. Sultan Top Up - Game Top Up & Digital Products
+- **Platform:** Web App
+- **URL:** [https://chickenexplorer.wreative.com/](https://chickenexplorer.wreative.com/)
+- **Showcase page:** https://showcase.wreative.com/project/sultan-top-up-game-top-up-digital-products (id: https://showcase.wreative.com/id/project/sultan-top-up-game-top-up-digital-products)
+- **Tech:** Next.js, Tailwind CSS, TypeScript, MySQL, Midtrans, Framer Motion, PostHog, TurboPack, Sentry
+- **Description:** Game Top Up and Digital Products Service. This app allows users to top up games and purchase various other digital products.
+
+### 5. SINFRA - Infrastruktur Information System Application
+- **Platform:** Web App
+- **URL:** [https://chickenexplorer.wreative.com/](https://chickenexplorer.wreative.com/)
+- **Showcase page:** https://showcase.wreative.com/project/sinfra-infrastruktur-information-system-application (id: https://showcase.wreative.com/id/project/sinfra-infrastruktur-information-system-application)
+- **Tech:** Laravel, CSS, JavaScript, MySQL
+- **Description:** Infrastructure Information System Application. This app is designed to provide information regarding the development of infrastructure in a specific area. It offers solutions for managing and monitoring digital infrastructure.
+
+### 6. Data Room KPBU - Public Private Partnership Data Room
+- **Platform:** Web App
+- **URL:** [https://chickenexplorer.wreative.com/](https://chickenexplorer.wreative.com/)
+- **Showcase page:** https://showcase.wreative.com/project/data-room-kpbu-public-private-partnership-data-room (id: https://showcase.wreative.com/id/project/data-room-kpbu-public-private-partnership-data-room)
+- **Tech:** Laravel, CSS, JavaScript, MySQL
+- **Description:** Public Private Partnership Data Room. This app is designed to provide a centralized platform for managing and sharing data related to public-private partnership projects or PJPK.
+
+### 7. Sajodo - Snack & Food
+- **Platform:** Web App
+- **URL:** [https://chickenexplorer.wreative.com/](https://chickenexplorer.wreative.com/)
+- **Showcase page:** https://showcase.wreative.com/project/sajodo-snack-food (id: https://showcase.wreative.com/id/project/sajodo-snack-food)
+- **Tech:** Laravel, CSS, JavaScript, MySQL
+- **Description:** This app is designed to provide a platform for managing and sharing data related to snack and food products.
+
+### 8. Andromart - Online Store & E-Commerce
+- **Platform:** Web App
+- **URL:** [https://chickenexplorer.wreative.com/](https://chickenexplorer.wreative.com/)
+- **Showcase page:** https://showcase.wreative.com/project/andromart-online-store-e-commerce (id: https://showcase.wreative.com/id/project/andromart-online-store-e-commerce)
+- **Tech:** Laravel, CSS, JavaScript, MySQL, Datatables
+- **Description:** Online Store & E-Commerce. This app is designed to provide a platform for managing and sharing data related to online shopping and e-commerce. Additionally, the app also provides features to facilitate the transaction process and product management for sellers.
 
 ## Mobile Apps
 
 ### 1. Wreative App
 - **Platform:** Mobile App
 - **URL:** [https://wreative.com/](https://wreative.com/)
+- **Showcase page:** https://showcase.wreative.com/project/wreative-app (id: https://showcase.wreative.com/id/project/wreative-app)
 - **Tech:** Flutter, Dart, WebView, Firebase Crashlytics, API Integration
 - **Description:** Brand companion app for Wreative creative agency. Clients can browse the portfolio, track project progress in real-time, communicate via in-app chat, and approve deliverables directly from their phone. Push notifications keep everyone aligned on deadlines.
 
 ### 2. TikCheck - Event Ticketing
 - **Platform:** Mobile App
 - **URL:** [https://chickenexplorer.wreative.com/](https://chickenexplorer.wreative.com/)
+- **Showcase page:** https://showcase.wreative.com/project/tikcheck-event-ticketing (id: https://showcase.wreative.com/id/project/tikcheck-event-ticketing)
 - **Tech:** Flutter, Dart, Firebase, Sync System, Sentry, API Integration, SQLLite
 - **Description:** Ticketing app for security personnel and event management. Features include QR scanning for entry, guest list management, push notifications for event updates, and calendar integration. Admins can manage events, tickets, and analytics reports.
 
 ### 3. TBCeria - TBC Health Companion
 - **Platform:** Mobile App
 - **URL:** [https://pernikahanini.wreative.com/](https://pernikahanini.wreative.com/)
+- **Showcase page:** https://showcase.wreative.com/project/tbceria-tbc-health-companion (id: https://showcase.wreative.com/id/project/tbceria-tbc-health-companion)
 - **Tech:** Flutter, Dart, API Integration, Push Notifications, Sentry, Chat System
 - **Description:** Health companion app for tuberculosis patients in Indonesia. Features include symptom tracking, medication reminders, online doctor consultations, and integration with local health services.
 
 ### 4. Sijalu - Wound Information Network System
 - **Platform:** Mobile App
 - **URL:** [https://dzatalomboktransport.wreative.com/](https://dzatalomboktransport.wreative.com/)
+- **Showcase page:** https://showcase.wreative.com/project/sijalu-wound-information-network-system (id: https://showcase.wreative.com/id/project/sijalu-wound-information-network-system)
 - **Tech:** Flutter, Dart, Firebase, Localization, Sentry, API Integration, Health API Integration, WebView
 - **Description:** A Wound Information Network System app for patients and medical professionals. Features include wound tracking, treatment reminders, online doctor consultations, and integration with local healthcare services.
 
 ### 5. Ceting Gmeil - Pregnancy Companion App
 - **Platform:** Mobile App
 - **URL:** [https://dzatalomboktransport.wreative.com/](https://dzatalomboktransport.wreative.com/)
+- **Showcase page:** https://showcase.wreative.com/project/ceting-gmeil-pregnancy-companion-app (id: https://showcase.wreative.com/id/project/ceting-gmeil-pregnancy-companion-app)
 - **Tech:** Flutter, Dart, Pregnancy Tracking, Push Notifications, Healthcare API, Sentry
 - **Description:** A pregnancy companion app for expectant mothers that helps monitor maternal health, track wellness milestones, receive timely reminders, and access trusted medical guidance anytime. It supports better prenatal care with education, notifications, and caregiver communication.
 
 ### 6. Mitra Jaya Cellular - PPOB Mobile Platform
 - **Platform:** Mobile App
 - **URL:** [https://dzatalomboktransport.wreative.com/](https://dzatalomboktransport.wreative.com/)
+- **Showcase page:** https://showcase.wreative.com/project/mitra-jaya-cellular-ppob-mobile-platform (id: https://showcase.wreative.com/id/project/mitra-jaya-cellular-ppob-mobile-platform)
 - **Tech:** Flutter, Dart, Sentry, API Integration, PPOB, Marketplace
 - **Description:** A mobile utility and bill payment platform for cellular service operators, enabling customers to purchase data bundles, top-ups, and digital transactions in a secure, convenient app. It helps streamline service operations and keeps transactions fast and efficient.
 
 ### 7. Momora - Parenting Growth Companion
 - **Platform:** Mobile App
 - **URL:** [https://dzatalomboktransport.wreative.com/](https://dzatalomboktransport.wreative.com/)
+- **Showcase page:** https://showcase.wreative.com/project/momora-parenting-growth-companion (id: https://showcase.wreative.com/id/project/momora-parenting-growth-companion)
 - **Tech:** Flutter, Dart, Push Notifications, Sentry, API Integration, Supabase
 - **Description:** A parenting app that helps families track baby growth, access educational content, and manage essential baby purchases in one place. It combines development monitoring with practical parenting guidance for a smoother child-care journey.
 
 ### 8. Voilla - Learning Management System
 - **Platform:** Mobile App
 - **URL:** [https://dzatalomboktransport.wreative.com/](https://dzatalomboktransport.wreative.com/)
+- **Showcase page:** https://showcase.wreative.com/project/voilla-learning-management-system (id: https://showcase.wreative.com/id/project/voilla-learning-management-system)
 - **Tech:** Flutter, Dart, Sentry, API Integration, LMS
 - **Description:** A mobile learning platform that helps students and educators manage courses, assignments, classroom materials, and learning progress in one place. It supports digital education through structured content access, communication, and performance tracking.
 
 ### 9. Sigap - Emergency Response Information System
 - **Platform:** Mobile App
 - **URL:** [https://dzatalomboktransport.wreative.com/](https://dzatalomboktransport.wreative.com/)
+- **Showcase page:** https://showcase.wreative.com/project/sigap-emergency-response-information-system (id: https://showcase.wreative.com/id/project/sigap-emergency-response-information-system)
 - **Tech:** Laravel, NativePHP, Sentry, Livewire, Tailwind CSS
 - **Description:** An emergency response management app designed for fast reporting, coordinated action, and public safety support. It helps teams share real-time updates, streamline response workflows, and improve readiness in critical situations.
 
 ### 10. Tridentacare - Dental Damage Detection App
 - **Platform:** Mobile App
 - **URL:** [https://dzatalomboktransport.wreative.com/](https://dzatalomboktransport.wreative.com/)
+- **Showcase page:** https://showcase.wreative.com/project/tridentacare-dental-damage-detection-app (id: https://showcase.wreative.com/id/project/tridentacare-dental-damage-detection-app)
 - **Tech:** Flutter, Dart, Object Detection & Segmentation, API Integration, Node.js, YOLO Model, TensorFlow, Keras, Express.js
 - **Description:** An AI-powered dental care app that helps detect oral damage through image-based analysis and guided assessment. It supports early diagnosis, patient awareness, and better decision-making for dental health management.
 
 ### 11. MelCalm - Wellness Screening
 - **Platform:** Mobile App
 - **URL:** [https://dzatalomboktransport.wreative.com/](https://dzatalomboktransport.wreative.com/)
+- **Showcase page:** https://showcase.wreative.com/project/melcalm-wellness-screening (id: https://showcase.wreative.com/id/project/melcalm-wellness-screening)
 - **Tech:** Flutter, Dart, Firebase, Firebase Crashlytics
 - **Description:** A wellness screening app designed to support physical and emotional well-being through health assessments, guidance, and personalized recommendations. It helps users better understand their condition and make healthier daily decisions.
 
 ### 12. HMM - Hardware Maintenance Management
 - **Platform:** Mobile App
 - **URL:** [https://dzatalomboktransport.wreative.com/](https://dzatalomboktransport.wreative.com/)
+- **Showcase page:** https://showcase.wreative.com/project/hmm-hardware-maintenance-management (id: https://showcase.wreative.com/id/project/hmm-hardware-maintenance-management)
 - **Tech:** Flutter, Dart, API Integration
 - **Description:** A maintenance management app for tracking equipment conditions, scheduling repairs, and managing technical service workflows. It helps organizations reduce downtime and improve asset reliability across operations.
 
 ### 13. IKA Pens - Alumni Network App
 - **Platform:** Mobile App
 - **URL:** [https://dzatalomboktransport.wreative.com/](https://dzatalomboktransport.wreative.com/)
+- **Showcase page:** https://showcase.wreative.com/project/ika-pens-alumni-network-app (id: https://showcase.wreative.com/id/project/ika-pens-alumni-network-app)
 - **Tech:** Flutter, Dart, API Integration
 - **Description:** An alumni engagement app for graduates of the Polytechnic Elektronika Negeri Surabaya, connecting members through updates, community features, and event participation. It strengthens professional relationships and keeps alumni informed about opportunities and activities.
 
