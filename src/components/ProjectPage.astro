@@ -171,7 +171,24 @@ const jsonLd = [
             </span>
           </div>
           <h1 class="mb-4 text-3xl font-semibold leading-tight tracking-tight sm:text-4xl">
-            {template.title}
+            {
+              template.url ? (
+                <a
+                  href={template.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="group inline-flex items-baseline gap-2 underline-offset-4 transition-colors duration-200 hover:text-primary hover:underline hover:decoration-coral focus-visible:text-primary focus-visible:underline focus-visible:decoration-coral motion-reduce:transition-none"
+                >
+                  {template.title}
+                  <Icon
+                    name="external-link"
+                    class="mb-1 h-4 w-4 shrink-0 text-muted-foreground transition-[color,transform] duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-coral group-focus-visible:-translate-y-0.5 group-focus-visible:translate-x-0.5 group-focus-visible:text-coral motion-reduce:transition-none sm:h-5 sm:w-5"
+                  />
+                </a>
+              ) : (
+                template.title
+              )
+            }
           </h1>
           <p
             class="mb-8 max-w-[65ch] leading-relaxed text-muted-foreground"
