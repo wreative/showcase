@@ -156,8 +156,8 @@ export const webAppPortfolios: Omit<PortfolioItem, 'id' | 'slug'>[] = [
     title: 'Andromart - Online Store & E-Commerce',
     platform: 'web-app',
     category: C.ECOMMERCE,
-    image: '/assets/cover/cover.webp',
-    url: 'https://chickenexplorer.wreative.com/',
+    image: '/assets/cover/andromart.webp',
+    url: 'https://andromartindonesia.com/',
     description:
       'Online Store & E-Commerce. This app is designed to provide a platform for managing and sharing data related to online shopping and e-commerce. Additionally, the app also provides features to facilitate the transaction process and product management for sellers.',
     descriptionId:
