@@ -3,9 +3,15 @@ import { type PortfolioItem, PortfolioCategory as C, img, entry } from './types'
 // --- Galleries (all images clearly different) ---
 
 const sultanTopUpGallery = [
-  img('/assets/cover/sultantopup.webp'), // agency branding
-  img('/assets/cover/sultantopup-game.webp'), // e-commerce layout
+  img('/assets/cover/sultantopup.webp'),
+  img('/assets/cover/sultantopup-game.webp'),
   img('/assets/cover/sultantopup-tools.webp'),
+];
+
+const tipotixGallery = [
+  img('/assets/cover/tipotix.webp'),
+  img('/assets/cover/tipotix-event.webp'),
+  img('/assets/cover/tipotix-myticket.webp'),
 ];
 
 // --- Web app entries ---
@@ -27,8 +33,8 @@ export const webAppPortfolios: Omit<PortfolioItem, 'id' | 'slug'>[] = [
     title: 'Tipotix - Ticketing & Event Management',
     platform: 'web-app',
     category: C.LIFESTYLE,
-    image: '/assets/cover/cover.webp',
-    url: 'https://chickenexplorer.wreative.com/',
+    image: '/assets/cover/tipotix.webp',
+    url: 'https://tipotix.com/',
     description:
       'Event and Ticketing Application. This app allows users to purchase event tickets, manage schedules, and receive updates on events they are interested in.',
     descriptionId:
@@ -44,6 +50,7 @@ export const webAppPortfolios: Omit<PortfolioItem, 'id' | 'slug'>[] = [
       'Sync System',
       'Sentry',
     ],
+    gallery: tipotixGallery,
   }),
   // entry({
   //   title: 'Gabungin - All in One Application',
