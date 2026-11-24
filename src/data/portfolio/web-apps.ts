@@ -14,6 +14,12 @@ const tipotixGallery = [
   img('/assets/cover/tipotix-myticket.webp'),
 ];
 
+const nikifitGallery = [
+  img('/assets/cover/nikifit.webp'),
+  img('/assets/cover/nikifit-class.webp'),
+  img('/assets/cover/nikifit-dashboard.webp'),
+];
+
 // --- Web app entries ---
 
 export const webAppPortfolios: Omit<PortfolioItem, 'id' | 'slug'>[] = [
@@ -21,13 +27,14 @@ export const webAppPortfolios: Omit<PortfolioItem, 'id' | 'slug'>[] = [
     title: 'Nikifit - Women Fitness & Wellness',
     platform: 'web-app',
     category: C.LIFESTYLE,
-    image: '/assets/cover/cover.webp',
-    url: 'https://wreative.com/',
+    image: '/assets/cover/nikifit.webp',
+    url: 'https://nikifit.id/',
     description:
       'Application for women-only Pilates studio. This app allows users to book classes, track progress, and receive updates on schedules and promotions. Additional features include social media integration, fitness tracking, and personalized content to enhance the user experience.',
     descriptionId:
       'Aplikasi Studio Pilates Khusus Wanita. Aplikasi ini memungkinkan pengguna untuk memesan kelas, melacak kemajuan, dan menerima pembaruan tentang jadwal dan promosi. Fitur tambahan termasuk integrasi media sosial, pelacakan kebugaran, dan konten yang dipersonalisasi untuk meningkatkan pengalaman pengguna.',
     tags: ['Laravel', 'Livewire', 'Tailwind CSS', 'Alpine.js', 'MySQL'],
+    gallery: nikifitGallery,
   }),
   entry({
     title: 'Tipotix - Ticketing & Event Management',
