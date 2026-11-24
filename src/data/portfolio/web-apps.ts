@@ -25,6 +25,11 @@ const dataroomGallery = [
   img('/assets/cover/dataroom-dashboard.webp'),
 ];
 
+const sinfraGallery = [
+  img('/assets/cover/sinfra.webp'),
+  img('/assets/cover/sinfra-dashboard.webp'),
+];
+
 // --- Web app entries ---
 
 export const webAppPortfolios: Omit<PortfolioItem, 'id' | 'slug'>[] = [
@@ -113,13 +118,14 @@ export const webAppPortfolios: Omit<PortfolioItem, 'id' | 'slug'>[] = [
     title: 'SINFRA - Infrastruktur Information System Application',
     platform: 'web-app',
     category: C.GOVERNMENT,
-    image: '/assets/cover/cover.webp',
+    image: '/assets/cover/sinfra.webp',
     url: 'https://chickenexplorer.wreative.com/',
     description:
       'Infrastructure Information System Application. This app is designed to provide information regarding the development of infrastructure in a specific area. It offers solutions for managing and monitoring digital infrastructure.',
     descriptionId:
       'Aplikasi yang dibentuk dengan tujuan memberikan informasi mengenai perkembangan pembangunan infrastruktur di wilayah tertentu. Aplikasi ini menyediakan solusi untuk mengelola dan memantau infrastruktur digital.',
     tags: ['Laravel', 'CSS', 'JavaScript', 'MySQL'],
+    gallery: sinfraGallery,
   }),
   entry({
     title: 'Data Room KPBU - Public Private Partnership Data Room',
