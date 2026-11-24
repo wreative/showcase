@@ -20,6 +20,11 @@ const nikifitGallery = [
   img('/assets/cover/nikifit-dashboard.webp'),
 ];
 
+const dataroomGallery = [
+  img('/assets/cover/dataroom.webp'),
+  img('/assets/cover/dataroom-dashboard.webp'),
+];
+
 // --- Web app entries ---
 
 export const webAppPortfolios: Omit<PortfolioItem, 'id' | 'slug'>[] = [
@@ -120,13 +125,14 @@ export const webAppPortfolios: Omit<PortfolioItem, 'id' | 'slug'>[] = [
     title: 'Data Room KPBU - Public Private Partnership Data Room',
     platform: 'web-app',
     category: C.GOVERNMENT,
-    image: '/assets/cover/cover.webp',
+    image: '/assets/cover/dataroom.webp',
     url: 'https://chickenexplorer.wreative.com/',
     description:
       'Public Private Partnership Data Room. This app is designed to provide a centralized platform for managing and sharing data related to public-private partnership projects or PJPK.',
     descriptionId:
       'Ruangan Data untuk Kerjasama Publik-Privat. Aplikasi ini dirancang untuk menyediakan platform terpusat dalam mengelola dan berbagi data yang terkait dengan proyek kerjasama publik-privat atau Penanggung Jawab Proyek Kerja Sama (PJPK).',
     tags: ['Laravel', 'CSS', 'JavaScript', 'MySQL'],
+    gallery: dataroomGallery,
   }),
   entry({
     title: 'Sajodo - Snack & Food',
