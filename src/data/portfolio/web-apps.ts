@@ -119,7 +119,7 @@ export const webAppPortfolios: Omit<PortfolioItem, 'id' | 'slug'>[] = [
     platform: 'web-app',
     category: C.GOVERNMENT,
     image: '/assets/cover/sinfra.webp',
-    url: 'https://chickenexplorer.wreative.com/',
+    url: 'https://sinfra.jatimprov.go.id/',
     description:
       'Infrastructure Information System Application. This app is designed to provide information regarding the development of infrastructure in a specific area. It offers solutions for managing and monitoring digital infrastructure.',
     descriptionId:
@@ -132,7 +132,7 @@ export const webAppPortfolios: Omit<PortfolioItem, 'id' | 'slug'>[] = [
     platform: 'web-app',
     category: C.GOVERNMENT,
     image: '/assets/cover/dataroom.webp',
-    url: 'https://chickenexplorer.wreative.com/',
+    url: 'https://dataroomkpbu.jatimprov.go.id/',
     description:
       'Public Private Partnership Data Room. This app is designed to provide a centralized platform for managing and sharing data related to public-private partnership projects or PJPK.',
     descriptionId:
@@ -144,8 +144,8 @@ export const webAppPortfolios: Omit<PortfolioItem, 'id' | 'slug'>[] = [
     title: 'Sajodo - Snack & Food',
     platform: 'web-app',
     category: C.FOOD,
-    image: '/assets/cover/cover.webp',
-    url: 'https://chickenexplorer.wreative.com/',
+    image: '/assets/cover/sajodo.webp',
+    url: 'https://www.sajodosnack.com/',
     description:
       'This app is designed to provide a platform for managing and sharing data related to snack and food products.',
     descriptionId:
