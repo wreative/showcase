@@ -37,28 +37,28 @@ export const webAppPortfolios: Omit<PortfolioItem, 'id' | 'slug'>[] = [
       'Sentry',
     ],
   }),
-  entry({
-    title: 'Gabungin - All in One Application',
-    platform: 'web-app',
-    category: C.BUSINESS,
-    image: '/assets/cover/cover.webp',
-    url: 'https://chickenexplorer.wreative.com/',
-    description:
-      'All-in-One Application Service. This app allows users to access various premium applications within the Gabungin service or Workspace.',
-    descriptionId:
-      'Layanan Aplikasi yang menggabungkan semua aplikasi menjadi satu. Aplikasi ini memungkinkan pengguna untuk mengakses berbagai aplikasi premium yang ada di dalam layanan atau Workspace Gabungin.',
-    tags: [
-      'Next.js',
-      'Tailwind CSS',
-      'TypeScript',
-      'MySQL',
-      'TriPay',
-      'Base UI',
-      'Browser Extension',
-      'Framer Motion',
-      'Sentry',
-    ],
-  }),
+  // entry({
+  //   title: 'Gabungin - All in One Application',
+  //   platform: 'web-app',
+  //   category: C.BUSINESS,
+  //   image: '/assets/cover/cover.webp',
+  //   url: 'https://chickenexplorer.wreative.com/',
+  //   description:
+  //     'All-in-One Application Service. This app allows users to access various premium applications within the Gabungin service or Workspace.',
+  //   descriptionId:
+  //     'Layanan Aplikasi yang menggabungkan semua aplikasi menjadi satu. Aplikasi ini memungkinkan pengguna untuk mengakses berbagai aplikasi premium yang ada di dalam layanan atau Workspace Gabungin.',
+  //   tags: [
+  //     'Next.js',
+  //     'Tailwind CSS',
+  //     'TypeScript',
+  //     'MySQL',
+  //     'TriPay',
+  //     'Base UI',
+  //     'Browser Extension',
+  //     'Framer Motion',
+  //     'Sentry',
+  //   ],
+  // }),
   entry({
     title: 'Sultan Top Up - Game Top Up & Digital Products',
     platform: 'web-app',
