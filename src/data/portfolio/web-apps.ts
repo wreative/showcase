@@ -1,4 +1,12 @@
-import { type PortfolioItem, PortfolioCategory as C, entry } from './types';
+import { type PortfolioItem, PortfolioCategory as C, img, entry } from './types';
+
+// --- Galleries (all images clearly different) ---
+
+const sultanTopUpGallery = [
+  img('/assets/cover/sultantopup.webp'), // agency branding
+  img('/assets/cover/sultantopup-game.webp'), // e-commerce layout
+  img('/assets/cover/sultantopup-tools.webp'),
+];
 
 // --- Web app entries ---
 
@@ -63,8 +71,8 @@ export const webAppPortfolios: Omit<PortfolioItem, 'id' | 'slug'>[] = [
     title: 'Sultan Top Up - Game Top Up & Digital Products',
     platform: 'web-app',
     category: C.LIFESTYLE,
-    image: '/assets/cover/cover.webp',
-    url: 'https://chickenexplorer.wreative.com/',
+    image: '/assets/cover/sultantopup.webp',
+    url: 'https://sultantopup.com/',
     description:
       'Game Top Up and Digital Products Service. This app allows users to top up games and purchase various other digital products.',
     descriptionId:
@@ -80,6 +88,7 @@ export const webAppPortfolios: Omit<PortfolioItem, 'id' | 'slug'>[] = [
       'TurboPack',
       'Sentry',
     ],
+    gallery: sultanTopUpGallery,
   }),
   entry({
     title: 'SINFRA - Infrastruktur Information System Application',
