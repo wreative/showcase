@@ -88,7 +88,7 @@ export const websitePortfolios: Omit<PortfolioItem, 'id' | 'slug'>[] = [
     descriptionId:
       'Toko e-commerce untuk produk dan layanan digital. Tata letak produk yang bersih, pengalaman checkout yang lancar, dan payment gateway terintegrasi. Dilengkapi video walkthrough produk.',
     tags: ['WordPress', 'WooCommerce', 'Payment Gateway'],
-    gallery: wreativeStoreGallery,
+    // gallery: wreativeStoreGallery,
   }),
   entry({
     title: 'Home Baraka',
@@ -126,7 +126,7 @@ export const websitePortfolios: Omit<PortfolioItem, 'id' | 'slug'>[] = [
     descriptionId:
       'Bisnis florist online dan rangkaian bunga. Tampilan produk yang menarik, koleksi musiman, dan sistem pemesanan mudah untuk pengiriman di seluruh kota.',
     tags: ['WordPress', 'WooCommerce', 'Custom Theme'],
-    gallery: fajarFloristGallery,
+    // gallery: fajarFloristGallery,
   }),
   entry({
     title: 'First Media Surabaya',
